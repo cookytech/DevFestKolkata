@@ -11,15 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dummy/dummy.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dummy/dummy.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -34,11 +27,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="announcement_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="114">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="32" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -46,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat_screen.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chat_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -62,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-end-line="30" />
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding>
                 <element signature="e#0#89#0" expanded="true" />
               </folding>
@@ -73,8 +78,8 @@
       <file leaf-file-name="social_media_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="112">
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -106,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session_detail_screen.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="session_detail_screen.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+            <state relative-caret-position="175">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -143,7 +148,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="implement_pages" />
       </map>
     </option>
   </component>
@@ -156,14 +161,14 @@
         <option value="$PROJECT_DIR$/lib/screens/session_details_screen/session_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_details_screen/invitation_details_screen/invitation_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/dummy/dummy.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/sm_feed_screen/sm_feed_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/home_screen/home_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/home_screen/home_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" />
       </list>
     </option>
   </component>
@@ -351,7 +356,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538487127750</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adds more screen">
+      <created>1538489812771</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1538489812771</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adds AppBar to the session details screen">
+      <created>1538497268842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1538497268842</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -396,7 +415,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adds tab bar view and uses tabController, maybe use something more custom if needed, but will do for now" />
     <MESSAGE value="refactors the dummy screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactors the dummy screen" />
+    <MESSAGE value="adds more screen" />
+    <MESSAGE value="adds AppBar to the session details screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds AppBar to the session details screen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
@@ -488,16 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/session_details_screen/session_details_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -538,10 +549,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="114">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
@@ -550,38 +601,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state relative-caret-position="175">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>

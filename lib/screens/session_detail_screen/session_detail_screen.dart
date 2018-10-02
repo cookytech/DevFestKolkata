@@ -9,6 +9,11 @@ class SessionDetailScreen extends StatefulWidget {
 class _SessionDetailScreenState extends State<SessionDetailScreen> {
   @override
   Widget build(BuildContext context) {
-    return DummyScreen(screenDetail: 'Session Details Screen',);
+    return Scaffold(
+      appBar: AppBar(title: Text('Sessions'),),
+      body: DummyScreen(
+        screenDetail: 'Session Details Screen',
+      ),
+    );
   }
 }
