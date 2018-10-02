@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class DummyScreen extends StatelessWidget {
-  final int index;
-  DummyScreen(this.index);
+  final String screenDetail;
+  DummyScreen({this.screenDetail});
 
   final Random random = Random();
 
@@ -13,7 +13,7 @@ class DummyScreen extends StatelessWidget {
       color: Color(random.nextInt(0x00FFFFFF) + 0xFF000000),
       child: Center(
           child: Text(
-        'Screen: ${index+1}',
+        'Screen: $screenDetail',
         style: TextStyle(color: Colors.white),
       )),
     );
