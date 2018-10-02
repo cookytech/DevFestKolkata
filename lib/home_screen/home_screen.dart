@@ -1,3 +1,4 @@
+import 'package:devfest_18_kolkata/dummy/dummy.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -7,7 +8,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
-  int _currentPage;
   TabController _tabController;
 
   @override
@@ -23,33 +23,6 @@ class _HomeScreenState extends State<HomeScreen>
       children: List<Widget>.generate(
         5,
         (i) => DummyScreen(i),
-      ),
-    );
-  }
-}
-
-class DummyScreen extends StatelessWidget {
-  final int index;
-  DummyScreen(this.index);
-
-  final List<Color> colors = [
-    Colors.amber,
-    Colors.red,
-    Colors.green,
-    Colors.blue,
-    Colors.tealAccent
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Screen ${index + 1}'),
-      ),
-      body: Center(
-        child: Container(
-          color: colors[index],
-        ),
       ),
     );
   }
