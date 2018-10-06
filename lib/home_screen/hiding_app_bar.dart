@@ -7,6 +7,7 @@ class HidingAppBar extends StatefulWidget {
   final TabController tabController;
 
   const HidingAppBar({Key key, this.tabController}) : super(key: key);
+
   @override
   _HidingAppBarState createState() => _HidingAppBarState();
 }
