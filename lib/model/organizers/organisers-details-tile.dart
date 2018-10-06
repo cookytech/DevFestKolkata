@@ -38,7 +38,7 @@ class OrganisersDetailsTile extends StatelessWidget {
                 SizedBox(width: 10.0),
                 Text(
                   name,
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20.0),
                 ),
               ],
             ),
@@ -71,13 +71,18 @@ class OrganisersDetailsTile extends StatelessWidget {
             ),
             children: <Widget>[
               Column(
+
                 children: <Widget>[
-                  Text(
-                    description,
-                    softWrap: true,
-                    overflow: TextOverflow.fade,
-                    maxLines: 10,
-                    style: TextStyle(color: Colors.black,),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      description,
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      overflow: TextOverflow.fade,
+                      maxLines: 10,
+                      style: TextStyle(color: Colors.black),
+                    ),
                   )
 
                 ],
