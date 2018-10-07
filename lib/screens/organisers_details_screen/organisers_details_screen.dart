@@ -24,8 +24,8 @@ class _OrganisersDetailsScreenState extends State<OrganisersDetailsScreen> {
         ),
       ),
       backgroundColor: Colors.white,
-      body: ListView(
-
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: list,
       ),
     );

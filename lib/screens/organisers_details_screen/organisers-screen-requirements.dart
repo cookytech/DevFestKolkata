@@ -3,7 +3,7 @@ import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers-
 import 'package:flutter/material.dart';
 
 List<Widget> list = List.generate(
-  3,
+  organisers.length,
   (i) => OrganisersDetailsTile(
         organiser: organisers[i],
       ),

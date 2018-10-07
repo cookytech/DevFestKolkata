@@ -37,6 +37,7 @@ List<IconButton> socialMediaIcons = [
 
 Widget socialMediaIconsRow(){
   return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
     children: List.generate(socialMediaIcons.length, (i) => socialMediaIcons[i]),
   );
 }
