@@ -11,8 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/model/organisers.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-details-tile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/social-media-icons.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/organizers/organisers-details-tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/organizers/organisers-details-tile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/organizers/organisers-details-tile.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/organizers/organisers-screen-requirements.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-screen-requirements.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -32,26 +37,32 @@
           <file leaf-file-name="organisers_details_screen.dart" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="27" selection-start-line="27" selection-end-line="27" />
+                <state relative-caret-position="532">
+                  <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#69#168#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="theme.dart" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/theme.dart">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="38">
+                  <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="organisers-details-tile.dart" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/model/organizers/organisers-details-tile.dart">
+            <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-details-tile.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+                <state relative-caret-position="703">
+                  <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#58#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -61,13 +72,34 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="organisers-screen-requirements.dart" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/model/organizers/organisers-screen-requirements.dart">
+            <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-screen-requirements.dart">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="515">
-                  <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+                <state relative-caret-position="291">
+                  <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
                   <folding>
-                    <element signature="e#0#82#0" expanded="true" />
+                    <element signature="e#0#58#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="social-media-icons.dart" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/social-media-icons.dart">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="874">
+                  <caret line="46" column="3" lean-forward="true" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#58#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="organisers.dart" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/lib/model/organisers.dart">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1615">
+                  <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -94,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/theme.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/android/app/src/main/kotlin/in/cookytech/devfest18kolkata/MainActivity.kt" />
         <option value="$PROJECT_DIR$/lib/screens/session_details_screen/session_details_screen.dart" />
@@ -111,7 +142,6 @@
         <option value="$PROJECT_DIR$/lib/models/organizers-details-tile.dart" />
         <option value="$PROJECT_DIR$/lib/models/organizers_details_tile/organizers-details-tile.dart" />
         <option value="$PROJECT_DIR$/lib/model/organizers/organizers-list-tile.dart" />
-        <option value="$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart" />
         <option value="$PROJECT_DIR$/lib/model/organizers/organizers-list.dart" />
         <option value="$PROJECT_DIR$/lib/model/organizers/organizers-details-tile.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
@@ -119,6 +149,12 @@
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/model/organizers/organisers-screen-requirements.dart" />
         <option value="$PROJECT_DIR$/lib/model/organizers/organisers-details-tile.dart" />
+        <option value="$PROJECT_DIR$/lib/model/organisers.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-screen-requirements.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/social-media-icons.dart" />
+        <option value="$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart" />
+        <option value="$PROJECT_DIR$/lib/theme.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-details-tile.dart" />
       </list>
     </option>
   </component>
@@ -127,10 +163,49 @@
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="home_screen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="organisers_details_screen" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="SDK Location" />
@@ -142,14 +217,15 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/model/organizers" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/lib/models/organizers_details_tile" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/lib/assets/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/screens/organisers_details_screen" />
+      <recent name="$PROJECT_DIR$/lib/model/organizers" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/lib/models/organizers_details_tile" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,8 +361,8 @@
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.31049252" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35546038" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.15310493" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17987151" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3290461" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3576017" />
       <window_info anchor="right" id="Flutter Outline" order="6" weight="0.32976446" />
@@ -312,10 +388,10 @@
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.31049252" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.15310493" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30513918" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16488223" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.32977587" />
@@ -327,20 +403,20 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24946466" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Flutter Outline" order="6" weight="0.32976446" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3290461" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3576017" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24946466" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.23126338" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -358,23 +434,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Adds expansion tile and this time it opens properly :wink:" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -634,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -656,13 +708,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/organizers/organizers-list-tile.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -670,27 +715,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart">
+    <entry file="file://$PROJECT_DIR$/lib/model/organisers.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="1615">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model/organizers/organisers-screen-requirements.dart">
+    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/social-media-icons.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+        <state relative-caret-position="874">
+          <caret line="46" column="3" lean-forward="true" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
           <folding>
-            <element signature="e#0#82#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model/organizers/organisers-details-tile.dart">
+    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-screen-requirements.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="79" column="49" selection-start-line="79" selection-start-column="49" selection-end-line="79" selection-end-column="49" />
+        <state relative-caret-position="291">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="e#69#168#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-details-tile.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
