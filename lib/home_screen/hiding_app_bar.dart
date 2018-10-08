@@ -24,12 +24,14 @@ class _HidingAppBarState extends State<HidingAppBar>
         AnimationController(vsync: this, duration: Duration(milliseconds: 700));
     position = Tween<Offset>(begin: Offset(0.0, 0.0), end: Offset(0.0, 1.0))
         .animate(CurvedAnimation(
-            parent: animationController, curve: Curves.easeOut, reverseCurve: Curves.bounceIn));
+            parent: animationController,
+            curve: Curves.easeOut,
+            reverseCurve: Curves.bounceIn));
     widget.tabController.addListener(() {
       if (hideTimer.isActive) hideTimer.cancel();
       animationController.reverse();
-      hideTimer =
-          Timer(Duration(milliseconds: 2000), () => animationController.forward());
+      hideTimer = Timer(
+          Duration(milliseconds: 2000), () => animationController.forward());
     });
     hideTimer =
         Timer(Duration(seconds: 3), () => animationController.forward());
