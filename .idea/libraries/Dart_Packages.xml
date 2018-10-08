@@ -75,7 +75,7 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter/lib" />
+              <option value="$USER_HOME$/MyCode/SDKs/Flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -89,7 +89,7 @@
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_test/lib" />
+              <option value="$USER_HOME$/MyCode/SDKs/Flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
@@ -299,7 +299,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../sdk/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$USER_HOME$/MyCode/SDKs/Flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -466,9 +466,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/watcher-0.9.7+10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-1.0.9/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/yaml-2.1.15/lib" />
-      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter/lib" />
-      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_test/lib" />
+      <root url="file://$USER_HOME$/MyCode/SDKs/Flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$USER_HOME$/MyCode/SDKs/Flutter/packages/flutter/lib" />
+      <root url="file://$USER_HOME$/MyCode/SDKs/Flutter/packages/flutter_test/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
