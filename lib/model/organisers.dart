@@ -30,7 +30,7 @@ const organisers = <Organiser>[
           ' officia deserunt mollit anim id est laborum.',
       fbURL: 'fb.me',
       gPlusURL: 'tredytg',
-      logoURI: 'dgtfdhg',
+      logoURI: 'assets/logo/google-developers.png',
       specialDescription:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
           ' do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -41,7 +41,7 @@ const organisers = <Organiser>[
           ' officia deserunt mollit anim id est laborum.',
       twitterURL: 'chgfcjhg'),
   Organiser(
-      title: "GDG Kolkata",
+      title: "WTM Kolkata",
       genericDescription:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
           ' do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -52,7 +52,7 @@ const organisers = <Organiser>[
           ' officia deserunt mollit anim id est laborum.',
       fbURL: 'fb.me',
       gPlusURL: 'tredytg',
-      logoURI: 'dgtfdhg',
+      logoURI: 'assets/logo/wtm.png',
       specialDescription:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
           ' do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -63,7 +63,7 @@ const organisers = <Organiser>[
           ' officia deserunt mollit anim id est laborum.',
       twitterURL: 'chgfcjhg'),
   Organiser(
-      title: "GDG Kolkata",
+      title: "DSC Kolkata",
       genericDescription:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
           ' do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -74,7 +74,7 @@ const organisers = <Organiser>[
           ' officia deserunt mollit anim id est laborum.',
       fbURL: 'fb.me',
       gPlusURL: 'tredytg',
-      logoURI: 'dgtfdhg',
+      logoURI: 'assets/logo/dsc.png',
       specialDescription:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
           ' do eiusmod tempor incididunt ut labore et dolore magna aliqua.'

@@ -10,9 +10,6 @@ List<Widget> list = List.generate(
 );
 
 List<Color> googleColorsList = [
-//  Colors.red,
-//  Colors.yellow,
-//  Colors.green,
   Colors.blue,
   Colors.green,
   Colors.yellow,

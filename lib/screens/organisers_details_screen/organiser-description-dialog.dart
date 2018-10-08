@@ -1,84 +1,95 @@
+import 'dart:ui';
+
 import 'package:devfest_18_kolkata/model/organisers.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers-screen-requirements.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/social-media-icons.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+class OrganiserDescriptionDialog extends StatelessWidget {
+  final Organiser organiser;
 
-organiserDescriptionDialog(BuildContext context, Organiser organiser) {
+  const OrganiserDescriptionDialog({
+    Key key,
+    this.organiser,
+  }) : super(key: key);
 
-  double width = MediaQuery.of(context).size.width;
-  double height = MediaQuery.of(context).size.height;
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
-  showDialog(
-    context: context,
-    builder: (context) {
-      return Center(
-        child: Stack(
-          children: <Widget>[
-            Positioned(
-              top: 40.0,
-              left: 12.0,
-              right: 12.0,
-              bottom: 40.0,
-              child: Card(
-                child: Container(
-                  color: Colors.white,
-                  width: width / 1.2,
-                  height: height / 1.3,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      SizedBox(height: 75.0),
-                      Text(
-                        organiser.title,
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      socialMediaIconsRow(),
-                      Expanded(
-                        flex: 2,
-                        child: Container(
-                          width: 250.0,
-                          height: 300.0,
-                          child: ListView(
-                            children: <Widget>[
-                              Text(
-                                organiser.genericDescription,
-                                style: TextStyle(color: Colors.black),
-                              ),
-                              SizedBox(height: 10.0),
-                              Text(
-                                organiser.specialDescription,
-                                style: TextStyle(color: Colors.black),
-                              ),
-                            ],
-                          ),
+    return Center(
+      child: Stack(
+        children: <Widget>[
+          BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+            child: Container(color: Colors.white.withOpacity(0.0),),
+          ),
+          Center(
+            child: Card(
+              child: Container(
+                width: width / 1.1,
+                height: height / 1.2,
+                color: Colors.white,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    SizedBox(height: 80.0),
+                    Text(
+                      organiser.title,
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 20.0),
+                    ),
+                    SizedBox(height: 5.0),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        width: 250.0,
+                        height: 300.0,
+                        child: ListView(
+                          children: <Widget>[
+                            Text(
+                              organiser.genericDescription,
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            SizedBox(height: 10.0),
+                            Text(
+                              organiser.specialDescription,
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ],
                         ),
                       ),
-                      SizedBox(height: 16.0),
-                      lowerBorder(width),
-                    ],
+                    ),
+                    SizedBox(height: 16.0),
+                    socialMediaIconsRowGeryScale(),
+                    lowerBorder(width),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 20.0,
+            left: MediaQuery.of(context).size.width / 2.8,
+            right: MediaQuery.of(context).size.width / 2.8,
+            child: Container(
+              child: Hero(
+                tag: organiser.logoURI,
+                child: CircleAvatar(
+                  radius: 50.0,
+                  backgroundColor: Colors.transparent,
+                  child: Image.asset(
+                    organiser.logoURI,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
-
-            Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.blue,
-                child: Icon(
-                  MdiIcons.googleCircles,
-                  size: 30.0,
-                ),
-              ),
-            )
-          ],
-        ),
-      );
-    },
-  );
+          )
+        ],
+      ),
+    );
+  }
 }

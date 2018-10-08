@@ -41,7 +41,19 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
               children: <Widget>[
                 GestureDetector(
                   onTap: () {
-                    organiserDescriptionDialog(context, widget.organiser);
+                    Navigator.of(context).push(
+                      PageRouteBuilder(
+                        barrierDismissible: true,
+                        maintainState: true,
+                        opaque: false,
+                        barrierColor: Colors.black.withOpacity(0.5),
+                        pageBuilder: (BuildContext context, _, __) {
+                          return OrganiserDescriptionDialog(
+                            organiser: widget.organiser,
+                          );
+                        },
+                      ),
+                    );
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,9 +62,9 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                         margin: EdgeInsets.only(left: 20.0),
                         width: 40.0,
                         height: 40.0,
-                        child: Icon(
-                          MdiIcons.googleCircles,
-                          color: Colors.black,
+                        child: Hero(
+                          tag: widget.organiser.logoURI,
+                          child: Image.asset(widget.organiser.logoURI)
                         ),
                       ),
                       SizedBox(width: 20.0),
@@ -60,6 +72,8 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                         widget.organiser.title,
                         style: TextStyle(
                           color: Colors.black,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
