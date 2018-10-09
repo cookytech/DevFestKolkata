@@ -31,8 +31,9 @@ List<Widget> colorsList = List.generate(
 
 Widget lowerBorder(width) => Container(
   height: 5.5,
-  width: width,
+  width: width-10,
   child: Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: colorsList,
   ),
 );

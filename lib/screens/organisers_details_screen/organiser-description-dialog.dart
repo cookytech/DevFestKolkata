@@ -1,10 +1,8 @@
 import 'dart:ui';
-
 import 'package:devfest_18_kolkata/model/organisers.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers-screen-requirements.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/social-media-icons.dart';
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class OrganiserDescriptionDialog extends StatelessWidget {
   final Organiser organiser;
@@ -23,15 +21,16 @@ class OrganiserDescriptionDialog extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-            child: Container(color: Colors.white.withOpacity(0.0),),
+            filter: ImageFilter.blur(sigmaX: 2.5, sigmaY: 2.5),
+            child: Container(
+              color: Colors.white.withOpacity(0.0),
+            ),
           ),
           Center(
             child: Card(
               child: Container(
                 width: width / 1.1,
                 height: height / 1.2,
-                color: Colors.white,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -39,7 +38,9 @@ class OrganiserDescriptionDialog extends StatelessWidget {
                     SizedBox(height: 80.0),
                     Text(
                       organiser.title,
-                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 20.0),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20.0),
                     ),
                     SizedBox(height: 5.0),
                     Expanded(
@@ -51,12 +52,10 @@ class OrganiserDescriptionDialog extends StatelessWidget {
                           children: <Widget>[
                             Text(
                               organiser.genericDescription,
-                              style: TextStyle(color: Colors.black),
                             ),
                             SizedBox(height: 10.0),
                             Text(
                               organiser.specialDescription,
-                              style: TextStyle(color: Colors.black),
                             ),
                           ],
                         ),

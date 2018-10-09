@@ -28,8 +28,8 @@ const organisers = <Organiser>[
           ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
           ' officia deserunt mollit anim id est laborum.',
-      fbURL: 'fb.me',
-      gPlusURL: 'tredytg',
+      fbURL: 'https://www.facebook.com/GDGKolkata/',
+      gPlusURL: 'https://www.meetup.com/GDG-Kolkata/?_cookie-check=klBmOviDWP24LZlk',
       logoURI: 'assets/logo/google-developers.png',
       specialDescription:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
@@ -39,7 +39,7 @@ const organisers = <Organiser>[
           ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
           ' officia deserunt mollit anim id est laborum.',
-      twitterURL: 'chgfcjhg'),
+      twitterURL: 'https://twitter.com/gdgkolkata?s=09'),
   Organiser(
       title: "WTM Kolkata",
       genericDescription:
