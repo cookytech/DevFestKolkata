@@ -10,14 +10,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/organisers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/organisers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organiser-description-dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organiser-description-dialog.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-details-tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-details-tile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-screen-requirements.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers-screen-requirements.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" afterDir="false" />
-    </list>
+    <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -379,12 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539028912688</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="makes it get along the actual theme and puts a placeholder for the images. A litte touch of Slivers too![Didn't really change much :meh:]">
+      <created>1539093079121</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1539093079121</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-2" width="1922" height="1083" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -466,7 +465,8 @@
     <MESSAGE value="Ignore the commit." />
     <MESSAGE value="Adds a Dialog to the organizers screen" />
     <MESSAGE value="Adds Hero Animation and logo from assets/logo. A blur effect to make it look a bit nice." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds Hero Animation and logo from assets/logo. A blur effect to make it look a bit nice." />
+    <MESSAGE value="makes it get along the actual theme and puts a placeholder for the images. A litte touch of Slivers too![Didn't really change much :meh:]" />
+    <option name="LAST_COMMIT_MESSAGE" value="makes it get along the actual theme and puts a placeholder for the images. A litte touch of Slivers too![Didn't really change much :meh:]" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart">
