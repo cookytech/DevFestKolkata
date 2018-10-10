@@ -3,9 +3,13 @@ import 'package:devfest_18_kolkata/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:devfest_18_kolkata/theme.dart' as theme;
 import 'package:devfest_18_kolkata/model/time_enum.dart';
+import 'package:flutter/services.dart';
 
-main() {
-  runApp(MyApp());
+void main() {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(new MyApp());
+  });
 }
 
 class MyApp extends StatefulWidget {

@@ -9,12 +9,10 @@ class DummyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color(random.nextInt(0x00FFFFFF) + 0xFF000000),
-      child: Center(
+    return Scaffold(
+      body: Center(
           child: Text(
         'Screen: $screenDetail',
-        style: TextStyle(color: Colors.white),
       )),
     );
   }

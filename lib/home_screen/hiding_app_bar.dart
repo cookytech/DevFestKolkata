@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:devfest_18_kolkata/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -52,22 +53,40 @@ class _HidingAppBarState extends State<HidingAppBar>
           controller: widget.tabController,
           tabs: <Widget>[
             Tab(
-              icon: Icon(MdiIcons.theater),
+              icon: Icon(
+                MdiIcons.theater,
+                color: googleColors[0],
+              ),
             ),
             Tab(
-              icon: Icon(MdiIcons.accountHeart),
+              icon: Icon(
+                MdiIcons.accountHeart,
+                color: googleColors[1],
+              ),
             ),
             Tab(
-              icon: Icon(MdiIcons.twitterRetweet),
+              icon: Icon(
+                MdiIcons.twitterRetweet,
+                color: googleColors[2],
+              ),
             ),
             Tab(
-              icon: Icon(MdiIcons.wechat),
+              icon: Icon(
+                MdiIcons.wechat,
+                color: googleColors[3],
+              ),
             ),
             Tab(
-              icon: Icon(MdiIcons.alertOctagram),
+              icon: Icon(
+                MdiIcons.alertOctagram,
+                color: googleColors[4],
+              ),
             ),
             Tab(
-              icon: Icon(MdiIcons.google),
+              icon: Icon(
+                MdiIcons.google,
+                color: googleColors[5],
+              ),
             ),
           ],
         ),

@@ -9,6 +9,10 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return DummyScreen(screenDetail: 'Chat Screen',);
+    return Scaffold(
+      body: Center(
+        child: Text('CHAT HERE'),
+      ),
+    );
   }
 }

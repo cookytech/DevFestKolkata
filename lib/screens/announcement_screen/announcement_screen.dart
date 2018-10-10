@@ -9,6 +9,10 @@ class AnnouncementScreen extends StatefulWidget {
 class _AnnouncementScreenState extends State<AnnouncementScreen> {
   @override
   Widget build(BuildContext context) {
-    return DummyScreen(screenDetail: 'Announcement Screen',);
+    return Scaffold(
+      body: Center(
+        child: Text('ANNOUNCEMENTS'),
+      ),
+    );
   }
 }
