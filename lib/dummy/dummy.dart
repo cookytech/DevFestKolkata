@@ -11,9 +11,10 @@ class DummyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Text(
-        'Screen: $screenDetail',
-      )),
+        child: Text(
+          'Screen: $screenDetail',
+        ),
+      ),
     );
   }
 }

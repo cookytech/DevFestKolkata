@@ -51,26 +51,30 @@ class _SessionWidgetState extends State<SessionWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: _session.speakers
                           .map(
-                            (speaker) => CircleAvatar(
-                                  backgroundImage: NetworkImage(
-                                    speaker.imageURI,
-                                  ),
-                                  minRadius: 24.0,
-                                  maxRadius: 36.0,
-                                  child: Material(
-                                    borderRadius: BorderRadius.circular(50.0),
-                                    color: Colors.transparent,
-                                    child: InkWell(
+                            (speaker) => Hero(
+                                  tag: speaker.name,
+                                  child: CircleAvatar(
+                                    backgroundImage: NetworkImage(
+                                      speaker.imageURI,
+                                    ),
+                                    minRadius: 24.0,
+                                    maxRadius: 36.0,
+                                    child: Material(
                                       borderRadius: BorderRadius.circular(50.0),
-                                      child: Center(),
-                                      onTap: () => Navigator.of(context).push(
-                                            SpeakerDetailsScreen.speakerRoute(
-                                                speaker),
-                                          ),
-                                      onLongPress: () => Scaffold.of(context)
-                                          .showSnackBar(SnackBar(
-                                              content: Text(
-                                                  '${speaker.name} (${speaker.designation})'))),
+                                      color: Colors.transparent,
+                                      child: InkWell(
+                                        borderRadius:
+                                            BorderRadius.circular(50.0),
+                                        child: Center(),
+                                        onTap: () => Navigator.of(context).push(
+                                              SpeakerDetailsScreen.speakerRoute(
+                                                  speaker),
+                                            ),
+                                        onLongPress: () => Scaffold.of(context)
+                                            .showSnackBar(SnackBar(
+                                                content: Text(
+                                                    '${speaker.name} (${speaker.designation})'))),
+                                      ),
                                     ),
                                   ),
                                 ),

@@ -94,7 +94,7 @@ Header Level 2
         ''',
         featureImageURI =
             'https://images.wallpaperscraft.com/image/butterfly_dark_wings_surface_71347_1920x1080.jpg',
-        speakers = const [Speaker.dummy(), Speaker.dummy()],
+        speakers = const [Speaker.dummy()],
         subHead = 'A State Management Adventure With Flutter',
         tagLine =
             '''State Management is one of the most important points for architechting an app properly.
