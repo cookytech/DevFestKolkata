@@ -11,9 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -31,8 +37,8 @@
       <file leaf-file-name="speaker_details_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="672">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -43,57 +49,23 @@
       <file leaf-file-name="session_detail_boc.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="social_media_buttons_grid.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/speaker_details_screen/social_media_buttons_grid.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1198">
-              <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+            <state relative-caret-position="407">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_screen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
+      <file leaf-file-name="backdrop_layer.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/session.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1968">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="360">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="speaker.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/speaker.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -126,7 +98,6 @@
         <option value="$PROJECT_DIR$/lib/home_screen/home_screen.dart" />
         <option value="$PROJECT_DIR$/lib/model/time_enum.dart" />
         <option value="$PROJECT_DIR$/lib/helper/widgets/time_manager.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/selector_layer/selector_layer.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_layer.dart" />
@@ -136,18 +107,19 @@
         <option value="$PROJECT_DIR$/lib/helper/widgets/frosted_background.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/column_list_item.dart" />
         <option value="$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/dummy/dummy.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_widget.dart" />
         <option value="$PROJECT_DIR$/lib/model/session.dart" />
         <option value="$PROJECT_DIR$/lib/model/speaker.dart" />
         <option value="$PROJECT_DIR$/lib/screens/speaker_details_screen/social_media_buttons_grid.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart" />
       </list>
     </option>
   </component>
@@ -196,6 +168,14 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="session_detail_screen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="session_detail_screen" type="462c0819:PsiDirectoryNode" />
+              <item name="backdrop_layer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539160662028</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="adds the rxdart package">
+      <created>1539161047557</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1539161047557</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -381,13 +368,14 @@
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32928064" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32848486" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.31025642" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3078788" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.3090909" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3078788" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3272727" />
       <window_info anchor="right" id="Flutter Outline" order="8" weight="0.32977587" />
@@ -395,14 +383,13 @@
       <window_info id="Captures" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24928367" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24928367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.3295129" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32848486" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,16 +446,10 @@
     <MESSAGE value="adds an enum for managing time" />
     <MESSAGE value="implements session details screen" />
     <MESSAGE value="implements speaker details screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="implements speaker details screen" />
+    <MESSAGE value="adds the rxdart package" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds the rxdart package" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -615,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -672,34 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -737,25 +683,72 @@
     <entry file="file://$PROJECT_DIR$/lib/model/speaker.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/session.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1968">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="576">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/MyCode/SDKs/Flutter/packages/flutter/lib/src/widgets/visibility.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/speaker_details_screen/social_media_buttons_grid.dart">
@@ -768,25 +761,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart">
+    <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_boc.dart">
+    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="360">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
