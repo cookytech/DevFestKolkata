@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers-screen-requirements.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers_tile_list_generator.dart';
 
 class OrganisersDetailsScreen extends StatefulWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:devfest_18_kolkata/model/organisers.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/organiser-description-dialog.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers-screen-requirements.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/social-media-icons.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_bottom_border_provider.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/organiser_description_dialog.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_provider.dart';
 import 'package:flutter/material.dart';
 
 class OrganisersDetailsTile extends StatefulWidget {
@@ -89,7 +89,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                   ],
                 ),
                 SizedBox(height: 20.0),
-                lowerBorder(width),
+                bottomBorder(width),
               ],
             ),
           ),

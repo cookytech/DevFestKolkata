@@ -12,7 +12,7 @@ List<Color> color = [
 List<IconData> icon = [
   MdiIcons.facebook,
   MdiIcons.twitter,
-  MdiIcons.googlePlus,
+  MdiIcons.meetup,
 ];
 
 List<String> url(index) {
