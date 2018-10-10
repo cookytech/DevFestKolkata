@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 
 class OrganisersDetailsTile extends StatefulWidget {
   final Organiser organiser;
+  final int index;
 
   const OrganisersDetailsTile({
     Key key,
     this.organiser,
+    this.index,
   }) : super(key: key);
 
   @override
@@ -28,15 +30,16 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
     return Stack(
       children: <Widget>[
         Container(
-          padding:EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
+          padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
           child: Placeholder(fallbackHeight: 250.0),
         ),
         Container(
           height: 100.0,
           width: width,
-          margin: EdgeInsets.only(top:140.0,bottom: 10.0),
+          margin: EdgeInsets.only(top: 140.0, bottom: 10.0),
           child: Card(
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0)),
             elevation: 10.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -44,7 +47,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    GestureDetector(
+                    InkWell(
                       onTap: () {
                         Navigator.of(context).push(
                           PageRouteBuilder(
@@ -54,6 +57,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                             pageBuilder: (BuildContext context, _, __) {
                               return OrganiserDescriptionDialog(
                                 organiser: widget.organiser,
+                                index: widget.index,
                               );
                             },
                           ),
@@ -67,11 +71,10 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                             width: 40.0,
                             height: 40.0,
                             child: Hero(
-                              tag: widget.organiser.logoURI,
-                              child: Image.asset(widget.organiser.logoURI)
-                            ),
+                                tag: widget.organiser.logoURI,
+                                child: Image.asset(widget.organiser.logoURI)),
                           ),
-                          SizedBox(width: 20.0),
+                          SizedBox(width: 10.0),
                           Text(
                             widget.organiser.title,
                             style: TextStyle(
@@ -82,7 +85,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                         ],
                       ),
                     ),
-                    socialMediaIconsRow(),
+                    socialMediaIconsRow(widget.index),
                   ],
                 ),
                 SizedBox(height: 20.0),

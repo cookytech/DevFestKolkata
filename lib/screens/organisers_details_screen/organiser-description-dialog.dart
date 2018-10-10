@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 
 class OrganiserDescriptionDialog extends StatelessWidget {
   final Organiser organiser;
+  final int index;
 
   const OrganiserDescriptionDialog({
     Key key,
     this.organiser,
+    this.index,
   }) : super(key: key);
 
   @override
@@ -28,6 +30,8 @@ class OrganiserDescriptionDialog extends StatelessWidget {
           ),
           Center(
             child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
               child: Container(
                 width: width / 1.1,
                 height: height / 1.2,
@@ -39,8 +43,7 @@ class OrganiserDescriptionDialog extends StatelessWidget {
                     Text(
                       organiser.title,
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20.0),
+                          fontWeight: FontWeight.w500, fontSize: 20.0),
                     ),
                     SizedBox(height: 5.0),
                     Expanded(
@@ -62,7 +65,7 @@ class OrganiserDescriptionDialog extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 16.0),
-                    socialMediaIconsRowGeryScale(),
+                    socialMediaIconsRowGeryScale(index),
                     lowerBorder(width),
                   ],
                 ),
