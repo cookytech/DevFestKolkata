@@ -11,122 +11,165 @@ class SessionWidget extends StatefulWidget {
   _SessionWidgetState createState() => _SessionWidgetState();
 }
 
-class _SessionWidgetState extends State<SessionWidget> {
+class _SessionWidgetState extends State<SessionWidget>
+    with TickerProviderStateMixin {
   Session get _session => widget.session;
   double get _imageWidth => (MediaQuery.of(context).size.width - 24.0) * 0.8;
 
+  AnimationController _slideController;
+  Animation<Offset> _slidePosition;
+
+  @override
+  void initState() {
+    super.initState();
+    _slideController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 800),
+    );
+    _slidePosition = TweenSequence<Offset>(<TweenSequenceItem<Offset>>[
+      TweenSequenceItem<Offset>(
+        tween: Tween(
+          begin: Offset(0.0, 0.0),
+          end: Offset(0.0, -1.0),
+        ),
+        weight: 30.0,
+      ),
+      TweenSequenceItem<Offset>(
+          tween: Tween(
+            begin: Offset(0.0, 1.0),
+            end: Offset(0.0, 0.0),
+          ),
+          weight: 100.0),
+    ]).animate(_slideController);
+  }
+
+  @override
+  void didUpdateWidget(SessionWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _slideController.reset();
+    _slideController.forward();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Container(
-          padding:
-              EdgeInsets.only(left: 12.0, right: 12.0, top: 96.0, bottom: 48.0),
-          child: Card(
-            child: Padding(
-              padding:
-                  const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 5.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  SizedBox(
-                    height: _imageWidth / 16 * 5,
-                  ),
-                  Text(
-                    _session.subHead,
-                    style: Theme.of(context).textTheme.subhead,
-                    textAlign: TextAlign.center,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 18.0),
-                    child: Text(
-                      _session.tagLine,
-                      style: Theme.of(context).textTheme.body1,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: _session.speakers
-                          .map(
-                            (speaker) => Hero(
-                                  tag: speaker.name,
-                                  child: CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                      speaker.imageURI,
-                                    ),
-                                    minRadius: 24.0,
-                                    maxRadius: 36.0,
-                                    child: Material(
-                                      borderRadius: BorderRadius.circular(50.0),
-                                      color: Colors.transparent,
-                                      child: InkWell(
-                                        borderRadius:
-                                            BorderRadius.circular(50.0),
-                                        child: Center(),
-                                        onTap: () => Navigator.of(context).push(
-                                              SpeakerDetailsScreen.speakerRoute(
-                                                  speaker),
-                                            ),
-                                        onLongPress: () => Scaffold.of(context)
-                                            .showSnackBar(SnackBar(
-                                                content: Text(
-                                                    '${speaker.name} (${speaker.designation})'))),
+    return SlideTransition(
+      position: _slidePosition,
+      child: Center(
+        child: Stack(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(
+                  left: 12.0, right: 12.0, top: 96.0, bottom: 48.0),
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      left: 12.0, right: 12.0, bottom: 5.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      SizedBox(
+                        height: _imageWidth / 16 * 5,
+                      ),
+                      Text(
+                        _session.subHead,
+                        style: Theme.of(context).textTheme.subhead,
+                        textAlign: TextAlign.center,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 18.0),
+                        child: Text(
+                          _session.tagLine,
+                          style: Theme.of(context).textTheme.body1,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 5.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: _session.speakers
+                              .map(
+                                (speaker) => Hero(
+                                      tag: speaker.name,
+                                      child: CircleAvatar(
+                                        backgroundImage: NetworkImage(
+                                          speaker.imageURI,
+                                        ),
+                                        minRadius: 24.0,
+                                        maxRadius: 36.0,
+                                        child: Material(
+                                          borderRadius:
+                                              BorderRadius.circular(50.0),
+                                          color: Colors.transparent,
+                                          child: InkWell(
+                                            borderRadius:
+                                                BorderRadius.circular(50.0),
+                                            child: Center(),
+                                            onTap: () =>
+                                                Navigator.of(context).push(
+                                                  SpeakerDetailsScreen
+                                                      .speakerRoute(speaker),
+                                                ),
+                                            onLongPress: () => Scaffold.of(
+                                                    context)
+                                                .showSnackBar(SnackBar(
+                                                    content: Text(
+                                                        '${speaker.name} (${speaker.designation})'))),
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ),
-                          )
-                          .toList(),
-                    ),
+                              )
+                              .toList(),
+                        ),
+                      ),
+                      ColumnListItem(
+                        title: 'Session Details',
+                        markdownData: _session.details,
+                      ),
+                      ColumnListItem(
+                        title: 'Speaker\'s Instructions',
+                        markdownData: _session.instructions,
+                      )
+                    ],
                   ),
-                  ColumnListItem(
-                    title: 'Session Details',
-                    markdownData: _session.details,
-                  ),
-                  ColumnListItem(
-                    title: 'Speaker\'s Instructions',
-                    markdownData: _session.instructions,
-                  )
-                ],
+                ),
               ),
             ),
-          ),
+            Align(
+              alignment: Alignment(0.0, -0.865),
+              child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(_session.featureImageURI),
+                    ),
+                    border: Border.all(
+                      width: 1.0,
+                      color: Theme.of(context).hintColor,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                width: _imageWidth,
+                height: _imageWidth / 16 * 9,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 3.0),
+                      child: Text(
+                        _session.title,
+                        style: Theme.of(context).textTheme.title.copyWith(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Theme.of(context).accentColor,
+                            decorationStyle: TextDecorationStyle.solid),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
         ),
-        Align(
-          alignment: Alignment(0.0, -0.9),
-          child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(_session.featureImageURI),
-                ),
-                border: Border.all(
-                  width: 1.0,
-                  color: Theme.of(context).hintColor,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(8.0))),
-            width: _imageWidth,
-            height: _imageWidth / 16 * 9,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 3.0),
-                  child: Text(
-                    _session.title,
-                    style: Theme.of(context).textTheme.title.copyWith(
-                        decoration: TextDecoration.underline,
-                        decorationColor: Theme.of(context).accentColor,
-                        decorationStyle: TextDecorationStyle.solid),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        )
-      ],
+      ),
     );
   }
 }

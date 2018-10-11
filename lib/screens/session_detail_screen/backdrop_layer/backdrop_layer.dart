@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_boc.dart'
+import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_bloc.dart'
     as bloc;
 
 class BackdropLayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<bool>(
-      initialData: true,
-      stream: bloc.isSelectorVisibleStream,
+      initialData: false,
+      stream: bloc.isBackdropVisibleStream,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return Visibility(
           visible: snapshot.data,
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaY: 5.0, sigmaX: 5.0),
+            filter: ImageFilter.blur(sigmaY: 3.0, sigmaX: 3.0),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.cyanAccent.shade100.withOpacity(0.5),
+                color: Colors.cyanAccent.shade100.withOpacity(0.15),
               ),
               child: Center(),
             ),

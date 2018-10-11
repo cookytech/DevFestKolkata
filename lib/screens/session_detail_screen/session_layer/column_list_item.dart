@@ -12,10 +12,6 @@ class ColumnListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          border: Border(
-              top: BorderSide(
-                  color: Theme.of(context).accentColor, width: 1.0))),
       child: InkWell(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
