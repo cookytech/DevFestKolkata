@@ -1,4 +1,3 @@
-import 'package:devfest_18_kolkata/dummy/dummy.dart';
 import 'package:flutter/material.dart';
 
 class AnnouncementScreen extends StatefulWidget {
@@ -9,6 +8,10 @@ class AnnouncementScreen extends StatefulWidget {
 class _AnnouncementScreenState extends State<AnnouncementScreen> {
   @override
   Widget build(BuildContext context) {
-    return DummyScreen(screenDetail: 'Announcement Screen',);
+    return Scaffold(
+      body: Center(
+        child: Text('ANNOUNCEMENTS'),
+      ),
+    );
   }
 }
