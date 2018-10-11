@@ -11,17 +11,14 @@ class _OrganisersDetailsScreenState extends State<OrganisersDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            expandedHeight: 50.0,
-            centerTitle: true,
-            title: Text('Organisers'),
-          ),
-          SliverList(
-            delegate: SliverChildListDelegate(list),
-          ),
-        ],
+      appBar: AppBar(
+        title: Text('Organisers'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: list,
+        ),
       ),
     );
   }

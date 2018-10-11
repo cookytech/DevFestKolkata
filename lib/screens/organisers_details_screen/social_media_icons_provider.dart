@@ -10,7 +10,7 @@ List<Color> color = [
 ];
 
 List<IconData> icon = [
-  MdiIcons.facebook,
+  MdiIcons.facebookBox,
   MdiIcons.twitter,
   MdiIcons.meetup,
 ];
@@ -34,6 +34,7 @@ Widget socialMediaIconsRow(int index) {
             icon: Icon(
               icon[i],
               color: color[i],
+              size: 30.0,
             ),
             onPressed: () {
               urlLauncher(url(index)[i]);
@@ -53,6 +54,7 @@ Widget socialMediaIconsRowGeryScale(int index) {
               icon: Icon(
                 icon[i],
                 color: Colors.grey,
+                size: 30.0,
               ),
               onPressed: () {
                 urlLauncher(url(index)[i]);

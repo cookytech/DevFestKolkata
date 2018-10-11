@@ -1,5 +1,6 @@
 import 'package:devfest_18_kolkata/model/organisers.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_bottom_border_provider.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/layers/organiser_tile_layers/organisers_tile_background_layer.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/organiser_description_dialog.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_provider.dart';
 import 'package:flutter/material.dart';
@@ -29,14 +30,13 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
 
     return Stack(
       children: <Widget>[
-        Container(
-          padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
-          child: Placeholder(fallbackHeight: 250.0),
+        organisersTileBackground(
+          imageURI: widget.organiser.imageURI,
         ),
         Container(
           height: 100.0,
           width: width,
-          margin: EdgeInsets.only(top: 140.0, bottom: 10.0),
+          margin: EdgeInsets.only(top: 140.0, bottom: 20.0),
           child: Card(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)),
@@ -74,11 +74,11 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                                 tag: widget.organiser.logoURI,
                                 child: Image.asset(widget.organiser.logoURI)),
                           ),
-                          SizedBox(width: 10.0),
+                          SizedBox(width: 15.0),
                           Text(
                             widget.organiser.title,
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 20.0,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
