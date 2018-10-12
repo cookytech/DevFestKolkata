@@ -12,7 +12,10 @@ class _OrganisersDetailsScreenState extends State<OrganisersDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Organisers'),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        title: Text('Organisers',),
+         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
