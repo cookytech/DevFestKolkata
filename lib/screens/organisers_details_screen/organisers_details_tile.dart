@@ -78,14 +78,14 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                           Text(
                             widget.organiser.title,
                             style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 16.5,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                         ],
                       ),
                     ),
-                    socialMediaIconsRow(widget.index),
+                    socialMediaIconsRow(widget.index, context),
                   ],
                 ),
                 SizedBox(height: 20.0),

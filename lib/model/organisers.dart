@@ -5,7 +5,6 @@ class Organiser {
   final String specialDescription;
   final String fbURL;
   final String twitterURL;
-  final String gPlusURL;
   final String imageURI;
 
   const Organiser({
@@ -15,7 +14,6 @@ class Organiser {
     this.specialDescription,
     this.fbURL,
     this.twitterURL,
-    this.gPlusURL,
     this.imageURI,
   });
 }
@@ -32,8 +30,6 @@ const organisers = <Organiser>[
         ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
         ' officia deserunt mollit anim id est laborum.',
     fbURL: 'https://www.facebook.com/GDGKolkata/',
-    gPlusURL:
-        'https://www.meetup.com/GDG-Kolkata/?_cookie-check=klBmOviDWP24LZlk',
     logoURI: 'assets/logo/google-developers.png',
     specialDescription:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
@@ -44,7 +40,7 @@ const organisers = <Organiser>[
         ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
         ' officia deserunt mollit anim id est laborum.',
     twitterURL: 'https://twitter.com/gdgkolkata?s=09',
-    imageURI: '',
+    imageURI: 'assets/image/gdg_background.jpg',
   ),
   Organiser(
     title: "WTM Kolkata",
@@ -56,8 +52,7 @@ const organisers = <Organiser>[
         ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
         ' officia deserunt mollit anim id est laborum.',
-    fbURL: 'fb.me',
-    gPlusURL: 'tredytg',
+    fbURL: 'https://www.facebook.com/WTMKolkata/',
     logoURI: 'assets/logo/wtm.png',
     specialDescription:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
@@ -67,8 +62,8 @@ const organisers = <Organiser>[
         ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
         ' officia deserunt mollit anim id est laborum.',
-    twitterURL: 'chgfcjhg',
-    imageURI: 'assets/image/wtm_background.JPG',
+    twitterURL: '',
+    imageURI: 'assets/image/wtm_background.jpg',
   ),
   Organiser(
     title: "DSC Kolkata",
@@ -80,8 +75,7 @@ const organisers = <Organiser>[
         ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
         ' officia deserunt mollit anim id est laborum.',
-    fbURL: 'fb.me',
-    gPlusURL: 'tredytg',
+    fbURL: 'https://www.facebook.com/DSCKolkata/',
     logoURI: 'assets/logo/dsc.png',
     specialDescription:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
@@ -91,7 +85,7 @@ const organisers = <Organiser>[
         ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
         ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
         ' officia deserunt mollit anim id est laborum.',
-    twitterURL: 'chgfcjhg',
+    twitterURL: 'https://twitter.com/DSCKolkata',
     imageURI: 'assets/image/dsc_kolkata_background.png',
   ),
 ];
