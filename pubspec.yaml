@@ -29,9 +29,14 @@ dependencies:
   cloud_firestore: ^0.8.1+1
   firebase_storage: ^1.0.4
 
+  cached_network_image: ^0.5.0
+  shared_preferences: ^0.4.3
+  intl: ^0.15.7
+
+
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+#  flutter_test:
+#    sdk: flutter
 
 
 # For information on the generic Dart part of this file, see the
