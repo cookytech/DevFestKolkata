@@ -14,12 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -34,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="546">
+              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -47,16 +44,28 @@
         <entry file="file://$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_screen.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home_screen.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="768">
+              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hiding_app_bar.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -83,7 +92,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/theme.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/android/app/src/main/kotlin/in/cookytech/devfest18kolkata/MainActivity.kt" />
         <option value="$PROJECT_DIR$/lib/screens/session_details_screen/session_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_details_screen/invitation_details_screen/invitation_details_screen.dart" />
@@ -94,7 +102,6 @@
         <option value="$PROJECT_DIR$/lib/screens/chat_screen/chat_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart" />
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/layers/organisers_tile_background_layer.dart" />
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/layers/organisers_tile_upper-card.dart" />
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/layers/organisers_tile_upper_layer.dart" />
@@ -110,6 +117,8 @@
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart" />
         <option value="$PROJECT_DIR$/lib/home_screen/home_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
       </list>
     </option>
   </component>
@@ -149,6 +158,13 @@
               <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="quick_links_screen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
@@ -349,16 +365,31 @@
       <option name="project" value="LOCAL" />
       <updated>1539513931286</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="refactors chatscreen to realtime board">
+      <created>1539583801610</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1539583801610</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactors announcement to quicklink screen">
+      <created>1539584071738</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1539584071738</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50143266" side_tool="true" weight="0.3078788" />
-      <window_info active="true" anchor="bottom" id="Dart Analysis" order="8" visible="true" weight="0.3090909" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.3090909" />
       <window_info anchor="right" id="Flutter Outline" order="8" weight="0.3295129" />
       <window_info anchor="bottom" id="Logcat" order="11" weight="0.3290461" />
       <window_info id="Capture Tool" order="7" />
@@ -376,7 +407,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49928367" weight="0.6981818" />
       <window_info id="Captures" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24928367" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24928367" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969698" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -463,7 +494,9 @@
     <MESSAGE value="compiles with google sign in plugin" />
     <MESSAGE value="bumps minSDK to 21 to escape miltidex configuration, compiles with firestore and storage plugins" />
     <MESSAGE value="adds cached_network_image, shared_preferences, intl&#10;compiles&#10;&#10;had to remove flutter_test plugin due to locked dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds cached_network_image, shared_preferences, intl&#10;compiles&#10;&#10;had to remove flutter_test plugin due to locked dependency" />
+    <MESSAGE value="refactors chatscreen to realtime board" />
+    <MESSAGE value="refactors announcement to quicklink screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactors announcement to quicklink screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,7 +604,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/announcement_screen/announcement_screen.dart">
+    <entry file="file://$PROJECT_DIR$/lib/screens/quick_links_screen/quick_links_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="3" column="32" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="32" />
@@ -603,11 +636,6 @@
     <entry file="file://$USER_HOME$/sdk/flutter/packages/flutter/lib/src/material/tab_controller.dart" />
     <entry file="file://$USER_HOME$/sdk/flutter/bin/cache/pkg/sky_engine/lib/ui/geometry.dart" />
     <entry file="file://$USER_HOME$/sdk/flutter/bin/cache/pkg/sky_engine/lib/async/timer.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/devfest_18_kolkata.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -743,24 +771,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/home_screen/hiding_app_bar.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/home_screen/home_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="768">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
         </state>
       </provider>
     </entry>
