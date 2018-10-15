@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "806439888000",
+    "firebase_url": "https://devfest-kolkata.firebaseio.com",
+    "project_id": "devfest-kolkata",
+    "storage_bucket": "devfest-kolkata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806439888000:android:4cf729ca7fd5ccc7",
+        "android_client_info": {
+          "package_name": "in.cookytech.devfest18kolkata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806439888000-c4kdaq169s2kc2o0no24vtjvlf77mi1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.cookytech.devfest18kolkata",
+            "certificate_hash": "8c9e5a5b36dfcf3182707aea22564cee0b22a4ae"
+          }
+        },
+        {
+          "client_id": "806439888000-anbdfth30nh5htch2ljl0hdbvsqpenkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJmBkeCOCmby4HzGl8fMwhOcY7G8lkxDc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806439888000-anbdfth30nh5htch2ljl0hdbvsqpenkl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "806439888000-d96u0k6c9cii0h4okhokf4r7082fp4j8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "in.cookytech.devfest18kolkata"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
