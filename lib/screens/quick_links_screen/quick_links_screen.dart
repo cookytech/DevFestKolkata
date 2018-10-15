@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AnnouncementScreen extends StatefulWidget {
+class QuickLinksScreen extends StatefulWidget {
   @override
-  _AnnouncementScreenState createState() => _AnnouncementScreenState();
+  _QuickLinksScreenState createState() => _QuickLinksScreenState();
 }
 
-class _AnnouncementScreenState extends State<AnnouncementScreen> {
+class _QuickLinksScreenState extends State<QuickLinksScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

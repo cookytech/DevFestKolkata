@@ -35,7 +35,7 @@ class MyAppState extends State<MyApp> {
       child: MaterialApp(
         title: 'DevFest\'18 Kolkata',
         theme: theme.myTheme,
-        home: HomeScreen(),
+        home: SafeArea(child: HomeScreen()),
       ),
     );
   }
