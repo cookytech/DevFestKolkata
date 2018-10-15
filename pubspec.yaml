@@ -32,6 +32,7 @@ dependencies:
   cached_network_image: ^0.5.0
   shared_preferences: ^0.4.3
   intl: ^0.15.7
+#TODO: implement once resolved  image_picker: ^0.4.10
 
 
 dev_dependencies:
