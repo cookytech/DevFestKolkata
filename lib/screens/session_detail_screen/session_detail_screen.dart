@@ -14,13 +14,15 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
-        builder: (_, __)=> Stack(
-          children: <Widget>[
-            SessionLayer( currentSessionStream: bloc.currentSessionStream,),
-            BackdropLayer(),
-            SelectorLayer(),
-          ],
-        ),
+        builder: (_, __) => Stack(
+              children: <Widget>[
+                SessionLayer(
+                  currentSessionStream: bloc.currentSessionStream,
+                ),
+                BackdropLayer(),
+                SelectorLayer(),
+              ],
+            ),
       ),
     );
   }
