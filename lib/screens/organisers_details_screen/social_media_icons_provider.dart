@@ -63,7 +63,8 @@ urlLauncher(String url, context) async {
   if (url == '') {
     Scaffold.of(context).showSnackBar(
       SnackBar(
-        content: Text('Sorry! we currenty don\'t have links for that.'),backgroundColor: Colors.grey,
+        content: Text('Sorry! we currenty don\'t have links for that.'),
+        backgroundColor: Colors.grey,
       ),
     );
   } else if (await canLaunch(url)) {
