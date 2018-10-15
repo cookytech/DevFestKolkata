@@ -79,7 +79,7 @@ class _HidingAppBarState extends State<HidingAppBar>
             ),
             Tab(
               icon: Icon(
-                MdiIcons.alertOctagram,
+                MdiIcons.linkVariant,
                 color: googleColors[4],
               ),
             ),

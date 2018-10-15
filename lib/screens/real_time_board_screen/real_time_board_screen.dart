@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ChatScreen extends StatefulWidget {
+class RealTimeBoardScreen extends StatefulWidget {
   @override
-  _ChatScreenState createState() => _ChatScreenState();
+  _RealTimeBoardScreenState createState() => _RealTimeBoardScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class _RealTimeBoardScreenState extends State<RealTimeBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
