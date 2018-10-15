@@ -11,7 +11,9 @@ class SelectorLayer extends StatelessWidget {
         LeftSelector(
           cloudTrackSessions: List.generate(8, (_) => Session.dummy()),
         ),
-        RightSelector(),
+        RightSelector(
+          cloudTrackSessions: <Session>[],
+        ),
       ],
     );
   }
