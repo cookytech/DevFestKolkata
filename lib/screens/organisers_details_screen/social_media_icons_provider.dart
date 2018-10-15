@@ -6,17 +6,20 @@ import 'package:url_launcher/url_launcher.dart';
 List<Color> color = [
   Color.fromRGBO(59, 89, 152, 1.0),
   Color.fromRGBO(29, 202, 255, 1.0),
+  Color.fromRGBO(237, 28, 64, 1.0),
 ];
 
 List<IconData> icon = [
   MdiIcons.facebookBox,
   MdiIcons.twitter,
+  MdiIcons.meetup,
 ];
 
 List<String> url(index) {
   List<String> list = [
     organisers[index].fbURL,
     organisers[index].twitterURL,
+    organisers[index].meetUpUrl,
   ];
   return list;
 }
@@ -26,7 +29,9 @@ Widget socialMediaIconsRow(int index, context) {
     mainAxisAlignment: MainAxisAlignment.center,
     children: List.generate(
       icon.length,
-      (i) => IconButton(
+      (i) {
+        if(url(index)[i] != '') {
+          return IconButton(
             icon: Icon(
               icon[i],
               color: color[i],
@@ -35,7 +40,11 @@ Widget socialMediaIconsRow(int index, context) {
             onPressed: () {
               urlLauncher(url(index)[i], context);
             },
-          ),
+          );
+        }else{
+          return Container();
+        }
+      },
     ),
   );
 }
@@ -45,7 +54,9 @@ Widget socialMediaIconsRowGeryScale(int index, context) {
     mainAxisAlignment: MainAxisAlignment.center,
     children: List.generate(
       icon.length,
-      (i) => IconButton(
+      (i) {
+        if(url(index)[i] != '') {
+          return IconButton(
             icon: Icon(
               icon[i],
               color: Colors.grey,
@@ -54,19 +65,17 @@ Widget socialMediaIconsRowGeryScale(int index, context) {
             onPressed: () {
               urlLauncher(url(index)[i], context);
             },
-          ),
+          );
+        }else{
+          return Container();
+        }
+      },
     ),
   );
 }
 
 urlLauncher(String url, context) async {
-  if (url == '') {
-    Scaffold.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Sorry! we currenty don\'t have links for that.'),backgroundColor: Colors.grey,
-      ),
-    );
-  } else if (await canLaunch(url)) {
+   if (await canLaunch(url)) {
     await launch(url);
   }
 }

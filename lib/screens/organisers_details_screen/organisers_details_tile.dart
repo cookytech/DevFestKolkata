@@ -31,6 +31,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
     return Stack(
       children: <Widget>[
         organisersTileBackground(
+          width,
           imageURI: widget.organiser.imageURI,
         ),
         Container(
