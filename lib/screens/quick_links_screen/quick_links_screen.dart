@@ -10,7 +10,7 @@ class _QuickLinksScreenState extends State<QuickLinksScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('ANNOUNCEMENTS'),
+        child: Text('QuickLinks'),
       ),
     );
   }
