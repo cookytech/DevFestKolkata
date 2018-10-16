@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'dart:ui' as ui;
 import 'package:devfest_18_kolkata/model/organisers.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_provider.dart';
@@ -23,7 +23,7 @@ class OrganiserDescriptionDialog extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 2.5, sigmaY: 2.5),
+            filter: ui.ImageFilter.blur(sigmaX: 2.5, sigmaY: 2.5),
             child: Container(
               color: Colors.white.withOpacity(0.0),
             ),
