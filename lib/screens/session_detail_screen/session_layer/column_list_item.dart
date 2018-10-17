@@ -47,6 +47,7 @@ class ColumnListItem extends StatelessWidget {
                               bottom: 8.0, right: 8.0, left: 8.0),
                           height: 300.0,
                           child: ListView(
+                            physics: BouncingScrollPhysics(),
                             children: <Widget>[
                               MarkdownBody(data: markdownData),
                             ],

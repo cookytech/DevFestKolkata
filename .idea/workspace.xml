@@ -30,20 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="session_widget.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="session_widget.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_widget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-841">
-              <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+            <state relative-caret-position="293">
+              <caret line="111" column="61" lean-forward="true" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="column_list_item.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="column_list_item.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/column_list_item.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+            <state relative-caret-position="798">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
               <folding>
                 <element signature="e#0#129#0" expanded="true" />
               </folding>
@@ -109,14 +109,14 @@
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/selector_layer/right_display_card.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/selector_layer/left_display_card.dart" />
         <option value="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_widget.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/column_list_item.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_widget.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1432" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -6418,13 +6418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_widget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-841">
-          <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SDK/flutter/packages/flutter/lib/src/material/dialog.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -6434,11 +6427,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/column_list_item.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        <state relative-caret-position="798">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
           <folding>
             <element signature="e#0#129#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/session_layer/session_widget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="111" column="61" lean-forward="true" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
         </state>
       </provider>
     </entry>

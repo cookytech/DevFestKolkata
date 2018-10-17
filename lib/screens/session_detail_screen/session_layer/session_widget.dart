@@ -8,6 +8,7 @@ class SessionWidget extends StatefulWidget {
   final Session session;
 
   const SessionWidget({Key key, this.session}) : super(key: key);
+
   @override
   _SessionWidgetState createState() => _SessionWidgetState();
 }
@@ -15,6 +16,7 @@ class SessionWidget extends StatefulWidget {
 class _SessionWidgetState extends State<SessionWidget>
     with TickerProviderStateMixin {
   Session get _session => widget.session;
+
   double get _imageWidth => (MediaQuery.of(context).size.width - 24.0) * 0.8;
 
   AnimationController _slideController;
@@ -114,7 +116,8 @@ class _SessionWidgetState extends State<SessionWidget>
                                                 onTap: () =>
                                                     Navigator.of(context).push(
                                                       SpeakerDetailsScreen
-                                                          .speakerRoute(speaker),
+                                                          .speakerRoute(
+                                                              speaker),
                                                     ),
                                                 onLongPress: () => Scaffold.of(
                                                         context)
@@ -156,23 +159,34 @@ class _SessionWidgetState extends State<SessionWidget>
                       width: 1.0,
                       color: Theme.of(context).hintColor,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
                 width: _imageWidth,
                 height: _imageWidth / 16 * 9,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 3.0),
-                      child: Text(
-                        _session.title,
-                        style: Theme.of(context).textTheme.title.copyWith(
-                            decoration: TextDecoration.underline,
-                            decorationColor: Theme.of(context).accentColor,
-                            decorationStyle: TextDecorationStyle.solid),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    gradient: LinearGradient(
+                        colors: [Colors.black, Colors.transparent],
+                        begin: FractionalOffset.bottomCenter,
+                        end: FractionalOffset.topCenter,
+                        stops: [0.05, 0.4]),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 3.0),
+                        child: Text(
+                          _session.title,
+                          style: Theme.of(context).textTheme.title.copyWith(
+                              decoration: TextDecoration.underline,
+                              decorationColor: Theme.of(context).accentColor,
+                              decorationStyle: TextDecorationStyle.solid),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             )
