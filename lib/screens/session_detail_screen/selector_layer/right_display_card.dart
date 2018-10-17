@@ -5,7 +5,7 @@ class RightDisplayCard extends StatefulWidget {
   final Session session;
   final int index;
 
-  const RightDisplayCard({Key key, this.session, this.index}) : super(key: key);
+  const RightDisplayCard({Key key, @required this.session, @required this.index}) : super(key: key);
   @override
   _RightDisplayCardState createState() => _RightDisplayCardState();
 }

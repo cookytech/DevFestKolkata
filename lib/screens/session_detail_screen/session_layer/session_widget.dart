@@ -46,8 +46,10 @@ class _SessionWidgetState extends State<SessionWidget>
   @override
   void didUpdateWidget(SessionWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
-    _slideController.reset();
-    _slideController.forward();
+    if (oldWidget.session.title != _session.title) {
+      _slideController.reset();
+      _slideController.forward();
+    }
   }
 
   @override
