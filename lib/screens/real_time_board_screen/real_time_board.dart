@@ -16,7 +16,7 @@ class _RealTimeBoardState extends State<RealTimeBoard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('UserName: ${_user.displayName}'),
+      child: Center(child: Text('UserName: ${_user.displayName}')),
     );
   }
 }

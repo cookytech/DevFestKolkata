@@ -27,7 +27,7 @@ BehaviorSubject<Session> _currentSessionController = BehaviorSubject<Session>();
 Stream<Session> get currentSessionStream => _currentSessionController.stream;
 set currentSession(Session session) {
   _currentDisplayedSessionCache = session;
-  _currentSessionController.sink.add(session);
+  _currentSessionController.sink.add(_currentDisplayedSessionCache);
 }
 
 makeLeftSelectorVisible() {
