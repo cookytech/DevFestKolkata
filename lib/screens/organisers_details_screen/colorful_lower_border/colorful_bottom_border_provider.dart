@@ -19,7 +19,7 @@ List<Widget> colorsList = List.generate(
       ),
 );
 
-Widget bottomBorder(width) => Container(
+Widget bottomBorder({double width}) => Container(
       height: 5.5,
       width: width,
       child: ClipRRect(
