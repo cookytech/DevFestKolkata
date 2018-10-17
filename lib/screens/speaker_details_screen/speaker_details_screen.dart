@@ -18,7 +18,7 @@ class SpeakerDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _imageWidth = MediaQuery.of(context).size.width * 0.5;
+    double _imageWidth = MediaQuery.of(context).size.width * 0.46;
 
     return Scaffold(
       appBar: AppBar(
