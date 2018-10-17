@@ -12,7 +12,7 @@ class RealTimeBoardScreen extends StatefulWidget {
 class _RealTimeBoardScreenState extends State<RealTimeBoardScreen> {
   @override
   Widget build(BuildContext context) {
-    FirebaseUser firebaseUser = UserManager.of(context).user.firebaseUser;
+    FirebaseUser firebaseUser = UserManager.of(context).user?.firebaseUser;
 
     return Scaffold(
       body: firebaseUser == null

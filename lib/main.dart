@@ -34,7 +34,7 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return UserManager(
-      newUser: (User newUser){
+      newUser: (User newUser) {
         setState(() {
           user = newUser;
         });
