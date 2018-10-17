@@ -1,4 +1,5 @@
 import 'package:devfest_18_kolkata/model/session.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
 import 'package:flutter/material.dart';
 
 class LeftDisplayCard extends StatefulWidget {
@@ -21,25 +22,30 @@ class _LeftDisplayCardState extends State<LeftDisplayCard>
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width / 1.6;
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 300),
-          child: Row(
-            children: <Widget>[
-              SizedBox(
-                width: 40.0,
-              ),
-              Text('${widget.index + 1}'),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Text(_session.title),
-                ],
-              ),
-            ],
-          ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: AnimatedContainer(
+        width: width,
+        height: 60.0,
+        duration: Duration(milliseconds: 300),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Center(
+                child: Column(
+                  children: <Widget>[
+                    Text(_session.title),
+                    Text(
+                      '${_session.fromTime}-${_session.toTime}',
+                    ),
+                  ],
+                )),
+            SizedBox(height: 10.0),
+            bottomBorder(width: width),
+          ],
         ),
       ),
     );

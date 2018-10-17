@@ -1,3 +1,4 @@
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
@@ -5,9 +6,11 @@ class ColumnListItem extends StatelessWidget {
   final String title;
   final String markdownData;
 
-  const ColumnListItem(
-      {Key key, this.title = '', this.markdownData = 'description'})
-      : super(key: key);
+  const ColumnListItem({
+    Key key,
+    this.title = '',
+    this.markdownData = 'description',
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +31,34 @@ class ColumnListItem extends StatelessWidget {
         ),
         onTap: () {
           showDialog(
-              context: context,
-              builder: (_) => SimpleDialog(
-                    titlePadding: EdgeInsets.all(8.0),
-                    contentPadding: EdgeInsets.all(8.0),
-                    title: Text(title),
+            context: context,
+            builder: (_) => Dialog(
+                  child: Column(
                     children: <Widget>[
-                      MarkdownBody(data: markdownData),
+                      Text(
+                        title,
+                        style: TextStyle(
+                          fontSize: 18.0,
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(
+                              bottom: 8.0, right: 8.0, left: 8.0),
+                          height: 300.0,
+                          child: ListView(
+                            physics: BouncingScrollPhysics(),
+                            children: <Widget>[
+                              MarkdownBody(data: markdownData),
+                            ],
+                          ),
+                        ),
+                      ),
+                      bottomBorder(),
                     ],
-                  ));
+                  ),
+                ),
+          );
         },
       ),
     );
