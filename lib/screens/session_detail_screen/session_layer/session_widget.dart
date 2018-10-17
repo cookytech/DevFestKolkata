@@ -1,4 +1,5 @@
 import 'package:devfest_18_kolkata/model/session.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_layer/column_list_item.dart';
 import 'package:devfest_18_kolkata/screens/speaker_details_screen/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
@@ -61,80 +62,86 @@ class _SessionWidgetState extends State<SessionWidget>
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(
-                  left: 12.0, right: 12.0, top: 96.0, bottom: 48.0),
+                  left: 12.0, right: 12.0, top: 96.0, bottom: 42.0),
               child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 12.0, right: 12.0, bottom: 5.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      SizedBox(
-                        height: _imageWidth / 16 * 5,
-                      ),
-                      Text(
-                        _session.subHead,
-                        style: Theme.of(context).textTheme.subhead,
-                        textAlign: TextAlign.center,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 18.0),
-                        child: Text(
-                          _session.tagLine,
-                          style: Theme.of(context).textTheme.body1,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 5.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: _session.speakers
-                              .map(
-                                (speaker) => Hero(
-                                      tag: speaker.name,
-                                      child: CircleAvatar(
-                                        backgroundImage: NetworkImage(
-                                          speaker.imageURI,
-                                        ),
-                                        minRadius: 24.0,
-                                        maxRadius: 36.0,
-                                        child: Material(
-                                          borderRadius:
-                                              BorderRadius.circular(50.0),
-                                          color: Colors.transparent,
-                                          child: InkWell(
-                                            borderRadius:
-                                                BorderRadius.circular(50.0),
-                                            child: Center(),
-                                            onTap: () =>
-                                                Navigator.of(context).push(
-                                                  SpeakerDetailsScreen
-                                                      .speakerRoute(speaker),
-                                                ),
-                                            onLongPress: () => Scaffold.of(
-                                                    context)
-                                                .showSnackBar(SnackBar(
-                                                    content: Text(
-                                                        '${speaker.name} (${speaker.designation})'))),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 12.0, right: 12.0, bottom: 5.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          SizedBox(
+                            height: _imageWidth / 16 * 5,
+                          ),
+                          Text(
+                            _session.subHead,
+                            style: Theme.of(context).textTheme.subhead,
+                            textAlign: TextAlign.center,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 18.0),
+                            child: Text(
+                              _session.tagLine,
+                              style: Theme.of(context).textTheme.body1,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 5.0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: _session.speakers
+                                  .map(
+                                    (speaker) => Hero(
+                                          tag: speaker.name,
+                                          child: CircleAvatar(
+                                            backgroundImage: NetworkImage(
+                                              speaker.imageURI,
+                                            ),
+                                            minRadius: 24.0,
+                                            maxRadius: 36.0,
+                                            child: Material(
+                                              borderRadius:
+                                                  BorderRadius.circular(50.0),
+                                              color: Colors.transparent,
+                                              child: InkWell(
+                                                borderRadius:
+                                                    BorderRadius.circular(50.0),
+                                                child: Center(),
+                                                onTap: () =>
+                                                    Navigator.of(context).push(
+                                                      SpeakerDetailsScreen
+                                                          .speakerRoute(speaker),
+                                                    ),
+                                                onLongPress: () => Scaffold.of(
+                                                        context)
+                                                    .showSnackBar(SnackBar(
+                                                        content: Text(
+                                                            '${speaker.name} (${speaker.designation})'))),
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ),
-                              )
-                              .toList(),
-                        ),
+                                  )
+                                  .toList(),
+                            ),
+                          ),
+                          ColumnListItem(
+                            title: 'Session Details',
+                            markdownData: _session.details,
+                          ),
+                          ColumnListItem(
+                            title: 'Speaker\'s Instructions',
+                            markdownData: _session.instructions,
+                          )
+                        ],
                       ),
-                      ColumnListItem(
-                        title: 'Session Details',
-                        markdownData: _session.details,
-                      ),
-                      ColumnListItem(
-                        title: 'Speaker\'s Instructions',
-                        markdownData: _session.instructions,
-                      )
-                    ],
-                  ),
+                    ),
+                    bottomBorder(),
+                  ],
                 ),
               ),
             ),
