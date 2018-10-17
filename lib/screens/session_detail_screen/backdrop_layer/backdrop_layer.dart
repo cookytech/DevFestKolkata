@@ -13,12 +13,11 @@ class BackdropLayer extends StatelessWidget {
         return Visibility(
           visible: snapshot.data,
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaY: 3.0, sigmaX: 3.0),
+            filter: ImageFilter.blur(sigmaY: 2.5, sigmaX: 2.5),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.cyanAccent.shade100.withOpacity(0.15),
+                color: Colors.black.withOpacity(0.15),
               ),
-              child: Center(),
             ),
           ),
         );

@@ -1,11 +1,15 @@
 import 'package:devfest_18_kolkata/model/session.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
 import 'package:flutter/material.dart';
 
 class RightDisplayCard extends StatefulWidget {
   final Session session;
   final int index;
 
-  const RightDisplayCard({Key key, @required this.session, @required this.index}) : super(key: key);
+  const RightDisplayCard(
+      {Key key, @required this.session, @required this.index})
+      : super(key: key);
+
   @override
   _RightDisplayCardState createState() => _RightDisplayCardState();
 }
@@ -21,25 +25,30 @@ class _RightDisplayCardState extends State<RightDisplayCard>
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width / 1.6;
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: AnimatedContainer(
-          duration: Duration(milliseconds: 300),
-          child: Row(
-            children: <Widget>[
-              Text('${widget.index + 1}'),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Text(_session.title),
-                ],
-              ),
-              SizedBox(
-                width: 40.0,
-              ),
-            ],
-          ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: AnimatedContainer(
+        width: width,
+        height: 60.0,
+        duration: Duration(milliseconds: 300),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Center(
+                child: Column(
+              children: <Widget>[
+                Text(_session.title),
+                Text(
+                  '${_session.fromTime}-${_session.toTime}',
+                ),
+              ],
+            )),
+            SizedBox(height: 10.0),
+            bottomBorder(width: width),
+          ],
         ),
       ),
     );
