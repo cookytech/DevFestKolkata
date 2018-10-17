@@ -15,7 +15,7 @@ class _OrganisersDetailsScreenState extends State<OrganisersDetailsScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Text('Organisers',),
-         centerTitle: true,
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

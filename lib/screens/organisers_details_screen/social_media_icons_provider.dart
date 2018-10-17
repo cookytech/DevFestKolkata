@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 List<Color> color = [
   Color.fromRGBO(59, 89, 152, 1.0),
   Color.fromRGBO(29, 202, 255, 1.0),
-  Color.fromRGBO(221, 75, 57, 1.0),
+  Color.fromRGBO(237, 28, 64, 1.0),
 ];
 
 List<IconData> icon = [
@@ -19,53 +19,63 @@ List<String> url(index) {
   List<String> list = [
     organisers[index].fbURL,
     organisers[index].twitterURL,
-    organisers[index].gPlusURL,
+    organisers[index].meetUpUrl,
   ];
   return list;
 }
 
-Widget socialMediaIconsRow(int index) {
+Widget socialMediaIconsRow(int index, context) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: List.generate(
-      organisers.length,
-          (i) =>
-          IconButton(
+      icon.length,
+      (i) {
+        if(url(index)[i] != '') {
+          return IconButton(
             icon: Icon(
               icon[i],
               color: color[i],
               size: 30.0,
             ),
             onPressed: () {
-              urlLauncher(url(index)[i]);
+              urlLauncher(url(index)[i], context);
             },
-          ),
+          );
+        }else{
+          return Container();
+        }
+      },
     ),
   );
 }
 
-Widget socialMediaIconsRowGeryScale(int index) {
+Widget socialMediaIconsRowGeryScale(int index, context) {
   return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(
-        organisers.length,
-            (i) =>
-            IconButton(
-              icon: Icon(
-                icon[i],
-                color: Colors.grey,
-                size: 30.0,
-              ),
-              onPressed: () {
-                urlLauncher(url(index)[i]);
-              },
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: List.generate(
+      icon.length,
+      (i) {
+        if(url(index)[i] != '') {
+          return IconButton(
+            icon: Icon(
+              icon[i],
+              color: Colors.grey,
+              size: 30.0,
             ),
-      ),
+            onPressed: () {
+              urlLauncher(url(index)[i], context);
+            },
+          );
+        }else{
+          return Container();
+        }
+      },
+    ),
   );
 }
 
-urlLauncher(String url) async {
-  if (await canLaunch(url)) {
+urlLauncher(String url, context) async {
+   if (await canLaunch(url)) {
     await launch(url);
   }
 }
