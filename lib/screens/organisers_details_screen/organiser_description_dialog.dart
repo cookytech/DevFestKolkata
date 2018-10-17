@@ -66,7 +66,7 @@ class OrganiserDescriptionDialog extends StatelessWidget {
                     ),
                     SizedBox(height: 16.0),
                     socialMediaIconsRowGeryScale(index, context),
-                    bottomBorder(width),
+                    bottomBorder(width: width),
                   ],
                 ),
               ),
