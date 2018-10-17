@@ -90,7 +90,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                   ],
                 ),
                 SizedBox(height: 20.0),
-                bottomBorder(width),
+                bottomBorder(width: width),
               ],
             ),
           ),
