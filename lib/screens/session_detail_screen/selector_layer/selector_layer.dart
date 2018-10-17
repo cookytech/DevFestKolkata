@@ -1,7 +1,8 @@
 import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/selector_layer/left_display_card.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/selector_layer/right_display_card.dart';
-import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_bloc.dart' as bloc;
+import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_bloc.dart'
+    as bloc;
 import 'package:flutter/material.dart';
 
 enum PanSide { right, left }
@@ -62,7 +63,7 @@ class SelectorLayerState extends State<SelectorLayer> {
         Expanded(
           child: StreamBuilder<bool>(
             initialData: false,
-            stream: bloc.isLeftSelectorVisibleStream,
+            stream: bloc.isSelectorVisibleStream,
             builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
               return Visibility(
                 visible: snapshot.data,
@@ -128,6 +129,7 @@ class SelectorLayerState extends State<SelectorLayer> {
     bloc.makeInvisible();
     bloc.currentSession = _leftSessions[_leftSessionIndex];
   }
+
   panEndRight(DragEndDetails dragDetails) {
     bloc.makeInvisible();
     bloc.currentSession = _rightSessions[_rightSessionIndex];

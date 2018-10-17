@@ -3,26 +3,13 @@ import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 import 'package:devfest_18_kolkata/model/session.dart';
 
-//LeftSelectorVisibility
-bool _isLeftSelectorVisibleCache = false;
-BehaviorSubject<bool> _isLeftSelectorVisibleController =
-    BehaviorSubject<bool>();
-Stream<bool> get isLeftSelectorVisibleStream =>
-    _isLeftSelectorVisibleController.stream;
-set _isLeftSelectorVisible(bool isVisible) {
-  _isLeftSelectorVisibleCache = isVisible;
-  _isLeftSelectorVisibleController.sink.add(_isLeftSelectorVisibleCache);
-}
-
-//Right Selector Visibility
-bool _isRightSelectorVisibleCache = false;
-BehaviorSubject<bool> _isRightSelectorVisibleController =
-    BehaviorSubject<bool>();
-Stream<bool> get isRightSelectorVisibleStream =>
-    _isRightSelectorVisibleController.stream;
-set _isRightSelectorVisible(bool isVisible) {
-  _isRightSelectorVisibleCache = isVisible;
-  _isRightSelectorVisibleController.sink.add(_isRightSelectorVisibleCache);
+//selectorVisibility
+bool _isSelectorVisibleCache = false;
+BehaviorSubject<bool> _isSelectorVisibleController = BehaviorSubject<bool>();
+Stream<bool> get isSelectorVisibleStream => _isSelectorVisibleController.stream;
+set _isSelectorVisible(bool isVisible) {
+  _isSelectorVisibleCache = isVisible;
+  _isSelectorVisibleController.sink.add(_isSelectorVisibleCache);
 }
 
 //Backdrop Layer Visibility
@@ -43,18 +30,12 @@ set currentSession(Session session) {
   _currentSessionController.sink.add(session);
 }
 
-makeRightSelectorVisible() {
-  _isBackdropVisible = true;
-  _isRightSelectorVisible = true;
-}
-
 makeLeftSelectorVisible() {
   _isBackdropVisible = true;
-  _isLeftSelectorVisible = true;
+  _isSelectorVisible = true;
 }
 
 makeInvisible() {
   _isBackdropVisible = false;
-  _isLeftSelectorVisible = false;
-  _isRightSelectorVisible = false;
+  _isSelectorVisible = false;
 }
