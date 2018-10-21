@@ -11,6 +11,7 @@ class User {
   ApplicationStatus get applicationStatus => ApplicationStatus.notApplied;
 
   User(this.firebaseUser);
+  User.empty();
 
   static Future<User> signIn() async {
     GoogleSignIn _googleSignIn = GoogleSignIn();
