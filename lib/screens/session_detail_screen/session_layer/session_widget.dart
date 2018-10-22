@@ -169,7 +169,7 @@ class _SessionWidgetState extends State<SessionWidget>
                         colors: [Colors.black, Colors.transparent],
                         begin: FractionalOffset.bottomCenter,
                         end: FractionalOffset.topCenter,
-                        stops: [0.05, 0.4]),
+                        stops: [0.156, 0.4],),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

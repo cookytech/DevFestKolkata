@@ -1,6 +1,7 @@
 import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class RightDisplayCard extends StatefulWidget {
   final Session session;
@@ -17,6 +18,8 @@ class RightDisplayCard extends StatefulWidget {
 class _RightDisplayCardState extends State<RightDisplayCard>
     with TickerProviderStateMixin {
   Session get _session => widget.session;
+
+  final format = DateFormat('hh:mm a');
 
   @override
   void initState() {
@@ -42,7 +45,7 @@ class _RightDisplayCardState extends State<RightDisplayCard>
               children: <Widget>[
                 Text(_session.title),
                 Text(
-                  '${_session.fromTime}-${_session.toTime}',
+                  '${format.format(DateTime.fromMillisecondsSinceEpoch(_session.fromTime))}-${format.format(DateTime.fromMillisecondsSinceEpoch(_session.toTime))}',
                 ),
               ],
             )),
