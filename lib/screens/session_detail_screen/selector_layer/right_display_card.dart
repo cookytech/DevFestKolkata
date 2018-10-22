@@ -19,8 +19,6 @@ class _RightDisplayCardState extends State<RightDisplayCard>
     with TickerProviderStateMixin {
   Session get _session => widget.session;
 
-  final format = DateFormat('hh:mm a');
-
   @override
   void initState() {
     super.initState();
@@ -28,6 +26,13 @@ class _RightDisplayCardState extends State<RightDisplayCard>
 
   @override
   Widget build(BuildContext context) {
+    final format = DateFormat('hh:mm a');
+
+    DateTime _fromTime =
+        DateTime.fromMillisecondsSinceEpoch(_session.fromTime).toLocal();
+    DateTime _toTime =
+        DateTime.fromMillisecondsSinceEpoch(_session.toTime).toLocal();
+
     double width = MediaQuery.of(context).size.width / 1.6;
     return Card(
       shape: RoundedRectangleBorder(
@@ -45,7 +50,7 @@ class _RightDisplayCardState extends State<RightDisplayCard>
               children: <Widget>[
                 Text(_session.title),
                 Text(
-                  '${format.format(DateTime.fromMillisecondsSinceEpoch(_session.fromTime))}-${format.format(DateTime.fromMillisecondsSinceEpoch(_session.toTime))}',
+                  '${format.format(_fromTime)} - ${format.format(_toTime)}',
                 ),
               ],
             )),
