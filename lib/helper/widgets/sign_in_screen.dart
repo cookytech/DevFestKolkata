@@ -3,10 +3,28 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'user_manager.dart';
 import 'package:devfest_18_kolkata/model/user.dart';
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
+  @override
+  SignInScreenState createState() {
+    return new SignInScreenState();
+  }
+}
+
+class SignInScreenState extends State<SignInScreen> {
+  bool isLoading;
+
+  @override
+  void initState() {
+    super.initState();
+    isLoading = false;
+  }
+
   @override
   Widget build(BuildContext context) {
     onPressed() async {
+      setState(() {
+        isLoading = true;
+      });
       try {
         UserManager.of(context).newUser(await User.signIn());
       } catch (e) {
@@ -17,13 +35,18 @@ class SignInScreen extends StatelessWidget {
           ),
         );
       }
+      setState(() {
+        isLoading = false;
+      });
     }
 
     return Center(
-      child: RaisedButton.icon(
-          onPressed: onPressed,
-          icon: Icon(MdiIcons.google),
-          label: Text('Sign In')),
+      child: isLoading
+          ? CircularProgressIndicator()
+          : RaisedButton.icon(
+              onPressed: onPressed,
+              icon: Icon(MdiIcons.google),
+              label: Text('Sign In')),
     );
   }
 }
