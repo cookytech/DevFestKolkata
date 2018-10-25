@@ -1,10 +1,11 @@
+import 'package:devfest_18_kolkata/theme.dart';
 import 'package:flutter/material.dart';
 
 List<Color> googleColorsList = [
-  Colors.blue,
-  Colors.green,
-  Colors.yellow,
-  Colors.red,
+  googleBlue,
+  googleRed,
+  googleYellow,
+  googleGreen,
 ];
 
 List flexValueForLowerBorderColors = [4, 1, 1, 1];
