@@ -1,7 +1,7 @@
 import 'dart:ui' as ui;
 import 'package:devfest_18_kolkata/model/organisers.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_provider.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_row_provider.dart';
 import 'package:flutter/material.dart';
 
 class OrganiserDescriptionDialog extends StatelessWidget {
@@ -52,6 +52,7 @@ class OrganiserDescriptionDialog extends StatelessWidget {
                         width: 250.0,
                         height: 300.0,
                         child: ListView(
+                          physics: BouncingScrollPhysics(),
                           children: <Widget>[
                             Text(
                               organiser.genericDescription,

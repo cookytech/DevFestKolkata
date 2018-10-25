@@ -56,37 +56,37 @@ class _HidingAppBarState extends State<HidingAppBar>
             Tab(
               icon: Icon(
                 MdiIcons.theater,
-                color: googleColors[0],
+                color: googleBlue,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.accountHeart,
-                color: googleColors[1],
+                color: googleRed,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.twitterRetweet,
-                color: googleColors[2],
+                color: googleYellow,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.wechat,
-                color: googleColors[3],
+                color: googleBlue,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.linkVariant,
-                color: googleColors[4],
+                color: googleGreen,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.google,
-                color: googleColors[5],
+                color: googleRed,
               ),
             ),
           ],
