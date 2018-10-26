@@ -47,15 +47,19 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return !isLoading? TimeManager(
-      timeEnum: timeEnum,
-      child: MaterialApp(
-        title: 'DevFest\'18 Kolkata',
-        theme: theme.myTheme,
-        home: SafeArea(
-          child: HomeScreen(),
-        ),
-      ),
-    ): LoadingScreen(animationController: animationController,);
+    return !isLoading
+        ? TimeManager(
+            timeEnum: timeEnum,
+            child: MaterialApp(
+              title: 'DevFest\'18 Kolkata',
+              theme: theme.myTheme,
+              home: SafeArea(
+                child: HomeScreen(),
+              ),
+            ),
+          )
+        : LoadingScreen(
+            animationController: animationController,
+          );
   }
 }
