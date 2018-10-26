@@ -63,6 +63,7 @@ class _SessionWidgetState extends State<SessionWidget>
         child: Stack(
           children: <Widget>[
             Container(
+              margin: EdgeInsets.only(bottom: 8.0),
               padding: EdgeInsets.only(
                   left: 12.0, right: 12.0, top: 96.0, bottom: 42.0),
               child: Card(
@@ -76,7 +77,7 @@ class _SessionWidgetState extends State<SessionWidget>
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           SizedBox(
-                            height: _imageWidth / 16 * 5,
+                            height: _imageWidth / 16 * 4,
                           ),
                           Text(
                             _session.subHead,
@@ -84,7 +85,7 @@ class _SessionWidgetState extends State<SessionWidget>
                             textAlign: TextAlign.center,
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 18.0),
+                            padding: const EdgeInsets.symmetric(vertical: 10.0),
                             child: Text(
                               _session.tagLine,
                               style: Theme.of(context).textTheme.body1,
@@ -176,11 +177,10 @@ class _SessionWidgetState extends State<SessionWidget>
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 3.0),
+                        padding: const EdgeInsets.only(bottom: 4.0),
                         child: Text(
                           _session.title,
                           style: Theme.of(context).textTheme.title.copyWith(
-                              decoration: TextDecoration.underline,
                               decorationColor: Theme.of(context).accentColor,
                               decorationStyle: TextDecorationStyle.solid),
                         ),

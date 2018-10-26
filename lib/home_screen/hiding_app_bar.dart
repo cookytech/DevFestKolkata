@@ -51,6 +51,8 @@ class _HidingAppBarState extends State<HidingAppBar>
       position: position,
       child: Material(
         child: TabBar(
+          indicatorColor: Colors.white.withOpacity(0.75),
+          indicatorWeight: 5.0,
           controller: widget.tabController,
           tabs: <Widget>[
             Tab(
