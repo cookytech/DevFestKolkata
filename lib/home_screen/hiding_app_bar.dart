@@ -69,12 +69,6 @@ class _HidingAppBarState extends State<HidingAppBar>
             ),
             Tab(
               icon: Icon(
-                MdiIcons.twitterRetweet,
-                color: googleYellow,
-              ),
-            ),
-            Tab(
-              icon: Icon(
                 MdiIcons.wechat,
                 color: googleBlue,
               ),

@@ -1,34 +1,22 @@
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
+  final AnimationController animationController;
+  const LoadingScreen({Key key, this.animationController}) : super(key: key);
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }
 
 class _LoadingScreenState extends State<LoadingScreen>
     with TickerProviderStateMixin {
-  AnimationController controller;
+  AnimationController get controller=> widget.animationController;
   Animation<double> logoSize;
 
   @override
   void initState() {
     super.initState();
-    controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 400))
-          ..addListener(() {
-            setState(() {});
-          })
-          ..addStatusListener(
-            (AnimationStatus status) {
-              if (status == AnimationStatus.completed) {
-                controller.reverse();
-              } else if (status == AnimationStatus.dismissed) {
-                controller.forward();
-              }
-            },
-          );
-    logoSize = Tween(begin: 80.0, end: 100.0)
-        .animate(CurvedAnimation(parent: controller, curve: Curves.bounceIn));
+    logoSize = Tween(begin: 30.0, end: 200.0)
+        .animate(controller);
   }
 
   @override

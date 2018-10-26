@@ -1,7 +1,6 @@
+import 'package:devfest_18_kolkata/helper/widgets/loading_screen.dart';
 import 'package:devfest_18_kolkata/helper/widgets/time_manager.dart';
-import 'package:devfest_18_kolkata/helper/widgets/user_manager.dart';
 import 'package:devfest_18_kolkata/home_screen/home_screen.dart';
-import 'package:devfest_18_kolkata/model/user.dart';
 import 'package:flutter/material.dart';
 import 'package:devfest_18_kolkata/theme.dart' as theme;
 import 'package:devfest_18_kolkata/model/time_enum.dart';
@@ -21,36 +20,42 @@ class MyApp extends StatefulWidget {
   }
 }
 
-class MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> with TickerProviderStateMixin {
   TimeEnum timeEnum;
-  User user;
+  AnimationController animationController;
+  bool isLoading;
 
   @override
   void initState() {
     super.initState();
+    isLoading = true;
     timeEnum = currentTimeType;
-    user = User.empty();
+    animationController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 4000))
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((AnimationStatus status) {
+            if (status == AnimationStatus.completed) {
+              setState(() {
+                isLoading = false;
+              });
+            }
+          });
+    animationController.forward();
   }
 
   @override
   Widget build(BuildContext context) {
-    return UserManager(
-      newUser: (User newUser) {
-        setState(() {
-          user = newUser;
-        });
-      },
-      user: user,
-      child: TimeManager(
-        timeEnum: timeEnum,
-        child: MaterialApp(
-          title: 'DevFest\'18 Kolkata',
-          theme: theme.myTheme,
-          home: SafeArea(
-            child: HomeScreen(),
-          ),
+    return !isLoading? TimeManager(
+      timeEnum: timeEnum,
+      child: MaterialApp(
+        title: 'DevFest\'18 Kolkata',
+        theme: theme.myTheme,
+        home: SafeArea(
+          child: HomeScreen(),
         ),
       ),
-    );
+    ): LoadingScreen(animationController: animationController,);
   }
 }
