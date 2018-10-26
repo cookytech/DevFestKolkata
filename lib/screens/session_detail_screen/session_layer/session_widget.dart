@@ -167,10 +167,11 @@ class _SessionWidgetState extends State<SessionWidget>
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     gradient: LinearGradient(
-                        colors: [Colors.black, Colors.transparent],
-                        begin: FractionalOffset.bottomCenter,
-                        end: FractionalOffset.topCenter,
-                        stops: [0.156, 0.4],),
+                      colors: [Colors.black, Colors.transparent],
+                      begin: FractionalOffset.bottomCenter,
+                      end: FractionalOffset.topCenter,
+                      stops: [0.156, 0.4],
+                    ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

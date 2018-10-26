@@ -4,7 +4,6 @@ import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers_
 import 'package:devfest_18_kolkata/screens/quick_links_screen/quick_links_screen.dart';
 import 'package:devfest_18_kolkata/screens/real_time_board_screen/real_time_board_screen.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_screen.dart';
-import 'package:devfest_18_kolkata/screens/sm_feed_screen/social_media_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen>
   void initState() {
     super.initState();
     _tabController = TabController(vsync: this, length: 6, initialIndex: 0);
-
   }
 
   @override
@@ -38,17 +36,17 @@ class _HomeScreenState extends State<HomeScreen>
           children: <Widget>[
             SessionDetailScreen(),
             InvitationDetailScreen(),
-            SocialMediaScreen(),
             RealTimeBoardScreen(),
             QuickLinksScreen(),
             OrganisersDetailsScreen(),
           ],
         ),
         Align(
-            alignment: Alignment.bottomCenter,
-            child: HidingAppBar(
-              tabController: _tabController,
-            ))
+          alignment: Alignment.bottomCenter,
+          child: HidingAppBar(
+            tabController: _tabController,
+          ),
+        ),
       ],
     );
   }
