@@ -32,6 +32,7 @@ dependencies:
   cached_network_image: ^0.5.0
   shared_preferences: ^0.4.3
   intl: ^0.15.7
+
 #TODO: implement once resolved  image_picker: ^0.4.10
 
 
@@ -39,6 +40,14 @@ dev_dependencies:
 #  flutter_test:
 #    sdk: flutter
 
+   flutter_launcher_icons: ^0.6.1
+
+flutter_icons:
+    android: true
+    ios: true
+    image_path: "assets/logo/icon.png"
+    image_path_android: "assets/logo/icon.png"
+    image_path_ios: "assets/logo/icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
