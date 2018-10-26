@@ -1,12 +1,13 @@
 import 'package:devfest_18_kolkata/model/organisers.dart';
+import 'package:devfest_18_kolkata/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 List<Color> color = [
-  Color.fromRGBO(59, 89, 152, 1.0),
-  Color.fromRGBO(29, 202, 255, 1.0),
-  Color.fromRGBO(237, 28, 64, 1.0),
+  facebookBlue,
+  twitterLightBlue,
+  meetupRed,
 ];
 
 List<IconData> icon = [
@@ -30,7 +31,7 @@ Widget socialMediaIconsRow(int index, context) {
     children: List.generate(
       icon.length,
       (i) {
-        if(url(index)[i] != '') {
+        if (url(index)[i] != '') {
           return IconButton(
             icon: Icon(
               icon[i],
@@ -41,7 +42,7 @@ Widget socialMediaIconsRow(int index, context) {
               urlLauncher(url(index)[i], context);
             },
           );
-        }else{
+        } else {
           return Container();
         }
       },
@@ -55,7 +56,7 @@ Widget socialMediaIconsRowGeryScale(int index, context) {
     children: List.generate(
       icon.length,
       (i) {
-        if(url(index)[i] != '') {
+        if (url(index)[i] != '') {
           return IconButton(
             icon: Icon(
               icon[i],
@@ -66,7 +67,7 @@ Widget socialMediaIconsRowGeryScale(int index, context) {
               urlLauncher(url(index)[i], context);
             },
           );
-        }else{
+        } else {
           return Container();
         }
       },
@@ -75,7 +76,7 @@ Widget socialMediaIconsRowGeryScale(int index, context) {
 }
 
 urlLauncher(String url, context) async {
-   if (await canLaunch(url)) {
+  if (await canLaunch(url)) {
     await launch(url);
   }
 }

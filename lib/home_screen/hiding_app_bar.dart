@@ -51,42 +51,44 @@ class _HidingAppBarState extends State<HidingAppBar>
       position: position,
       child: Material(
         child: TabBar(
+          indicatorColor: Colors.white.withOpacity(0.75),
+          indicatorWeight: 5.0,
           controller: widget.tabController,
           tabs: <Widget>[
             Tab(
               icon: Icon(
                 MdiIcons.theater,
-                color: googleColors[0],
+                color: googleBlue,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.accountHeart,
-                color: googleColors[1],
+                color: googleRed,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.twitterRetweet,
-                color: googleColors[2],
+                color: googleYellow,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.wechat,
-                color: googleColors[3],
+                color: googleBlue,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.linkVariant,
-                color: googleColors[4],
+                color: googleGreen,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.google,
-                color: googleColors[5],
+                color: googleRed,
               ),
             ),
           ],
