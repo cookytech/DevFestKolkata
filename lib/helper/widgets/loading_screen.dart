@@ -9,49 +9,58 @@ class LoadingScreen extends StatefulWidget {
 
 class _LoadingScreenState extends State<LoadingScreen>
     with TickerProviderStateMixin {
-  AnimationController get controller=> widget.animationController;
-  Animation colorAnimation;
-  Animation<Alignment> logoAnimation;
-  Animation<Alignment> textAnimation;
-
+  AnimationController get controller => widget.animationController;
+  Animation<Color> colorAnimation;
+  Animation<double> logoAnimation;
+  Animation<double> splashAnimation;
+  Animation<double> textAnimation;
 
   @override
   void initState() {
     super.initState();
-    colorAnimation = ColorTween(begin: Colors.black, end: Colors.grey[900]).animate(
+    colorAnimation =
+        ColorTween(begin: Colors.black, end: ThemeData.dark().cardColor)
+            .animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: Interval(
+          0.10,
+          0.35,
+          curve: Curves.bounceIn,
+        ),
+      ),
+    );
+    splashAnimation = Tween(begin: 25.0, end: 450.0).animate(
       CurvedAnimation(
         parent: controller,
         curve: Interval(
           0.0,
-          0.2,
+          0.3,
           curve: Curves.linear,
         ),
       ),
     );
-    logoAnimation =
-        AlignmentTween(begin: Alignment.center, end: Alignment(0.0, -0.6))
-            .animate(
-          CurvedAnimation(
-            parent: controller,
-            curve: Interval(
-              0.0,
-              0.440,
-              curve: Curves.linear,
-            ),
-          ),
-        );
-    textAnimation =
-        AlignmentTween(end: Alignment.center, begin: Alignment(0.0, 0.6))
-            .animate(
-          CurvedAnimation(
-            parent: controller,
-            curve: Interval(
-              0.220,
-              0.440,
-              curve: Curves.linear,
-            ),
-          ),
-        );
+
+    logoAnimation = Tween(begin: 25.0, end: 60.0).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: Interval(
+          0.27,
+          0.440,
+          curve: Curves.linear,
+        ),
+      ),
+    );
+    textAnimation = Tween(begin: 0.0, end: 35.0).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: Interval(
+          0.400,
+          0.8,
+          curve: Curves.linear,
+        ),
+      ),
+    );
     controller.forward();
   }
 
@@ -63,48 +72,36 @@ class _LoadingScreenState extends State<LoadingScreen>
         body: Center(
           child: Stack(
             children: <Widget>[
-              Align(
-                alignment: logoAnimation.value,
-                child: FadeTransition(
-                  opacity: Tween<double>(begin: 1.0, end: 0.0).animate(
-                    CurvedAnimation(
-                      parent: controller,
-                      curve: Interval(
-                        0.250,
-                        0.550,
-                        curve: Curves.linear,
-                      ),
-                    ),
-                  ),
+              Center(
                   child: CircleAvatar(
-                    radius: 22.5,
-                    backgroundColor: Colors.transparent,
-                    backgroundImage: AssetImage('assets/logo/icon.png'),
+                radius: splashAnimation.value,
+                backgroundColor: ThemeData.dark().cardColor,
+              )),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Center(
+                    child: CircleAvatar(
+                      radius: logoAnimation.value,
+                      backgroundColor: Colors.transparent,
+                      backgroundImage: AssetImage('assets/logo/icon.png'),
+                    ),
                   ),
-                ),
-              ),
-              Align(
-                alignment: textAnimation.value,
-                child: FadeTransition(
-                  opacity: Tween<double>(begin: 0.0, end: 1.0).animate(
-                    CurvedAnimation(
-                      parent: controller,
-                      curve: Interval(
-                        0.430,
-                        0.580,
-                        curve: Curves.linear,
+                  Center(
+                    child: Container(
+                      padding: new EdgeInsets.only(top: textAnimation.value),
+                      child: Text(
+                        'DevFest\'18 Kolkata',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: textAnimation.value,
+                        ),
                       ),
                     ),
                   ),
-                  child: Text(
-                    'DevFest\'18 Kolkata',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 40.0,
-                    ),
-                  ),
-                ),
+                ],
               ),
             ],
           ),

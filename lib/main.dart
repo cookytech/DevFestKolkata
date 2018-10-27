@@ -31,7 +31,7 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
     isLoading = true;
     timeEnum = currentTimeType;
     animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 4000))
+        AnimationController(vsync: this, duration: Duration(milliseconds: 3000))
           ..addListener(() {
             setState(() {});
           })
