@@ -9,8 +9,14 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        title: Text('Invitations'),
+        centerTitle: true,
+      ),
       body: Center(
-        child: Text('ABOUT YOUR INVITATIONS'),
+        child: Text('Under Construction...'),
       ),
     );
   }

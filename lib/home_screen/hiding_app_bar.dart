@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:devfest_18_kolkata/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -47,6 +46,7 @@ class _HidingAppBarState extends State<HidingAppBar>
 
   @override
   Widget build(BuildContext context) {
+    Color iconColor = Colors.white.withOpacity(0.85);
     return SlideTransition(
       position: position,
       child: Material(
@@ -58,31 +58,31 @@ class _HidingAppBarState extends State<HidingAppBar>
             Tab(
               icon: Icon(
                 MdiIcons.theater,
-                color: googleBlue,
+                color: iconColor,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.accountHeart,
-                color: googleRed,
+                color: iconColor,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.wechat,
-                color: googleBlue,
+                color: iconColor,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.linkVariant,
-                color: googleGreen,
+                color: iconColor,
               ),
             ),
             Tab(
               icon: Icon(
                 MdiIcons.google,
-                color: googleRed,
+                color: iconColor,
               ),
             ),
           ],
