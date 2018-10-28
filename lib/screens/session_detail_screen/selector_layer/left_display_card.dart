@@ -1,5 +1,5 @@
 import 'package:devfest_18_kolkata/model/session.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
+import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

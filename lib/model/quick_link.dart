@@ -15,9 +15,9 @@ class QuickLink {
   });
 
   QuickLink.dummy({this.reference})
-      : url = 'fb.me/raveesh.me',
+      : url = 'https://fb.me/raveesh.me',
         description = 'visit raveesh\'s facebook page to rock',
-        iconCodePoint = 0xf20d;
+        iconCodePoint = 0xf20c;
 
   QuickLink.fromMap(Map map, {this.reference})
       : assert(map["url"] != null),

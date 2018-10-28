@@ -1,5 +1,5 @@
 import 'package:devfest_18_kolkata/model/organisers.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart';
+import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/layers/organiser_tile_layers/organisers_tile_background_layer.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/organiser_description_dialog.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_row_provider.dart';
