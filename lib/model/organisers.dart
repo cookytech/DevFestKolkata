@@ -22,25 +22,6 @@ class Organiser {
 
 const organisers = <Organiser>[
   Organiser(
-    title: "WTM Kolkata",
-    genericDescription:
-    'Women Techmakers India aims to be a unifier in the ecosystem of women in technology by collaborating with other communities, tech companies, and influencers.'
-        'As India quickly emerges as a hub for inspiring innovation, we are committing to engaging, enabling, and empowering women in the technology spectrum through focused initiatives.'
-        'For the first time, Google’s Women Techmakers has commissioned a study to gain insights into the health of women in the technology sector in India. We aim to share the knowledge gained with the ecosystem and get a better understanding of how to strategically uplift more Indian women in technology across all career levels.',
-    fbURL: 'https://www.facebook.com/WTMKolkata/',
-    logoURI: 'assets/logo/wtm.png',
-    specialDescription:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'
-        ' do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-        ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi'
-        ' ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit'
-        ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-        ' Excepteur sint occaecat cupidatat non proident, sunt in culpa qui'
-        ' officia deserunt mollit anim id est laborum.',
-    imageURI: 'assets/image/wtm_background.jpg',
-  ),
-
-  Organiser(
     title: "GDG Kolkata",
     genericDescription:
         'The GDG platform is a membership level within the wider Google Developers Community Groups program and it offers tailored support to organizers of local GDG chapters.'
@@ -63,9 +44,22 @@ const organisers = <Organiser>[
     fbURL: 'https://www.facebook.com/DSCKolkata/',
     logoURI: 'assets/logo/dsc.png',
     specialDescription:
-        'Developer Student Clubs- DSC Kolkata is a open community set up by the college students with a focus of enhancing web and mobile development skills of students.'
-        'Besides being a college based community it has been able to draw a lot of attention through the events such a Google IO Extended\'18 & a 30 day Machine Learning Crash Course Study Jam,  organised and sponsored completely by the community itself. Currently there are 2 DSC Leads working in 2 colleges in Kolkata alongside other sudo DSCs running and exchanging expertise and experiences.',
+        'Developer Student Clubs- DSC Kolkata is a non- profit open community as well as college students club set up by the college students themselves with a focus on enhancing web and mobile development skills of students.'
+        'Besides being a college based community it has been able to draw a lot of attention through the events such a Google IO Extended\'18, organised and sponsored completely by the community itself. Currently there are 2 DSC Leads working in 2 colleges in Kolkata alongside other sudo DSCs running and exchanging expertise and experiences.',
     twitterURL: 'https://twitter.com/DSCKolkata',
     imageURI: 'assets/image/dsc_kolkata_background.png',
+  ),
+  Organiser(
+    title: "WTM Kolkata",
+    genericDescription:
+        'Women Techmakers India aims to be a unifier in the ecosystem of women in technology by collaborating with other communities, tech companies, and influencers.'
+        'As India quickly emerges as a hub for inspiring innovation, we are committing to engaging, enabling, and empowering women in the technology spectrum through focused initiatives.'
+        'For the first time, Google’s Women Techmakers has commissioned a study to gain insights into the health of women in the technology sector in India. We aim to share the knowledge gained with the ecosystem and get a better understanding of how to strategically uplift more Indian women in technology across all career levels.',
+    fbURL: 'https://www.facebook.com/WTMKolkata/',
+    logoURI: 'assets/logo/wtm.png',
+    specialDescription:
+        'WTM Kolkata is a community is amongst the most fucntional technical communities in Kolkata. It has helped womens of Kolkata to grow to great extents. WTM of kolkata is also responsilble for taking development in'
+            'flutter to new heights via organising two fabulous Flutter Study Jams along side a Flutter Hackathon while giving platforms to new and energised developers.',
+    imageURI: 'assets/image/wtm_background.jpg',
   ),
 ];
