@@ -2,6 +2,7 @@ import 'package:devfest_18_kolkata/helper/widgets/tool_tip_appbar.dart';
 import 'package:devfest_18_kolkata/model/quick_link.dart';
 import 'package:devfest_18_kolkata/screens/quick_links_screen/quick_links_list.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class QuickLinksScreen extends StatefulWidget {
   @override
@@ -15,10 +16,18 @@ class _QuickLinksScreenState extends State<QuickLinksScreen> {
       appBar: toolTipAppBar(
         title: 'Quick Links',
       ),
-      body: StreamBuilder(
-
-        builder: (BuildContext context, AsyncSnapshot snapshot) {
-          return QuickLinksList(quickLinks: List.generate(18, (_)=> QuickLink.dummy()),);
+      body: StreamBuilder<QuerySnapshot>(
+        stream: Firestore.instance.collection('quick_links').snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData) {
+            return LinearProgressIndicator();
+          }
+          return QuickLinksList(
+            quickLinks: snapshot.data.documents
+                .map((DocumentSnapshot docSnapshot) =>
+                    QuickLink.fromSnapshot(docSnapshot))
+                .toList(),
+          );
         },
       ),
     );
