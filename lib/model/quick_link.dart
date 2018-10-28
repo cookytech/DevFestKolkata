@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class QuickLink {
@@ -7,25 +6,18 @@ class QuickLink {
   final int iconCodePoint;
   final DocumentReference reference;
 
-  QuickLink({
-    @required this.url,
-    @required this.description,
-    @required this.iconCodePoint,
-    this.reference,
-  });
-
-  QuickLink.dummy({this.reference})
-      : url = 'https://fb.me/raveesh.me',
-        description = 'visit raveesh\'s facebook page to rock',
-        iconCodePoint = 0xf20c;
+//  QuickLink.dummy({this.reference})
+//      : url = 'https://fb.me/raveesh.me',
+//        description = 'visit raveesh\'s facebook page to rock',
+//        iconCodePoint = 0xf20c;
 
   QuickLink.fromMap(Map map, {this.reference})
       : assert(map["url"] != null),
         assert(map["description"] != null),
         assert(map["icon"] != null),
         url = map["url"],
-        description = map["url"],
-        iconCodePoint = map["url"];
+        description = map["description"],
+        iconCodePoint = map["icon"];
 
   QuickLink.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);

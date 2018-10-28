@@ -29,25 +29,27 @@ class QuickLinkWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: <Widget>[
-                SizedBox(
-                  width: 5.0,
-                ),
                 Expanded(
                   child: Card(
-                    child: Column(
-                      children: <Widget>[
-                        Text(quickLink.description),
-                        Text(quickLink.url)
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(quickLink.description, style: Theme.of(context).textTheme.body2, maxLines: 1, overflow: TextOverflow.ellipsis,),
+                          Text('<${quickLink.url}>', style: Theme.of(context).textTheme.body1,maxLines: 1, overflow: TextOverflow.ellipsis,)
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                CircleAvatar(
-                  radius: 32.0,
-                  child: Icon(
-                    iconFromMDIcons(quickLink.iconCodePoint),
-                    size: 60.0,
-                  ),
+                SizedBox(
+                  width: 12.0,
+                ),
+                Icon(
+                  iconFromMDIcons(quickLink.iconCodePoint),
+                  size: 50.0,
                 ),
               ],
             ),
