@@ -34,17 +34,20 @@ class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
     userManager = UserManager.of(context);
     return Scaffold(
       appBar: toolTipAppBar(
-        title: "Discussion",
+        title: "Testimonials",
       ),
       body: Stack(
         children: <Widget>[
           StreamBuilder(
               stream: Firestore.instance
                   .collection('messages')
-                  .orderBy('time')
+                  .orderBy('time', descending: true)
                   .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {
+                if (!snapshot.hasData) {
+                  return LinearProgressIndicator();
+                }
                 return DiscussionWidget(
                   messages: snapshot.data.documents
                       .map((DocumentSnapshot snapshot) =>
@@ -55,7 +58,15 @@ class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
           Align(
             alignment: Alignment(0.0, 0.75),
             child: FloatingActionButton(
-                child: Icon(fabIcon), onPressed: onFabPressed),
+              child: Icon(
+                fabIcon,
+              ),
+              onPressed: onFabPressed,
+              backgroundColor:
+                  Theme.of(context).highlightColor.withOpacity(1.0),
+              foregroundColor:
+                  Theme.of(context).scaffoldBackgroundColor.withOpacity(1.0),
+            ),
           ),
         ],
       ),
@@ -89,6 +100,7 @@ class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
                             horizontal: 12.0, vertical: 18.0),
                         child: TextField(
                           maxLines: 5,
+                          maxLengthEnforced: false,
                           controller: textEditingController,
                           decoration:
                               InputDecoration(hintText: 'How is #DevFestKol?'),

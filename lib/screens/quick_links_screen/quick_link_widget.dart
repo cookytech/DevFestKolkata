@@ -60,6 +60,7 @@ class QuickLinkWidget extends StatelessWidget {
                 Icon(
                   iconFromMDIcons(quickLink.iconCodePoint),
                   size: 50.0,
+                  color: Theme.of(context).hintColor,
                 ),
               ],
             ),

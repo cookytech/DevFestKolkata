@@ -46,12 +46,12 @@ class _HidingAppBarState extends State<HidingAppBar>
 
   @override
   Widget build(BuildContext context) {
-    Color iconColor = Colors.white.withOpacity(0.85);
+    Color iconColor = Theme.of(context).hintColor;
     return SlideTransition(
       position: position,
       child: Material(
         child: TabBar(
-          indicatorColor: Colors.white.withOpacity(0.75),
+          indicatorColor: Theme.of(context).highlightColor,
           indicatorWeight: 5.0,
           controller: widget.tabController,
           tabs: <Widget>[
