@@ -114,7 +114,7 @@ class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
                         Navigator.of(context).pop(textEditingController.text);
                       },
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Icon(
                           MdiIcons.send,
                         ),

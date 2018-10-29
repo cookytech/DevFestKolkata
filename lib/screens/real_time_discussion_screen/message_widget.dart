@@ -18,7 +18,7 @@ class MessageWidget extends StatelessWidget {
             backgroundImage: NetworkImage(message.photoUrl),
             radius: screenWidth*0.27,
           ),
-          opacity: 0.15,
+          opacity: 0.27,
         ),
         Column(
           mainAxisSize: MainAxisSize.min,
@@ -28,7 +28,7 @@ class MessageWidget extends StatelessWidget {
               message.message,
               style:
                   Theme.of(context).textTheme.display4.copyWith(fontSize: 24.0),
-              maxLines: 4,
+              maxLines: 5,
               overflow: TextOverflow.fade,
             ),
             Text(
