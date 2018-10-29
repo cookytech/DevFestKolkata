@@ -19,18 +19,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/model/message.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_author_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assets.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/quick_link.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/quick_link.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/quick_links_screen/quick_link_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/quick_links_screen/quick_link_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -82,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -566,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540712067130</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="wiring for discussion">
+      <created>1540803334037</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1540803334037</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -580,7 +577,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
@@ -656,7 +652,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactors the dummy screen" />
     <MESSAGE value="adds more screen" />
     <MESSAGE value="adds AppBar to the session details screen" />
     <MESSAGE value="adds title to the AppBar" />
@@ -681,7 +676,8 @@
     <MESSAGE value="updates loading animation to more tasteful" />
     <MESSAGE value="* moved colorful bottom provider&#10;* adds (optional)tooltip appbar&#10;* updated quick link model icon&#10;* adds quickLinkWidget" />
     <MESSAGE value="implements firestore for quick links" />
-    <option name="LAST_COMMIT_MESSAGE" value="implements firestore for quick links" />
+    <MESSAGE value="wiring for discussion" />
+    <option name="LAST_COMMIT_MESSAGE" value="wiring for discussion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -972,7 +968,7 @@
     <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
