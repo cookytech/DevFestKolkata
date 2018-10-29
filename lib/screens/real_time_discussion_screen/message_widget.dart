@@ -13,7 +13,6 @@ class MessageWidget extends StatelessWidget {
     return Stack(
       children: <Widget>[
         MessageCard(message: message.message),
-        MessageAuthorCard(messageAuthor: message.messageAuthor),
       ],
     );
   }
