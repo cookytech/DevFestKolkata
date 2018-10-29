@@ -1,4 +1,3 @@
-import 'package:devfest_18_kolkata/assets.dart';
 import 'package:devfest_18_kolkata/model/message.dart';
 import 'package:devfest_18_kolkata/screens/real_time_discussion_screen/message_author_card.dart';
 import 'package:devfest_18_kolkata/screens/real_time_discussion_screen/message_card.dart';

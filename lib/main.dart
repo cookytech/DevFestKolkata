@@ -1,5 +1,6 @@
 import 'package:devfest_18_kolkata/helper/widgets/loading_screen.dart';
 import 'package:devfest_18_kolkata/helper/widgets/time_manager.dart';
+import 'package:devfest_18_kolkata/helper/widgets/user_manager.dart';
 import 'package:devfest_18_kolkata/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:devfest_18_kolkata/theme.dart' as theme;
@@ -53,8 +54,10 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
             child: MaterialApp(
               title: 'DevFest\'18 Kolkata',
               theme: theme.myTheme,
-              home: SafeArea(
-                child: HomeScreen(),
+              home: UserBuilder(
+                child: SafeArea(
+                  child: HomeScreen(),
+                ),
               ),
             ),
           )

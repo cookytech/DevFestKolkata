@@ -10,7 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/lib/main.dart" line="4" />
+    <bookmark url="file://$PROJECT_DIR$/lib/main.dart" line="5" />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -19,8 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86e6a56-c714-4efb-984c-71e2c3b1e226" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helper/widgets/user_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helper/widgets/user_manager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/message.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/message.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -38,20 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="message.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/message.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="real_time_discussion_screen.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="real_time_discussion_screen.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding>
                 <element signature="e#0#72#0" expanded="true" />
               </folding>
@@ -59,62 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/model/user.dart">
+      <file leaf-file-name="user_manager.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/helper/widgets/user_manager.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="discussion_widget.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_widget.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_card.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_card.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_author_card.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_author_card.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="1">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -122,11 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assets.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/assets.dart">
+      <file leaf-file-name="discussion_widget.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            <state relative-caret-position="253">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,7 +116,6 @@
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/organisers_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/auth.dart" />
-        <option value="$PROJECT_DIR$/lib/helper/widgets/user_manager.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/session_detail_bloc.dart" />
         <option value="$PROJECT_DIR$/lib/helper/widgets/sign_in_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/organisers_details_screen/colorful_lower_border/colorful_bottom_border_provider.dart" />
@@ -186,7 +132,6 @@
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.dart" />
         <option value="$PROJECT_DIR$/lib/helper/widgets/loading_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_board_screen/real_time_board_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" />
@@ -201,15 +146,17 @@
         <option value="$PROJECT_DIR$/lib/home_screen/home_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" />
         <option value="$PROJECT_DIR$/lib/assets.dart" />
-        <option value="$PROJECT_DIR$/lib/model/message.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_user_card.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_author_card.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_card.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart" />
         <option value="$PROJECT_DIR$/lib/model/user.dart" />
         <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart" />
+        <option value="$PROJECT_DIR$/lib/model/message.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/helper/widgets/user_manager.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart" />
       </list>
     </option>
   </component>
@@ -247,7 +194,7 @@
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
               <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
@@ -563,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540803334037</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="wiring for discussion">
+      <created>1540803497494</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1540803497494</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -577,6 +531,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
@@ -586,9 +541,9 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010707" side_tool="true" weight="0.23875803" />
       <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.36120042" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892932" weight="0.39871383" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32848486" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4993481" visible="true" weight="0.3301179" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49892932" visible="true" weight="0.39871383" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3279743" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993481" weight="0.3301179" />
       <window_info anchor="right" id="Flutter Outline" order="6" weight="0.32976446" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.32762313" />
       <window_info id="Captures" order="7" weight="0.32976446" />
@@ -685,7 +640,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/home_screen/color_list.dart" />
     <entry file="file://$PROJECT_DIR$/devfest_18_kolkata_android.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -768,13 +722,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/sdk/flutter/packages/flutter/lib/src/material/radio.dart" />
     <entry file="file://$PROJECT_DIR$/lib/screens/sm_feed_screen/social_media_screen.dart" />
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
@@ -797,16 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,24 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/assets.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.6.2+1/lib/firebase_auth.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
           <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model/message.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -931,33 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/model/user.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -965,12 +861,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart">
+    <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/message_widget.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state>
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model/message.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model/user.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/assets.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/helper/widgets/user_manager.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/discussion_widget.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/real_time_discussion_screen/real_time_discussion_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>

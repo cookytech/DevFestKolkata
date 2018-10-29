@@ -4,5 +4,6 @@ class Message {
   final String message;
   final FirebaseUser messageAuthor;
 
-  Message.dummy(this.messageAuthor):message = "Hi, this is me";
+  Message(this.message, this.messageAuthor);
+  Message.dummy():message = "Hi, this is me", messageAuthor = null;
 }
