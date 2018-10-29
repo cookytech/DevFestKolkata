@@ -37,8 +37,18 @@ class QuickLinkWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text(quickLink.description, style: Theme.of(context).textTheme.body2, maxLines: 1, overflow: TextOverflow.ellipsis,),
-                          Text('<${quickLink.url}>', style: Theme.of(context).textTheme.body1,maxLines: 1, overflow: TextOverflow.ellipsis,)
+                          Text(
+                            quickLink.description,
+                            style: Theme.of(context).textTheme.body2,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(
+                            '<${quickLink.url}>',
+                            style: Theme.of(context).textTheme.body1,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          )
                         ],
                       ),
                     ),

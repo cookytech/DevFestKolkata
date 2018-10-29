@@ -5,7 +5,6 @@ class QuickLink {
   final String description;
   final int iconCodePoint;
   final DocumentReference reference;
-
 //  QuickLink.dummy({this.reference})
 //      : url = 'https://fb.me/raveesh.me',
 //        description = 'visit raveesh\'s facebook page to rock',
