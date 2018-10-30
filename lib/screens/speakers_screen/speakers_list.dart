@@ -14,16 +14,16 @@ class SpeakersList extends StatelessWidget {
       padding: EdgeInsets.only(top: 15.0, bottom: 50.0),
       children: [
         titleWrap(
-          title: 'Sessions\'',
+          title: 'Sessions',
           sessionType: 'session',
           context: context,
         ),
         titleWrap(
-            title: 'Lightning Talks\'',
+            title: 'Lightning Talks',
             sessionType: 'lightning_talks',
             context: context),
         titleWrap(
-            title: 'Hands-On Workshops\'',
+            title: 'Hands-On Workshops',
             sessionType: 'workshop',
             context: context),
       ],
@@ -41,19 +41,23 @@ class SpeakersList extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0).copyWith(bottom: 20.0),
               child: Text(
                 '$title :',
-                style: Theme.of(context).textTheme.title,
+                style: Theme.of(context).textTheme.display4.copyWith(fontSize: 55.0),
               ),
             ),
-            Wrap(
-              spacing: 8.0,
-              children: speakers
-                  .where(
-                      (Speaker speaker) => speaker.sessionType == sessionType)
-                  .map((speaker) => SpeakerWidget(speaker: speaker))
-                  .toList(),
+            Opacity(
+              opacity: 0.8,
+              child: Wrap(
+                alignment: WrapAlignment.start,
+                runSpacing: 20.0,
+                children: speakers
+                    .where(
+                        (Speaker speaker) => speaker.sessionType == sessionType)
+                    .map((speaker) => SpeakerWidget(speaker: speaker))
+                    .toList(),
+              ),
             )
           ],
         ),

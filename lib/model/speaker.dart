@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'lists.dart';
+//import 'lists.dart';
 
 class Speaker {
   final String name;
@@ -64,12 +64,12 @@ class Speaker {
 
 
 
-populate() {
-  List<Speaker> speakers = List.generate(18, (i)=>Speaker(names[i], salutations[i], images[i], fbs[i], tws[i], ghbs[i], linds[i], sTypes[i], ''));
-  speakers.forEach(
-    (speaker) =>
-        Firestore.instance.document('speakers/${speaker.name}').setData(
-              speaker.toMap(),
-            ),
-  );
-}
+//populate() {
+//  List<Speaker> speakers = List.generate(18, (i)=>Speaker(names[i], salutations[i], images[i], fbs[i], tws[i], ghbs[i], linds[i], sTypes[i], ''));
+//  speakers.forEach(
+//    (speaker) =>
+//        Firestore.instance.document('speakers/${speaker.name}').setData(
+//              speaker.toMap(),
+//            ),
+//  );
+//}

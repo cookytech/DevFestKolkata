@@ -34,7 +34,7 @@ class MessageWidgetState extends State<MessageWidget> {
               backgroundImage: NetworkImage(widget.message.photoUrl),
               radius: screenWidth * 0.27,
             ),
-            opacity: 0.28,
+            opacity: 0.3,
           ),
           Column(
             mainAxisSize: MainAxisSize.min,

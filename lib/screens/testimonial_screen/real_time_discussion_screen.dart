@@ -113,7 +113,6 @@ class _TestimonialScreenState extends State<TestimonialScreen> {
                       highlightColor: Colors.transparent,
                       onPressed: () {
                         Navigator.of(context).pop(textEditingController.text);
-                        print(textEditingController.text+'😀');
                       },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
