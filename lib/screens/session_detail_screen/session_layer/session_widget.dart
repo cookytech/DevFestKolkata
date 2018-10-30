@@ -102,7 +102,7 @@ class _SessionWidgetState extends State<SessionWidget>
                                           tag: speaker.name,
                                           child: CircleAvatar(
                                             backgroundImage: NetworkImage(
-                                              speaker.imageURI,
+                                              speaker.imageURL,
                                             ),
                                             minRadius: 24.0,
                                             maxRadius: 36.0,

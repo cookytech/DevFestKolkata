@@ -30,26 +30,29 @@ class QuickLinkWidget extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            quickLink.description,
-                            style: Theme.of(context).textTheme.body2,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          Text(
-                            '<${quickLink.url}>',
-                            style: Theme.of(context).textTheme.body1,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
+                  child: Opacity(
+                    opacity: 0.90,
+                    child: Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              quickLink.description,
+                              style: Theme.of(context).textTheme.body2,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            Text(
+                              '<${quickLink.url}>',
+                              style: Theme.of(context).textTheme.body1,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

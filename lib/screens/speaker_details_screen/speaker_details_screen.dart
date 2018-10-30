@@ -81,7 +81,7 @@ class SpeakerDetailsScreen extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(speaker.imageURI),
+                        image: NetworkImage(speaker.imageURL),
                       ),
                       boxShadow: [
                         BoxShadow(
