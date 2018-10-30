@@ -69,13 +69,13 @@ class _HidingAppBarState extends State<HidingAppBar>
             ),
             Tab(
               icon: Icon(
-                MdiIcons.wechat,
+                MdiIcons.linkVariant,
                 color: iconColor,
               ),
             ),
             Tab(
               icon: Icon(
-                MdiIcons.linkVariant,
+                MdiIcons.accountEdit,
                 color: iconColor,
               ),
             ),

@@ -2,19 +2,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/helper/widgets/tool_tip_appbar.dart';
 import 'package:devfest_18_kolkata/model/message.dart';
-import 'package:devfest_18_kolkata/screens/real_time_discussion_screen/discussion_widget.dart';
+import 'package:devfest_18_kolkata/screens/testimonial_screen/discussion_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:devfest_18_kolkata/helper/widgets/user_manager.dart';
 
-class RealTimeDiscussionScreen extends StatefulWidget {
+class TestimonialScreen extends StatefulWidget {
   @override
-  _RealTimeDiscussionScreenState createState() =>
-      _RealTimeDiscussionScreenState();
+  _TestimonialScreenState createState() =>
+      _TestimonialScreenState();
 }
 
-class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
+class _TestimonialScreenState extends State<TestimonialScreen> {
   UserManager userManager;
   String centerText;
 
@@ -56,7 +56,7 @@ class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
                 );
               }),
           Align(
-            alignment: Alignment(0.0, 0.75),
+            alignment: Alignment(0.6435, 0.75),
             child: FloatingActionButton(
               child: Icon(
                 fabIcon,
@@ -100,7 +100,8 @@ class _RealTimeDiscussionScreenState extends State<RealTimeDiscussionScreen> {
                             horizontal: 12.0, vertical: 18.0),
                         child: TextField(
                           maxLines: 5,
-                          maxLengthEnforced: false,
+                          maxLength: 140,
+                          maxLengthEnforced: true,
                           controller: textEditingController,
                           decoration:
                               InputDecoration(hintText: 'How is #DevFestKol?'),
