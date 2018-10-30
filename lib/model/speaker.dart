@@ -108,6 +108,6 @@ Header Level 2
         sessionType = 'lightning';
 
   populate() {
-    Firestore.instance.document('speakers/${name}').setData(this.toMap());
+    Firestore.instance.document('speakers/$name').setData(this.toMap());
   }
 }

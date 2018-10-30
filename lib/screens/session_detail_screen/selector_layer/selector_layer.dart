@@ -8,13 +8,13 @@ import 'package:flutter/material.dart';
 enum PanSide { right, left }
 
 class SelectorLayer extends StatefulWidget {
-  final List<Session> leftTrackSessions;
-  final List<Session> rightTrackSessions;
+  final List<Session> sessions;
+  List<Session> get leftTrackSessions => sessions.where((session)=> session.roomNumber == 2).toList();
+  List<Session> get rightTrackSessions => sessions.where((session)=> session.roomNumber == 1).toList();
 
   const SelectorLayer(
       {Key key,
-      @required this.leftTrackSessions,
-      @required this.rightTrackSessions})
+      @required this.sessions})
       : super(key: key);
   @override
   SelectorLayerState createState() {

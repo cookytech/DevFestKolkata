@@ -29,9 +29,9 @@ class _RightDisplayCardState extends State<RightDisplayCard>
     final format = DateFormat('hh:mm a');
 
     DateTime _fromTime =
-        DateTime.fromMillisecondsSinceEpoch(_session.fromTime).toLocal();
+        _session.fromTime;
     DateTime _toTime =
-        DateTime.fromMillisecondsSinceEpoch(_session.toTime).toLocal();
+        _session.toTime;
 
     double width = MediaQuery.of(context).size.width / 1.6;
     return Card(

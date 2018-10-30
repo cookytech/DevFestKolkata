@@ -22,8 +22,7 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
                 ),
                 BackdropLayer(),
                 SelectorLayer(
-                  leftTrackSessions: List.generate(6, (i) => Session.dummy()),
-                  rightTrackSessions: List.generate(8, (i) => Session.dummy()),
+                  sessions: List.generate(6, (i) => Session.dummy()),
                 ),
               ],
             ),

@@ -8,31 +8,42 @@ class Session {
   final String details;
   final String instructions;
   final String featureImageURI;
-  final String iconURI;
-  final int fromTime;
-  final int toTime;
-  final List<String> tags;
+  final DateTime fromTime;
+  final DateTime toTime;
   final String track;
   final String format;
-  final List<Speaker> speakers;
+  final Speaker speaker;
+  final int roomNumber;
+
+  Map<String, Object> get toMap => {
+    'title': title,
+    'subhead': subHead,
+    'tagLine': tagLine,
+    'details': details,
+    'instrucions': instructions,
+    'feature_image_uri': featureImageURI,
+    'from_time': fromTime,
+    'toTime': toTime,
+
+  };
 
   const Session(
-      {@required this.tags,
+      {
+      @required this.roomNumber,
       @required this.subHead,
       @required this.tagLine,
       @required this.format,
       @required this.track,
-      @required this.speakers,
+      @required this.speaker,
       @required this.title,
       @required this.details,
       @required this.instructions,
       @required this.featureImageURI,
-      @required this.iconURI,
       @required this.fromTime,
       @required this.toTime});
 
-  const Session.dummy()
-      : tags = const ['flutter', 'mobile', 'app'],
+  Session.dummy()
+      : roomNumber = 1,
         format = 'workshop',
         track = 'app',
         title = 'Experiments.on(context)',
@@ -94,7 +105,7 @@ Header Level 2
         ''',
         featureImageURI =
             'https://images.wallpaperscraft.com/image/butterfly_dark_wings_surface_71347_1920x1080.jpg',
-        speakers = const [Speaker.dummy()],
+        speaker = const Speaker.dummy(),
         subHead = 'A State Management Adventure With Flutter',
         tagLine =
             '''State Management is one of the most important points for architechting an app properly.
@@ -102,9 +113,6 @@ Header Level 2
 State Management Pattern should not be decided by the preference of the engineer, but by the requirements of the problem.
 
 Attend this session to experience all the State Management patterns in one sitting.''',
-        iconURI = '',
-        fromTime = 1541309400000,
-        toTime = 1541316600000;
+        fromTime = DateTime(1541309400000),
+        toTime = DateTime(1541316600000);
 }
-
-List<Session> dummySessions = List.generate(7, (_) => Session.dummy());

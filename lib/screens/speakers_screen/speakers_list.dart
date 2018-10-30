@@ -1,4 +1,3 @@
-import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/model/speaker.dart';
 import 'package:devfest_18_kolkata/screens/speakers_screen/speaker_widget.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +38,7 @@ class SpeakersList extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-            '${title} :',
+            '$title :',
               style: Theme.of(context).textTheme.title,
             ),
           ),
