@@ -13,7 +13,11 @@ class SpeakersList extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       padding: EdgeInsets.only(top: 15.0, bottom: 50.0),
       children: [
-        titleWrap(title: 'Sessions\'', sessionType: 'session', context: context),
+        titleWrap(
+          title: 'Sessions\'',
+          sessionType: 'session',
+          context: context,
+        ),
         titleWrap(
             title: 'Lightning Talks\'',
             sessionType: 'lightning_talks',
@@ -30,26 +34,28 @@ class SpeakersList extends StatelessWidget {
     @required String title,
     @required String sessionType,
     @required BuildContext context,
-  }) => Container(
-      margin: EdgeInsets.only(bottom: 40.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-            '$title :',
-              style: Theme.of(context).textTheme.title,
+  }) =>
+      Container(
+        margin: EdgeInsets.only(bottom: 40.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                '$title :',
+                style: Theme.of(context).textTheme.title,
+              ),
             ),
-          ),
-          Wrap(
-            spacing: 8.0,
-            children: speakers
-                .where((Speaker speaker) => speaker.sessionType == sessionType)
-                .map((speaker) => SpeakerWidget(speaker: speaker))
-                .toList(),
-          )
-        ],
-      ),
-    );
+            Wrap(
+              spacing: 8.0,
+              children: speakers
+                  .where(
+                      (Speaker speaker) => speaker.sessionType == sessionType)
+                  .map((speaker) => SpeakerWidget(speaker: speaker))
+                  .toList(),
+            )
+          ],
+        ),
+      );
 }

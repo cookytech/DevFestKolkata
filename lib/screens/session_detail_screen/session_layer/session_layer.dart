@@ -12,7 +12,7 @@ class SessionLayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<Session>(
-      initialData: Session.dummy(),
+      initialData: null,
       stream: currentSessionStream,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return SessionWidget(

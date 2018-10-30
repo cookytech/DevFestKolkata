@@ -1,4 +1,5 @@
-import 'package:meta/meta.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'speaker.dart';
 
 class Session {
@@ -12,107 +13,55 @@ class Session {
   final DateTime toTime;
   final String track;
   final String format;
-  final Speaker speaker;
+  final String speakerReference;
   final int roomNumber;
+  final Speaker speaker;
+  final DocumentReference reference;
 
   Map<String, Object> get toMap => {
-    'title': title,
-    'subhead': subHead,
-    'tagLine': tagLine,
-    'details': details,
-    'instrucions': instructions,
-    'feature_image_uri': featureImageURI,
-    'from_time': fromTime,
-    'toTime': toTime,
+        'title': title,
+        'subhead': subHead,
+        'tagline': tagLine,
+        'details': details,
+        'instrucions': instructions,
+        'feature_image_uri': featureImageURI,
+        'from_time': fromTime,
+        'to_time': toTime,
+        'track': track,
+        'format': format,
+        'speaker_reference': speakerReference,
+        'speaker': speaker.toMap(),
+        'room_number': roomNumber,
+      };
 
-  };
+  Session.fromMap(Map map, {this.reference})
+      : assert(map['title' != null]),
+        assert(map['subhead' != null]),
+        assert(map['tagline' != null]),
+        assert(map['details' != null]),
+        assert(map['instructions' != null]),
+        assert(map['feature_image_uri' != null]),
+        assert(map['from_time' != null]),
+        assert(map['to_time' != null]),
+        assert(map['track' != null]),
+        assert(map['format' != null]),
+        assert(map['speaker_reference' != null]),
+        assert(map['speaker' != null]),
+        assert(map['room_number' != null]),
+        title = map['title'],
+        subHead = map['subhead'],
+        tagLine = map['tagline'],
+        details = map['details'],
+        instructions = map['instructions'],
+        featureImageURI = map['feature_image_uri'],
+        fromTime = map['from_time'],
+        toTime = map['to_time'],
+        track = map['track'],
+        format = map['format'],
+        speakerReference = map['speaker_reference'],
+        speaker = Speaker.fromMap(map['speaker']),
+        roomNumber = map['room_number'];
 
-  const Session(
-      {
-      @required this.roomNumber,
-      @required this.subHead,
-      @required this.tagLine,
-      @required this.format,
-      @required this.track,
-      @required this.speaker,
-      @required this.title,
-      @required this.details,
-      @required this.instructions,
-      @required this.featureImageURI,
-      @required this.fromTime,
-      @required this.toTime});
-
-  Session.dummy()
-      : roomNumber = 1,
-        format = 'workshop',
-        track = 'app',
-        title = 'Experiments.on(context)',
-        details = '''
-Markdown Ipsum Presents
-=======================
-
-**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
-
-Header Level 2
---------------
-
-  1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  2. Aliquam tincidunt mauris eu risus.
-
-
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur  massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-
-### Header Level 3
-
-  * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  * Aliquam tincidunt mauris eu risus.
-
-```
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-```
-        ''',
-        instructions = '''
-Markdown Ipsum Presents
-=======================
-
-**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
-
-Header Level 2
---------------
-
-  1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  2. Aliquam tincidunt mauris eu risus.
-
-
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur  massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-
-### Header Level 3
-
-  * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  * Aliquam tincidunt mauris eu risus.
-
-```
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-```
-        ''',
-        featureImageURI =
-            'https://images.wallpaperscraft.com/image/butterfly_dark_wings_surface_71347_1920x1080.jpg',
-        speaker = const Speaker.dummy(),
-        subHead = 'A State Management Adventure With Flutter',
-        tagLine =
-            '''State Management is one of the most important points for architechting an app properly.
-
-State Management Pattern should not be decided by the preference of the engineer, but by the requirements of the problem.
-
-Attend this session to experience all the State Management patterns in one sitting.''',
-        fromTime = DateTime(1541309400000),
-        toTime = DateTime(1541316600000);
+  Session.fromSnapshot(DocumentSnapshot snapshot)
+      : this.fromMap(snapshot.data, reference: snapshot.reference);
 }

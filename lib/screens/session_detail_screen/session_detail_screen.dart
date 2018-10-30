@@ -1,4 +1,3 @@
-import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/selector_layer/selector_layer.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_layer/session_layer.dart';
@@ -22,7 +21,7 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
                 ),
                 BackdropLayer(),
                 SelectorLayer(
-                  sessions: List.generate(6, (i) => Session.dummy()),
+                  sessions: List.generate(6, (i) => null),
                 ),
               ],
             ),

@@ -1,6 +1,5 @@
 import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
-import 'package:devfest_18_kolkata/model/speaker.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_layer/column_list_item.dart';
 import 'package:devfest_18_kolkata/screens/speaker_details_screen/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +16,11 @@ class SessionWidget extends StatefulWidget {
 class _SessionWidgetState extends State<SessionWidget>
     with TickerProviderStateMixin {
   Session get _session => widget.session;
+  //TODO
+   var speaker = null;
+
 
   double get _imageWidth => (MediaQuery.of(context).size.width - 24.0) * 0.8;
-  Speaker get speaker => _session.speaker;
 
   AnimationController _slideController;
   Animation<Offset> _slidePosition;
