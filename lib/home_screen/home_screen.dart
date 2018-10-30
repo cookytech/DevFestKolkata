@@ -3,6 +3,7 @@ import 'package:devfest_18_kolkata/screens/invitiation_detail_screen/invitation_
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers_details_screen.dart';
 import 'package:devfest_18_kolkata/screens/quick_links_screen/quick_links_screen.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_screen.dart';
+import 'package:devfest_18_kolkata/screens/speakers_screen/speakers_screen.dart';
 import 'package:devfest_18_kolkata/screens/testimonial_screen/real_time_discussion_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -38,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen>
             InvitationDetailScreen(),
             QuickLinksScreen(),
             TestimonialScreen(),
+            SpeakersScreen(),
             OrganisersDetailsScreen(),
           ],
         ),

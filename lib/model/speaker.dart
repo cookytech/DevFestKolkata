@@ -9,6 +9,7 @@ class Speaker {
   final String twitterURL;
   final String githubURL;
   final String linkedInURL;
+  final String sessionType;
 
   const Speaker.dummy()
       : name = 'Raveesh Agarwal',
@@ -46,11 +47,15 @@ Header Level 2
         fbURL = 'https://www.facebook.com/raveesh.me',
         twitterURL = 'https://twitter.com/raveesh_me',
         githubURL = 'https://github.com/raveesh-me',
-        linkedInURL = 'https://www.linkedin.com/in/raveeshagarwal/';
-  Speaker({
+        linkedInURL = 'https://www.linkedin.com/in/raveeshagarwal/',
+  sessionType = 'workshop';
+
+
+  Speaker( {
     @required this.name,
     @required this.designation,
     @required this.about,
+    @required this.sessionType,
     @required this.imageURI,
     @required this.fbURL,
     @required this.twitterURL,

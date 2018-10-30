@@ -63,7 +63,7 @@ class _HidingAppBarState extends State<HidingAppBar>
             ),
             Tab(
               icon: Icon(
-                MdiIcons.accountHeart,
+                MdiIcons.script,
                 color: iconColor,
               ),
             ),
@@ -75,7 +75,13 @@ class _HidingAppBarState extends State<HidingAppBar>
             ),
             Tab(
               icon: Icon(
-                MdiIcons.accountEdit,
+                MdiIcons.commentPlusOutline,
+                color: iconColor,
+              ),
+            ),
+            Tab(
+              icon: Icon(
+                MdiIcons.starFace,
                 color: iconColor,
               ),
             ),

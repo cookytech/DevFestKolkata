@@ -1,5 +1,7 @@
+import 'package:devfest_18_kolkata/model/organisers.dart';
+import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers_list.dart';
 import 'package:flutter/material.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/organisers_tile_list_generator.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class OrganisersDetailsScreen extends StatefulWidget {
   @override
@@ -19,12 +21,18 @@ class _OrganisersDetailsScreenState extends State<OrganisersDetailsScreen> {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView(
-          physics: BouncingScrollPhysics(),
-          children: list,
-        ),
+      body: StreamBuilder<QuerySnapshot>(
+        stream: Firestore.instance.collection('organisers').snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData) {
+            return LinearProgressIndicator();
+          }
+          return OrganisersList(
+              organisers: snapshot.data.documents
+                  .map((DocumentSnapshot snapshot) =>
+                      Organiser.fromSnapshot(snapshot))
+                  .toList());
+        },
       ),
     );
   }

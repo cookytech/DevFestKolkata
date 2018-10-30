@@ -1,6 +1,5 @@
 import 'package:devfest_18_kolkata/model/organisers.dart';
 import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
-import 'package:devfest_18_kolkata/screens/organisers_details_screen/layers/organiser_tile_layers/organisers_tile_background_layer.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/organiser_description_dialog.dart';
 import 'package:devfest_18_kolkata/screens/organisers_details_screen/social_media_icons_row_provider.dart';
 import 'package:flutter/material.dart';
@@ -30,9 +29,12 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
 
     return Stack(
       children: <Widget>[
-        organisersTileBackground(
-          width,
-          imageURI: widget.organiser.imageURI,
+        Opacity(
+          opacity: 0.85,
+          child: organisersTileBackground(
+            width,
+            imageURI: widget.organiser.imageURI,
+          ),
         ),
         Container(
           height: 100.0,
@@ -48,7 +50,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    InkWell(
+                    GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
                           PageRouteBuilder(
@@ -86,7 +88,7 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
                         ],
                       ),
                     ),
-                    socialMediaIconsRow(widget.index, context),
+                    colorfulSocialMediaIconsRow(widget.organiser,),
                   ],
                 ),
                 SizedBox(height: 20.0),
@@ -98,4 +100,19 @@ class OrganisersDetailsTileState extends State<OrganisersDetailsTile> {
       ],
     );
   }
+}
+
+Widget organisersTileBackground(width, {String imageURI}) {
+  return Container(
+    height: 250.0,
+    width: width,
+    padding: EdgeInsets.only(bottom: 10.0),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(10.0),
+      child: Image.asset(
+        imageURI,
+        fit: BoxFit.fill,
+      ),
+    ),
+  );
 }
