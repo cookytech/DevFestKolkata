@@ -9,23 +9,25 @@ class SpeakerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+     double _screenWidth = MediaQuery.of(context).size.width;
+
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(
           SpeakerDetailsScreen.speakerRoute(speaker),
         );
       },
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: <Widget>[
-          Opacity(
-            opacity: 0.8,
-            child: Hero(
-              //TODO: Manage Hero Stuff
+      child: SizedBox(
+        width: _screenWidth*0.33,
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: <Widget>[
+            Hero(
               tag: '${speaker.name}',
               child: CircleAvatar(
                 backgroundImage: NetworkImage(speaker.imageURL),
-                radius: MediaQuery.of(context).size.width * 0.15,
+                radius: _screenWidth * 0.13,
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100.0),
@@ -39,25 +41,26 @@ class SpeakerWidget extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Text(
-                '${speaker.name}',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text(
+                  '${speaker.name}',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Text(
-                '${speaker.designation}',
-                style: TextStyle(
-                  fontWeight: FontWeight.w200,
+                Text(
+                  '${speaker.designation}',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w200,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
