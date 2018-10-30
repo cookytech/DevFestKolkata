@@ -8,7 +8,7 @@ import 'package:devfest_18_kolkata/model/time_enum.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown])
       .then((_) {
     runApp(new MyApp());
   });

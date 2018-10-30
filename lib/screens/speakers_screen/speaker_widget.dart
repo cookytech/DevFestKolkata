@@ -1,4 +1,5 @@
 import 'package:devfest_18_kolkata/model/speaker.dart';
+import 'package:devfest_18_kolkata/screens/speaker_details_screen/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class SpeakerWidget extends StatelessWidget {
@@ -8,33 +9,58 @@ class SpeakerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Opacity(
-      opacity: 0.8,
-      child: CircleAvatar(
-        backgroundImage: NetworkImage(speaker.imageURL),
-        radius: MediaQuery.of(context).size.width*0.16,
-        child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100.0),
-              gradient: LinearGradient(
-                colors: [Colors.black, Colors.transparent],
-                stops: [0.1, 0.3],
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-              )),
-          child: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text('${speaker.name}',
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                    )),
-                Text('${speaker.designation}'),
-              ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(
+          SpeakerDetailsScreen.speakerRoute(speaker),
+        );
+      },
+      onLongPress: () {
+        Scaffold.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Hello! I am ${speaker.name}😀'),
+          ),
+        );
+      },
+      child: Stack(
+        alignment: Alignment.bottomCenter,
+        children: <Widget>[
+          Opacity(
+            opacity: 0.8,
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(speaker.imageURL),
+              radius: MediaQuery.of(context).size.width * 0.15,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100.0),
+                  gradient: LinearGradient(
+                    colors: [Colors.black, Colors.transparent],
+                    stops: [0.2, 0.4],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                  ),
+                ),
+              ),
             ),
           ),
-        ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Text(
+                '${speaker.name}',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '${speaker.designation}',
+                style: TextStyle(
+                  fontWeight: FontWeight.w200,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
