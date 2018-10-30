@@ -35,11 +35,15 @@ class SpeakersList extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.title,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.title,
+            ),
           ),
           Wrap(
+            spacing: 8.0,
             children: speakers
                 .where((Speaker speaker) => speaker.sessionType == sessionType)
                 .map((speaker) => SpeakerWidget(speaker: speaker))

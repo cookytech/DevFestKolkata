@@ -8,8 +8,34 @@ class SpeakerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(speaker.name),
+    return Opacity(
+      opacity: 0.8,
+      child: CircleAvatar(
+        backgroundImage: NetworkImage(speaker.imageURL),
+        radius: MediaQuery.of(context).size.width*0.16,
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.0),
+              gradient: LinearGradient(
+                colors: [Colors.black, Colors.transparent],
+                stops: [0.1, 0.3],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+              )),
+          child: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text('${speaker.name}',
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                    )),
+                Text('${speaker.designation}'),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
