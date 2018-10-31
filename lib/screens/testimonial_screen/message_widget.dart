@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:devfest_18_kolkata/model/message.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class MessageWidgetState extends State<MessageWidget> {
           ),
           Opacity(
             child: CircleAvatar(
-              backgroundImage: NetworkImage(widget.message.photoUrl),
+              backgroundImage: CachedNetworkImageProvider(widget.message.photoUrl),
               radius: screenWidth * 0.27,
             ),
             opacity: 0.3,

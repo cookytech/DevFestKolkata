@@ -1,6 +1,7 @@
 import 'package:devfest_18_kolkata/model/speaker.dart';
 import 'package:devfest_18_kolkata/screens/speaker_details_screen/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class SpeakerWidget extends StatelessWidget {
   final Speaker speaker;
@@ -26,7 +27,7 @@ class SpeakerWidget extends StatelessWidget {
             Hero(
               tag: '${speaker.name}',
               child: CircleAvatar(
-                backgroundImage: NetworkImage(speaker.imageURL),
+                backgroundImage: CachedNetworkImageProvider(speaker.imageURL),
                 radius: _screenWidth * 0.13,
                 child: Container(
                   decoration: BoxDecoration(

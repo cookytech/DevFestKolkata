@@ -5,9 +5,63 @@ import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaButtonsGrid extends StatelessWidget {
   final Speaker speaker;
-  final double iconSize = 40.0;
 
   const SocialMediaButtonsGrid(this.speaker, {Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: Center(
+        child: Wrap(
+          children: <Widget>[
+            ConditionalIconButton(
+              iconData: MdiIcons.facebookBox,
+              url: speaker.fbURL,
+            ),
+
+            ConditionalIconButton(
+              iconData: MdiIcons.twitterBox,
+              url: speaker.twitterURL,
+            ),ConditionalIconButton(
+              iconData: MdiIcons.linkedinBox,
+              url: speaker.linkedInURL,
+            ),
+
+            ConditionalIconButton(
+              iconData: MdiIcons.githubBox,
+              url: speaker.githubURL,
+            )
+          ],
+        ),
+      )
+    );
+  }
+}
+
+class ConditionalIconButton extends StatelessWidget {
+  final IconData iconData;
+  final String url;
+
+  const ConditionalIconButton({Key key, this.iconData, this.url})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var squareDimensions = 62.0;
+    return url.isEmpty
+        ? SizedBox(
+            height: squareDimensions,
+            width: squareDimensions,
+          )
+        : IconButton(
+            icon: Icon(iconData),
+            onPressed: () {
+              showSocialProfile(url, context);
+            },
+            iconSize: 46.0,
+          );
+  }
 
   showSocialProfile(String url, BuildContext context) async {
     if (await canLaunch(url)) {
@@ -16,70 +70,5 @@ class SocialMediaButtonsGrid extends StatelessWidget {
       Scaffold.of(context)
           .showSnackBar(SnackBar(content: Text('Could not launch URL: $url')));
     }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    double containerHeight = MediaQuery.of(context).size.width * 0.38;
-    MainAxisAlignment rowAlignment = MainAxisAlignment.center;
-    double sizedBoxWidth = 8.0;
-    return Material(
-      color: Colors.transparent,
-      child: Container(
-        height: containerHeight,
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Row(
-                mainAxisAlignment: rowAlignment,
-                children: <Widget>[
-                  IconButton(
-                    iconSize: iconSize,
-                    icon: Icon(MdiIcons.facebookBox),
-                    onPressed: () {
-                      showSocialProfile(speaker.fbURL, context);
-                    },
-                  ),
-                  SizedBox(
-                    width: sizedBoxWidth,
-                  ),
-                  IconButton(
-                    iconSize: iconSize,
-                    icon: Icon(MdiIcons.twitterBox),
-                    onPressed: () {
-                      showSocialProfile(speaker.twitterURL, context);
-                    },
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: rowAlignment,
-                children: <Widget>[
-                  IconButton(
-                    iconSize: iconSize,
-                    icon: Icon(MdiIcons.linkedinBox),
-                    onPressed: () {
-                      showSocialProfile(speaker.linkedInURL, context);
-                    },
-                  ),
-                  SizedBox(
-                    width: sizedBoxWidth,
-                  ),
-                  IconButton(
-                    iconSize: iconSize,
-                    icon: Icon(MdiIcons.githubBox),
-                    onPressed: () {
-                      showSocialProfile(speaker.githubURL, context);
-                    },
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    );
   }
 }

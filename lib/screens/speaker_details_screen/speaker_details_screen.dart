@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:devfest_18_kolkata/model/speaker.dart';
 import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/screens/speaker_details_screen/social_media_buttons_grid.dart';
@@ -18,7 +19,7 @@ class SpeakerDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _imageWidth = MediaQuery.of(context).size.width * 0.46;
+    double _imageWidth = MediaQuery.of(context).size.width * 0.55;
     return Scaffold(
       appBar: AppBar(
         title: Text(speaker.name),
@@ -32,8 +33,8 @@ class SpeakerDetailsScreen extends StatelessWidget {
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(
-                top: 25.0,
-                left: 17.0,
+                top: 55.0,
+                left: 22.0,
                 right: 6.0,
                 bottom: 12.0,
               ),
@@ -80,7 +81,7 @@ class SpeakerDetailsScreen extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(speaker.imageURL),
+                        image: CachedNetworkImageProvider(speaker.imageURL),
                       ),
                       boxShadow: [
                         BoxShadow(
