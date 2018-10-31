@@ -22,7 +22,7 @@ set _isBackdropVisible(bool isVisible) {
 }
 
 //Current active session Controller
-Session _currentDisplayedSessionCache = null;
+Session _currentDisplayedSessionCache;
 BehaviorSubject<Session> _currentSessionController = BehaviorSubject<Session>();
 Stream<Session> get currentSessionStream => _currentSessionController.stream;
 set currentSession(Session session) {

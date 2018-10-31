@@ -15,7 +15,7 @@ class Session {
   final String format;
   final String speakerReference;
   final int roomNumber;
-  final Speaker speaker;
+//  final Speaker speaker;
   final DocumentReference reference;
 
   Map<String, Object> get toMap => {
@@ -30,7 +30,7 @@ class Session {
         'track': track,
         'format': format,
         'speaker_reference': speakerReference,
-        'speaker': speaker.toMap(),
+//        'speaker': speaker.toMap(),
         'room_number': roomNumber,
       };
 
@@ -59,7 +59,7 @@ class Session {
         track = map['track'],
         format = map['format'],
         speakerReference = map['speaker_reference'],
-        speaker = Speaker.fromMap(map['speaker']),
+//        speaker = Speaker.fromMap(map['speaker']),
         roomNumber = map['room_number'];
 
   Session.fromSnapshot(DocumentSnapshot snapshot)

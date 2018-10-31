@@ -9,8 +9,6 @@ enum PanSide { right, left }
 
 class SelectorLayer extends StatefulWidget {
   final List<Session> sessions;
-  List<Session> get leftTrackSessions => sessions.where((session)=> session.roomNumber == 2).toList();
-  List<Session> get rightTrackSessions => sessions.where((session)=> session.roomNumber == 1).toList();
 
   const SelectorLayer(
       {Key key,
@@ -23,11 +21,11 @@ class SelectorLayer extends StatefulWidget {
 }
 
 class SelectorLayerState extends State<SelectorLayer> {
-  List<Session> get _leftSessions => widget.leftTrackSessions;
+  List<Session> get _leftSessions => widget.sessions.where((session)=> session.roomNumber == 2).toList();
   int get _leftSessionIndex => (currentAlignY * _leftSessions.length).floor();
   Color _leftColor = Colors.transparent;
 
-  List<Session> get _rightSessions => widget.rightTrackSessions;
+  List<Session> get _rightSessions => widget.sessions.where((session)=> session.roomNumber == 1).toList();
   int get _rightSessionIndex => (currentAlignY * _rightSessions.length).floor();
   Color _rightColor = Colors.transparent;
 

@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/backdrop_layer/backdrop_layer.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/selector_layer/selector_layer.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_layer/session_layer.dart';
@@ -14,17 +16,32 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
-        builder: (_, __) => Stack(
-              children: <Widget>[
-                SessionLayer(
-                  currentSessionStream: bloc.currentSessionStream,
-                ),
-                BackdropLayer(),
-                SelectorLayer(
-                  sessions: List.generate(6, (i) => null),
-                ),
-              ],
-            ),
+        stream: Firestore.instance.collection('sessions').snapshots(),
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (!snapshot.hasData) {
+            return LinearProgressIndicator();
+          }
+
+          return Stack(
+            children: <Widget>[
+              SessionLayer(
+                currentSessionStream: bloc.currentSessionStream,
+              ),
+              BackdropLayer(),
+              SelectorLayer(
+                sessions: snapshot.data.documents
+                    .map((DocumentSnapshot snapshot) =>
+                        Session.fromSnapshot(snapshot))
+                    .toList(),
+              ),
+            ],
+          );
+//          return ListView(
+//            children: snapshot.data.documents
+//                .map((DocumentSnapshot snap) => Text('${snap.data['title']}'))
+//                .toList(),
+//          );
+        },
       ),
     );
   }
