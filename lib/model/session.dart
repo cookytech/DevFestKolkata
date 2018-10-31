@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'speaker.dart';
+import 'list.dart';
 
 class Session {
   final String title;
@@ -64,4 +65,23 @@ class Session {
 
   Session.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
+
+  Session(this.title, this.subHead, this.tagLine, this.details,
+      this.instructions, this.featureImageURI, this.fromTime, this.toTime,
+      this.track, this.format, this.speakerReference, this.roomNumber,
+      ):this.reference = null;
+
+
 }
+
+populate() {
+  List<Session> sessions = List.generate(speaker.length, (i)=>Session(title[i], subhead[i], '', '', '', featureImageURI[i], null, null, track[i], format[i], speaker[i], roomNumber[i],));
+  sessions.forEach(
+    (session) =>
+        Firestore.instance.document('sessions/${session.title}').setData(
+              session.toMap,
+            ),
+  );
+}
+
+
