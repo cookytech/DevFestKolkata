@@ -15,7 +15,7 @@ class Session {
   final String format;
   final String speakerReference;
   final int roomNumber;
-//  final Speaker speaker;
+  final Speaker speaker;
   final DocumentReference reference;
 
   Map<String, Object> get toMap => {
@@ -30,24 +30,14 @@ class Session {
         'track': track,
         'format': format,
         'speaker_reference': speakerReference,
-//        'speaker': speaker.toMap(),
+        'speaker': speaker.toMap(),
         'room_number': roomNumber,
       };
 
+
+
   Session.fromMap(Map map, {this.reference})
-      : assert(map['title' != null]),
-        assert(map['subhead' != null]),
-        assert(map['tagline' != null]),
-        assert(map['details' != null]),
-        assert(map['instructions' != null]),
-        assert(map['feature_image_uri' != null]),
-        assert(map['from_time' != null]),
-        assert(map['to_time' != null]),
-        assert(map['track' != null]),
-        assert(map['format' != null]),
-        assert(map['speaker_reference' != null]),
-        assert(map['speaker' != null]),
-        assert(map['room_number' != null]),
+      :
         title = map['title'],
         subHead = map['subhead'],
         tagLine = map['tagline'],
@@ -59,7 +49,7 @@ class Session {
         track = map['track'],
         format = map['format'],
         speakerReference = map['speaker_reference'],
-//        speaker = Speaker.fromMap(map['speaker']),
+        speaker = Speaker.fromMap(map['speaker']),
         roomNumber = map['room_number'];
 
   Session.fromSnapshot(DocumentSnapshot snapshot)
