@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'lists.dart';
 
 class Speaker {
   final String name;
@@ -47,7 +46,6 @@ class Speaker {
         assert(map['twitter_url'] != null),
         assert(map['github_url'] != null),
         assert(map['linkedin_url'] != null),
-//   TODO     assert(map['session_topic'] != null),
         name = map['name'],
         designation = map['designation'],
         about = map['about_md'],
@@ -61,15 +59,3 @@ class Speaker {
   Speaker.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
 }
-
-
-
-//populate() {
-//  List<Speaker> speakers = List.generate(18, (i)=>Speaker(names[i], salutations[i], images[i], fbs[i], tws[i], ghbs[i], linds[i], sTypes[i], ''));
-//  speakers.forEach(
-//    (speaker) =>
-//        Firestore.instance.document('speakers/${speaker.name}').setData(
-//              speaker.toMap(),
-//            ),
-//  );
-//}

@@ -44,7 +44,10 @@ class SpeakersList extends StatelessWidget {
               padding: const EdgeInsets.all(8.0).copyWith(bottom: 20.0),
               child: Text(
                 '$title :',
-                style: Theme.of(context).textTheme.display4.copyWith(fontSize: 55.0),
+                style: Theme.of(context)
+                    .textTheme
+                    .display4
+                    .copyWith(fontSize: 55.0),
               ),
             ),
             Opacity(
