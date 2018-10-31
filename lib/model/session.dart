@@ -34,11 +34,8 @@ class Session {
         'room_number': roomNumber,
       };
 
-
-
   Session.fromMap(Map map, {this.reference})
-      :
-        title = map['title'],
+      : title = map['title'],
         subHead = map['subhead'],
         tagLine = map['tagline'],
         details = map['details'],
@@ -54,4 +51,21 @@ class Session {
 
   Session.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
+
+  static syncSessionSpeakers() async {
+    QuerySnapshot querySnapshot =
+        await Firestore.instance.collection('sessions').snapshots().first;
+    List<Session> sessions = querySnapshot.documents
+        .map((DocumentSnapshot snapshot) => Session.fromSnapshot(snapshot))
+        .toList();
+
+    sessions.forEach((Session session) async {
+      Speaker speaker = Speaker.fromSnapshot(await Firestore.instance
+          .document('speakers/${session.speakerReference}')
+          .get());
+      Firestore.instance
+          .document('sessions/${session.title}')
+          .setData({"speaker": speaker.toMap()}, merge: true);
+    });
+  }
 }
