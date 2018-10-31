@@ -58,4 +58,16 @@ class Speaker {
 
   Speaker.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
+
+  const Speaker.dummy()
+      : name = 'pappu',
+        designation = 'beggar at streets',
+        about = 'not much',
+        sessionType = 'lightning',
+        imageURL = 'https://image.ibb.co/cBG9L0/Rimjhim-Bhadani.jpg',
+        fbURL = 'https://www.facebook.com/rimjhim.bhadani',
+        twitterURL = 'https://twitter.com/bhadani_rimjhim',
+        githubURL = 'khaali',
+        linkedInURL = 'no link',
+        reference = null;
 }
