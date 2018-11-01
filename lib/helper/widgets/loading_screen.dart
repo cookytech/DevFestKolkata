@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
   final AnimationController animationController;
+
   const LoadingScreen({Key key, this.animationController}) : super(key: key);
+
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }
@@ -12,7 +14,8 @@ class _LoadingScreenState extends State<LoadingScreen>
   AnimationController get controller => widget.animationController;
   Animation<Color> colorAnimation;
   Animation<double> logoAnimation;
-  Animation<double> splashAnimation;
+
+//  Animation<double> splashAnimation;
   Animation<double> textAnimation;
 
   @override
@@ -24,24 +27,24 @@ class _LoadingScreenState extends State<LoadingScreen>
       CurvedAnimation(
         parent: controller,
         curve: Interval(
-          0.10,
-          0.35,
+          0.0,
+          0.15,
           curve: Curves.bounceIn,
         ),
       ),
     );
-    splashAnimation = Tween(begin: 25.0, end: 450.0).animate(
-      CurvedAnimation(
-        parent: controller,
-        curve: Interval(
-          0.0,
-          0.3,
-          curve: Curves.linear,
-        ),
-      ),
-    );
+//    splashAnimation = Tween(begin: 25.0, end: 450.0).animate(
+//      CurvedAnimation(
+//        parent: controller,
+//        curve: Interval(
+//          0.0,
+//          0.3,
+//          curve: Curves.linear,
+//        ),
+//      ),
+//    );
 
-    logoAnimation = Tween(begin: 25.0, end: 60.0).animate(
+    logoAnimation = Tween(begin: 25.0, end: 50.0).animate(
       CurvedAnimation(
         parent: controller,
         curve: Interval(
@@ -51,7 +54,7 @@ class _LoadingScreenState extends State<LoadingScreen>
         ),
       ),
     );
-    textAnimation = Tween(begin: 0.0, end: 35.0).animate(
+    textAnimation = Tween(begin: 0.0, end: 25.0).animate(
       CurvedAnimation(
         parent: controller,
         curve: Interval(
@@ -72,11 +75,6 @@ class _LoadingScreenState extends State<LoadingScreen>
         body: Center(
           child: Stack(
             children: <Widget>[
-              Center(
-                  child: CircleAvatar(
-                radius: splashAnimation.value,
-                backgroundColor: ThemeData.dark().cardColor,
-              )),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -91,14 +89,11 @@ class _LoadingScreenState extends State<LoadingScreen>
                   Center(
                     child: Container(
                       padding: new EdgeInsets.only(top: textAnimation.value),
-                      child: Text(
-                        'DevFest\'18 Kolkata',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: textAnimation.value,
-                        ),
-                      ),
+                      child: Text('DevFest\'18 Kolkata',
+                          style: ThemeData.dark()
+                              .textTheme
+                              .display2
+                              .copyWith(fontSize: textAnimation.value)),
                     ),
                   ),
                 ],
