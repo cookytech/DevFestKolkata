@@ -4,7 +4,7 @@ class RejectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('Rejected'),
+      child: Image.asset('/assets/image/minion_sad'),
     );
   }
 }

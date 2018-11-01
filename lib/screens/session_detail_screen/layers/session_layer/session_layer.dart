@@ -20,7 +20,8 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
             return LinearProgressIndicator();
           }
           print('THIS IS NHETE ${snapshot.data}');
-          return SessionWidget(session: snapshot.data,);
+          return Container();
+//          return SessionWidget(session: snapshot.data,);
         }
       ),
     );

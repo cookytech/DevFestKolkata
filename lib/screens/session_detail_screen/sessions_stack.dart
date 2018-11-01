@@ -14,7 +14,7 @@ class SessionsStack extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        SessionWidget(),
+//        SessionWidget(),
         BackdropLayer(),
         SelectorLayer(sessions: sessions,),
       ],
