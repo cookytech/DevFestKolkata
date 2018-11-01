@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:devfest_18_kolkata/model/session.dart';
-import 'package:devfest_18_kolkata/screens/session_detail_screen/layers/session_layer/session_widget.dart';
 import 'package:flutter/material.dart';
 
 class SessionDetailScreen extends StatefulWidget {

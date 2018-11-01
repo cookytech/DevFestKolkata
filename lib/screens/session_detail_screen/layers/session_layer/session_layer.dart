@@ -1,7 +1,7 @@
 import 'package:devfest_18_kolkata/model/session.dart';
-import 'package:devfest_18_kolkata/screens/session_detail_screen/layers/session_layer/session_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_bloc.dart' as bloc;
+import 'session_widget.dart';
 
 class SessionDetailScreen extends StatefulWidget {
   @override
@@ -20,8 +20,7 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
             return LinearProgressIndicator();
           }
           print('THIS IS NHETE ${snapshot.data}');
-          return Container();
-//          return SessionWidget(session: snapshot.data,);
+          return SessionWidget(session: snapshot.data,);
         }
       ),
     );

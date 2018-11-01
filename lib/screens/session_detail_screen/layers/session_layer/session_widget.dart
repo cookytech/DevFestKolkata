@@ -1,13 +1,12 @@
-import 'package:devfest_18_kolkata/helper/widgets/colorful_bottom_border_provider.dart';
 import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/layers/session_layer/sessions_chip.dart';
 import 'package:devfest_18_kolkata/screens/speaker_details_screen/speaker_details_screen.dart';
 import 'package:flutter/material.dart';
 
-class SessionsWidget extends StatelessWidget {
+class SessionWidget extends StatelessWidget {
   final Session session;
 
-  const SessionsWidget({Key key, this.session}) : super(key: key);
+  const SessionWidget({Key key, this.session}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Scaffold(

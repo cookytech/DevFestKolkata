@@ -1,8 +1,6 @@
 import 'dart:convert';
-
-import 'package:devfest_18_kolkata/screens/invitiation_detail_screen/invitation_screen.dart';
-import 'package:devfest_18_kolkata/screens/invitiation_detail_screen/rejection_screen.dart';
 import 'package:devfest_18_kolkata/helper/widgets/user_manager.dart';
+import 'package:devfest_18_kolkata/screens/invitiation_detail_screen/result_screen.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -21,6 +19,7 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
   @override
   void initState() {
     super.initState();
+    isLoading = false;
     emailEditingController = TextEditingController();
   }
 
@@ -35,127 +34,136 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
         title: Text('Invitations'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Builder(
-          builder: (BuildContext context) {
-            return isLoading
-                ? LinearProgressIndicator()
-                : isInvited != null
-                    ? isInvited ? InvitationScreen() : RejectionScreen()
-                    : SingleChildScrollView(
-                        padding: EdgeInsets.only(bottom: 50.0),
-                        physics: BouncingScrollPhysics(),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'Google',
-                              style: Theme.of(context).textTheme.display4,
-                            ),
-                            Row(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: singleLetterBoxWidth * 0.5),
-                                  child: SizedBox(
-                                    width: singleLetterBoxWidth,
-                                    child: Center(
-                                      child: Text(
-                                        '?',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .display4,
-                                      ),
+      body: Builder(
+        builder: (BuildContext context) {
+          return isLoading
+              ? LinearProgressIndicator()
+              : SingleChildScrollView(
+                      padding: EdgeInsets.only(bottom: 50.0),
+                      physics: BouncingScrollPhysics(),
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            'Google',
+                            style: Theme.of(context).textTheme.display4,
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: singleLetterBoxWidth * 0.5),
+                                child: SizedBox(
+                                  width: singleLetterBoxWidth,
+                                  child: Center(
+                                    child: Text(
+                                      '?',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .display4,
                                     ),
                                   ),
                                 ),
-                                Expanded(
-                                  child: userManager.user == null
-                                      ? RaisedButton.icon(
-                                          onPressed: () {
-                                            userManager.authorize();
-                                          },
-                                          icon: Icon(MdiIcons.google),
-                                          label: Text('SIGN IN'))
-                                      : Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 12.0),
-                                          child: Text(
-                                            'Hi, ${userManager.user.displayName.split(' ')[0]}!',
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .display3
-                                                .copyWith(fontSize: 25.0),
-                                          ),
+                              ),
+//                                Expanded(child: SizedBox(),),
+                              userManager.user == null
+                                  ? Opacity(
+                                      opacity: 0.9,
+                                      child: FlatButton.icon(
+                                        onPressed: () {
+                                          userManager.authorize();
+                                        },
+                                        highlightColor: Colors.transparent,
+                                        splashColor: Colors.transparent,
+                                        icon: Icon(
+                                          MdiIcons.google,
+                                          size: 60.0,
                                         ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: singleLetterBoxWidth * 0.5),
-                                  child: SizedBox(
-                                    width: singleLetterBoxWidth,
-                                    child: Center(
+                                        label: Text(
+                                          'Sign In',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .display1,
+                                        ),
+                                      ),
+                                    )
+                                  : Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 12.0),
                                       child: Text(
-                                        ':',
+                                        'Hi, ${userManager.user.displayName.split(' ')[0]}!',
                                         style: Theme.of(context)
                                             .textTheme
-                                            .display4,
+                                            .display3
+                                            .copyWith(fontSize: 25.0),
                                       ),
+                                    ),
+                              Expanded(
+                                child: SizedBox(),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: singleLetterBoxWidth * 0.5),
+                                child: SizedBox(
+                                  width: singleLetterBoxWidth,
+                                  child: Center(
+                                    child: Text(
+                                      ':',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .display4,
                                     ),
                                   ),
                                 ),
-                                Expanded(
-                                    child: Container(
-                                  padding: const EdgeInsets.only(
-                                      top: 20.0, right: 20.0),
-                                  child: TextField(
-                                    controller: emailEditingController,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .display3
-                                        .copyWith(fontSize: 25.0),
-                                    decoration: InputDecoration(
-                                        labelText: 'Email',
-                                        hintText: 'If !Gmail',
-                                        border: OutlineInputBorder()),
-                                    autofocus: false,
+                              ),
+                              Expanded(
+                                  child: Container(
+                                padding: const EdgeInsets.only(
+                                    top: 20.0, right: 20.0),
+                                child: TextField(
+                                  controller: emailEditingController,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .display3
+                                      .copyWith(fontSize: 25.0),
+                                  decoration: InputDecoration(
+                                      labelText: 'Email',
+                                      hintText: 'If !Gmail',
+                                      border: OutlineInputBorder()),
+                                  autofocus: false,
+                                ),
+                              )),
+                            ],
+                          ),
+                          Builder(
+                            builder: (_) => InkWell(
+                                  onTap: () {
+                                    fetchStatus(_);
+                                  },
+                                  borderRadius: BorderRadius.circular(100.0),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 55.0),
+                                    child: Text(';',
+                                        style:
+                                            Theme.of(_).textTheme.display4),
                                   ),
-                                )),
-                              ],
-                            ),
-                            Builder(
-                              builder: (_) => InkWell(
-                                    onTap: () {
-                                      fetchStatus(_);
-                                    },
-                                    borderRadius: BorderRadius.circular(100.0),
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 55.0),
-                                      child: Text(';',
-                                          style:
-                                              Theme.of(_).textTheme.display4),
-                                    ),
-                                  ),
-                            )
-                          ],
-                        ),
-                      );
-          },
-        ),
+                                ),
+                          )
+                        ],
+                      ),
+                    );
+        },
       ),
     );
   }
 
   fetchStatus(BuildContext context) async {
     var editorText = emailEditingController.text;
-    setState(() {
-      isLoading = true;
-    });
     String email;
     if (!isEmailAddress(editorText)) {
       if (userManager.user == null) {
@@ -173,7 +181,6 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
     } else {
       email = emailEditingController.text;
     }
-    print('Checking status for $email');
     try {
       bool invited = await getInviteDetails(email);
       setState(() {
@@ -182,13 +189,10 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
     } catch (e) {
       print('CHECK STATUS ERROR: $e');
     }
-    setState(() {
-      isLoading = false;
-    });
+    Navigator.of(context).push(ResultScreen.route(isInvited));
   }
 
   Future<bool> getInviteDetails(String email) async {
-
     String url =
         'https://xprilion.com/devfest/check.php?email=$email&auth=whr8w43f093j4fhKLN902';
     http.Response response = await http.get(url);
