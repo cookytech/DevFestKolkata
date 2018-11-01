@@ -2,7 +2,7 @@ import 'package:devfest_18_kolkata/model/session.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/layers/selector_layer/left_display_card.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/layers/selector_layer/right_display_card.dart';
 import 'package:devfest_18_kolkata/screens/session_detail_screen/session_detail_bloc.dart'
-as bloc;
+    as bloc;
 import 'package:flutter/material.dart';
 
 enum PanSide { right, left }
@@ -10,10 +10,7 @@ enum PanSide { right, left }
 class SelectorLayer extends StatefulWidget {
   final List<Session> sessions;
 
-  const SelectorLayer(
-      {Key key,
-        @required this.sessions})
-      : super(key: key);
+  const SelectorLayer({Key key, @required this.sessions}) : super(key: key);
   @override
   SelectorLayerState createState() {
     return new SelectorLayerState();
@@ -21,12 +18,11 @@ class SelectorLayer extends StatefulWidget {
 }
 
 class SelectorLayerState extends State<SelectorLayer> {
-  List<Session> get _leftSessions => widget.sessions.where((session)=>session.roomNumber == 1).toList();
+  List<Session> _leftSessions;
   int get _leftSessionIndex => (currentAlignY * _leftSessions.length).floor();
   Color _leftColor = Colors.transparent;
 
-
-  List<Session> get _rightSessions => widget.sessions.where((session)=>session.roomNumber == 2).toList();
+  List<Session> _rightSessions;
   int get _rightSessionIndex => (currentAlignY * _rightSessions.length).floor();
   Color _rightColor = Colors.transparent;
 
@@ -35,9 +31,16 @@ class SelectorLayerState extends State<SelectorLayer> {
 
   PanSide currentPanSide;
 
+  int sorter(Session one, Session two) =>
+      one.fromTime.millisecondsSinceEpoch - two.fromTime.millisecondsSinceEpoch;
+
   @override
   void initState() {
     super.initState();
+    _leftSessions = widget.sessions.where((session) => session.roomNumber == 1).toList();
+    _leftSessions.sort(sorter);
+    _rightSessions = widget.sessions.where((session) => session.roomNumber == 2).toList();
+    _rightSessions.sort(sorter);
   }
 
   @override
@@ -70,13 +73,13 @@ class SelectorLayerState extends State<SelectorLayer> {
                   alignment: Alignment(0.0, -1.0 + 2 * currentAlignY),
                   child: currentPanSide == PanSide.left
                       ? LeftDisplayCard(
-                    session: _leftSessions[_leftSessionIndex],
-                    index: _leftSessionIndex,
-                  )
+                          session: _leftSessions[_leftSessionIndex],
+                          index: _leftSessionIndex,
+                        )
                       : RightDisplayCard(
-                    session: _rightSessions[_rightSessionIndex],
-                    index: _rightSessionIndex,
-                  ),
+                          session: _rightSessions[_rightSessionIndex],
+                          index: _rightSessionIndex,
+                        ),
                 ),
               );
             },

@@ -3,6 +3,7 @@ import 'package:devfest_18_kolkata/screens/session_detail_screen/layers/session_
 import 'package:devfest_18_kolkata/screens/speakers_screen/speaker_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class SessionWidget extends StatelessWidget {
   final Session session;
@@ -21,9 +22,8 @@ class SessionWidget extends StatelessWidget {
         height: contextWidth * 0.95 * 9 / 16,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(0.0),
-          child: Image.network(
-            session.featureImageURI,
-            fit: BoxFit.cover,
+          child: CachedNetworkImage(
+            fit: BoxFit.cover, imageUrl: session.featureImageURI,
           ),
         ),
       ),
@@ -101,7 +101,7 @@ class SessionWidget extends StatelessWidget {
 
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(vertical: 110.0),
+      padding: EdgeInsets.symmetric(vertical: 110.0).copyWith(left: 5.0),
       child: Opacity(
         child: Column(
           children: <Widget>[

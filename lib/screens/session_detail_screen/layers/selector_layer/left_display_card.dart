@@ -46,7 +46,7 @@ class _LeftDisplayCardState extends State<LeftDisplayCard>
             Center(
                 child: Column(
                   children: <Widget>[
-                    Text(_session.title),
+                    Text(_session.title, maxLines: 1, overflow: TextOverflow.fade,),
                     Text(
                       '${format.format(_fromTime)} - ${format.format(_toTime)}',
                     ),
