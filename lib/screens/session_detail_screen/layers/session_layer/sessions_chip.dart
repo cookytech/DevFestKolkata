@@ -6,49 +6,52 @@ class SessionsChip extends StatelessWidget {
   final String label;
   final String markdownData;
 
-  const SessionsChip({Key key, this.label, this.markdownData,}) : super(key: key);
-
+  const SessionsChip({
+    Key key,
+    this.label,
+    this.markdownData,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return markdownData == null || markdownData.isEmpty
         ? Container()
         : GestureDetector(
-      onTap: (){
-        showDialog(
-          context: context,
-          builder: (_) => Dialog(
-            child: Column(
-              children: <Widget>[
-                Text(
-                  'Session: $label',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    padding: EdgeInsets.only(
-                        bottom: 8.0, right: 8.0, left: 8.0),
-                    height: 300.0,
-                    child: ListView(
-                      physics: BouncingScrollPhysics(),
-                      children: <Widget>[
-                        MarkdownBody(data: markdownData),
-                      ],
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return Dialog(
+                    child: Card(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: Text(
+                              label,
+                              style: Theme.of(context).textTheme.title,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0)
+                                .copyWith(bottom: 20.0),
+                            child: MarkdownBody(
+                              data: markdownData,
+                            ),
+                          ),
+                          bottomBorder()
+                        ],
+                      ),
                     ),
-                  ),
-                ),
-                bottomBorder(),
-              ],
+                  );
+                },
+              );
+            },
+            child: Chip(
+              label: Text(label),
+              backgroundColor: Colors.grey,
             ),
-          ),
-        );
-      },
-      child: Chip(
-        label: Text(label),
-        backgroundColor: Colors.grey,
-      ),
-    );
+          );
   }
 }

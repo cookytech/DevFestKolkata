@@ -21,46 +21,49 @@ class SpeakerWidget extends StatelessWidget {
       },
       child: SizedBox(
         width: _screenWidth*0.33,
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: <Widget>[
-            Hero(
-              tag: '${speaker.name}',
-              child: CircleAvatar(
-                backgroundImage: CachedNetworkImageProvider(speaker.imageURL),
-                radius: _screenWidth * 0.13,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100.0),
-                    gradient: LinearGradient(
-                      colors: [Colors.black, Colors.transparent],
-                      stops: [0.2, 0.4],
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
+        child: SizedBox(
+          height: 100.0,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: <Widget>[
+              Hero(
+                tag: '${speaker.name}',
+                child: CircleAvatar(
+                  backgroundImage: CachedNetworkImageProvider(speaker.imageURL),
+                  radius: _screenWidth * 0.13,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100.0),
+                      gradient: LinearGradient(
+                        colors: [Colors.black, Colors.transparent],
+                        stops: [0.2, 0.4],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Text(
-                  '${speaker.name}',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    '${speaker.name}',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Text(
-                  '${speaker.designation}',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w200,
+                  Text(
+                    '${speaker.designation}',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w200,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
