@@ -63,6 +63,9 @@
       <excludeFolder url="file://$MODULE_DIR$/loading_screen_experiment/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/loading_screen_experiment/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/loading_screen_experiment/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ui_for_sessions_screen/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ui_for_sessions_screen/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ui_for_sessions_screen/build" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
