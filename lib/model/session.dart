@@ -9,8 +9,8 @@ class Session {
   final String details;
   final String instructions;
   final String featureImageURI;
-  final int fromTime; //TODO
-  final int toTime; //TODO try to take TimStamp from Firebase instead of int
+  final DateTime fromTime; //TODO
+  final DateTime toTime; //TODO try to take TimStamp from Firebase instead of int
   final String track;
   final String format;
   final String speakerReference;
@@ -69,36 +69,36 @@ class Session {
     });
   }
 
-  Session.dummyLeft(
-      {this.title = 'Title',
-      this.subHead = 'Subhead',
-      this.tagLine =
-          'Tagline is a Lorem Ipsum to must attend event, otherwise \n miss might many some  lot of fun',
-      this.details = 'details... lot of details...',
-      this.instructions = 'speakser has no instructions',
-      this.featureImageURI = 'https://image.ibb.co/hGWnQ0/Untitled.png',
-      this.fromTime = 123213213213,
-      this.toTime = 2343432423234,
-      this.track = 'flutter',
-      this.format = 'workshop',
-      this.speakerReference = 'Raveesh Agarwal',
-      this.roomNumber = 1,
-      this.speaker = const Speaker.dummy(),
-      this.reference});
-  Session.dummyRight(
-      {this.title = 'Title',
-      this.subHead = 'Subhead',
-      this.tagLine =
-          'Tagline is a Lorem Ipsum to must attend event, otherwise \n miss might many some  lot of fun',
-      this.details = 'details... lot of details...',
-      this.instructions = 'speakser has no instructions',
-      this.featureImageURI = 'https://image.ibb.co/hGWnQ0/Untitled.png',
-      this.fromTime = 123213213213,
-      this.toTime = 2343432423234,
-      this.track = 'flutter',
-      this.format = 'workshop',
-      this.speakerReference = 'Raveesh Agarwal',
-      this.roomNumber = 2,
-      this.speaker = const Speaker.dummy(),
-      this.reference});
+//  Session.dummyLeft(
+//      {this.title = 'Title',
+//      this.subHead = 'Subhead',
+//      this.tagLine =
+//          'Tagline is a Lorem Ipsum to must attend event, otherwise \n miss might many some  lot of fun',
+//      this.details = 'details... lot of details...',
+//      this.instructions = 'speakser has no instructions',
+//      this.featureImageURI = 'https://image.ibb.co/hGWnQ0/Untitled.png',
+//      this.fromTime = 123213213213,
+//      this.toTime = 2343432423234,
+//      this.track = 'flutter',
+//      this.format = 'workshop',
+//      this.speakerReference = 'Raveesh Agarwal',
+//      this.roomNumber = 1,
+//      this.speaker = const Speaker.dummy(),
+//      this.reference});
+//  Session.dummyRight(
+//      {this.title = 'Title',
+//      this.subHead = 'Subhead',
+//      this.tagLine =
+//          'Tagline is a Lorem Ipsum to must attend event, otherwise \n miss might many some  lot of fun',
+//      this.details = 'details... lot of details...',
+//      this.instructions = 'speakser has no instructions',
+//      this.featureImageURI = 'https://image.ibb.co/hGWnQ0/Untitled.png',
+//      this.fromTime = 123213213213,
+//      this.toTime = 2343432423234,
+//      this.track = 'flutter',
+//      this.format = 'workshop',
+//      this.speakerReference = 'Raveesh Agarwal',
+//      this.roomNumber = 2,
+//      this.speaker = const Speaker.dummy(),
+//      this.reference});
 }

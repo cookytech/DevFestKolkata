@@ -27,10 +27,8 @@ class _LeftDisplayCardState extends State<LeftDisplayCard>
   Widget build(BuildContext context) {
     final format = DateFormat('hh:mm a');
 
-    DateTime _fromTime =
-    DateTime.fromMillisecondsSinceEpoch(_session.fromTime).toLocal();
-    DateTime _toTime =
-    DateTime.fromMillisecondsSinceEpoch(_session.toTime).toLocal();
+    DateTime _fromTime =_session.fromTime;
+    DateTime _toTime = _session.toTime;
 
     double width = MediaQuery.of(context).size.width / 1.6;
 

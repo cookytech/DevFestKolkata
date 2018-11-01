@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:devfest_18_kolkata/model/session.dart';
+import 'package:devfest_18_kolkata/screens/session_detail_screen/sessions_stack.dart';
 import 'package:flutter/material.dart';
 
 class SessionDetailScreen extends StatefulWidget {
@@ -12,7 +13,7 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
-          stream: Firestore.instance.collection('speakers').snapshots(),
+          stream: Firestore.instance.collection('sessions').snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (!snapshot.hasData) return LinearProgressIndicator();
@@ -20,8 +21,7 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
                 snapshot.data.documents.map((DocumentSnapshot snapshot) {
               return Session.fromSnapshot(snapshot);
             }).toList();
-            sessions.forEach(print);
-            return Container();
+            return SessionsStack(sessions: sessions,);
           }),
     );
   }
