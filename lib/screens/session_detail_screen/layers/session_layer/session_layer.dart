@@ -19,7 +19,7 @@ class _SessionLayerState extends State<SessionLayer> {
             if (!snapshot.hasData) {
               return Center(
                 child: Text(
-                  'Swipe the vertical edges to select sessions :)',
+                  'Hi! \n\nPAN the SIDES to select sessions :) \n\nSwipe Sideways for more screens',
                   style: Theme.of(context)
                       .textTheme
                       .display4

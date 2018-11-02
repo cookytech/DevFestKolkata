@@ -39,124 +39,120 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
           return isLoading
               ? LinearProgressIndicator()
               : SingleChildScrollView(
-                      padding: EdgeInsets.only(bottom: 50.0),
-                      physics: BouncingScrollPhysics(),
-                      child: Column(
+                  padding: EdgeInsets.only(bottom: 50.0),
+                  physics: BouncingScrollPhysics(),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        'Google',
+                        style: Theme.of(context).textTheme.display4,
+                      ),
+                      Row(
                         children: <Widget>[
-                          Text(
-                            'Google',
-                            style: Theme.of(context).textTheme.display4,
-                          ),
-                          Row(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: singleLetterBoxWidth * 0.5),
-                                child: SizedBox(
-                                  width: singleLetterBoxWidth,
-                                  child: Center(
-                                    child: Text(
-                                      '?',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .display4,
-                                    ),
-                                  ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: singleLetterBoxWidth * 0.5),
+                            child: SizedBox(
+                              width: singleLetterBoxWidth,
+                              child: Center(
+                                child: Text(
+                                  '?',
+                                  style: Theme.of(context).textTheme.display4,
                                 ),
                               ),
+                            ),
+                          ),
 //                                Expanded(child: SizedBox(),),
-                              userManager.user == null
-                                  ? Opacity(
-                                      opacity: 0.9,
-                                      child: FlatButton.icon(
-                                        onPressed: () {
-                                          userManager.authorize();
-                                        },
-                                        highlightColor: Colors.transparent,
-                                        splashColor: Colors.transparent,
-                                        icon: Icon(
-                                          MdiIcons.google,
-                                          size: 60.0,
-                                        ),
-                                        label: Text(
-                                          'Sign In',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .display1,
-                                        ),
-                                      ),
-                                    )
-                                  : Padding(
-                                      padding:
-                                          const EdgeInsets.only(left: 12.0),
-                                      child: Text(
-                                        'Hi, ${userManager.user.displayName.split(' ')[0]}!',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .display3
-                                            .copyWith(fontSize: 25.0),
-                                      ),
+                          userManager.user == null
+                              ? Opacity(
+                                  opacity: 0.9,
+                                  child: FlatButton.icon(
+                                    onPressed: () {
+                                      userManager.authorize();
+                                    },
+                                    highlightColor: Colors.transparent,
+                                    splashColor: Colors.transparent,
+                                    icon: Icon(
+                                      MdiIcons.google,
+                                      size: 60.0,
                                     ),
-                              Expanded(
-                                child: SizedBox(),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    left: singleLetterBoxWidth * 0.5),
-                                child: SizedBox(
-                                  width: singleLetterBoxWidth,
-                                  child: Center(
-                                    child: Text(
-                                      ':',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .display4,
+                                    label: Text(
+                                      'Sign In',
+                                      style:
+                                          Theme.of(context).textTheme.display1,
                                     ),
                                   ),
-                                ),
-                              ),
-                              Expanded(
-                                  child: Container(
-                                padding: const EdgeInsets.only(
-                                    top: 20.0, right: 20.0),
-                                child: TextField(
-                                  controller: emailEditingController,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .display3
-                                      .copyWith(fontSize: 25.0),
-                                  decoration: InputDecoration(
-                                      labelText: 'Email',
-                                      hintText: 'If !Gmail',
-                                      border: OutlineInputBorder()),
-                                  autofocus: false,
-                                ),
-                              )),
-                            ],
-                          ),
-                          Builder(
-                            builder: (_) => InkWell(
-                                  onTap: () {
-                                    fetchStatus(_);
-                                  },
-                                  borderRadius: BorderRadius.circular(100.0),
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 55.0),
-                                    child: Text(';',
-                                        style:
-                                            Theme.of(_).textTheme.display4),
+                                )
+                              : Padding(
+                                  padding: const EdgeInsets.only(left: 12.0),
+                                  child: Text(
+                                    'Hi, ${userManager.user.displayName.split(' ')[0]}!',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .display3
+                                        .copyWith(fontSize: 25.0),
                                   ),
                                 ),
-                          )
+                          Expanded(
+                            child: SizedBox(),
+                          ),
                         ],
                       ),
-                    );
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                left: singleLetterBoxWidth * 0.5),
+                            child: SizedBox(
+                              width: singleLetterBoxWidth,
+                              child: Center(
+                                child: Text(
+                                  ':',
+                                  style: Theme.of(context).textTheme.display4,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                              child: Container(
+                            padding:
+                                const EdgeInsets.only(top: 20.0, right: 20.0),
+                            child: TextField(
+                              controller: emailEditingController,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .display3
+                                  .copyWith(fontSize: 25.0),
+                              decoration: InputDecoration(
+                                  labelText: 'Email',
+                                  hintText: 'If !Gmail',
+                                  border: OutlineInputBorder()),
+                              autofocus: false,
+                            ),
+                          )),
+                        ],
+                      ),
+                      Builder(
+                        builder: (_) => InkWell(
+                              onTap: () {
+                                fetchStatus(_);
+                              },
+                              borderRadius: BorderRadius.circular(100.0),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 55.0),
+                                child: Text(
+                                  ';',
+                                  style: Theme.of(_).textTheme.display4,
+                                  textScaleFactor: 0.8,
+                                ),
+                              ),
+                            ),
+                      )
+                    ],
+                  ),
+                );
         },
       ),
     );

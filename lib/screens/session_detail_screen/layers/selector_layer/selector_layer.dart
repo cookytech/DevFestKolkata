@@ -19,15 +19,20 @@ class SelectorLayer extends StatefulWidget {
 
 class SelectorLayerState extends State<SelectorLayer> {
   List<Session> _leftSessions;
-  int get _leftSessionIndex => (currentAlignY * _leftSessions.length).floor();
+  int get _leftSessionIndex => (currentAlignY * _leftSessions.length)
+      .clamp(0.0, _rightSessions.length - 1)
+      .floor();
   Color _leftColor = Colors.transparent;
 
   List<Session> _rightSessions;
-  int get _rightSessionIndex => (currentAlignY * _rightSessions.length).floor();
+  int get _rightSessionIndex => (currentAlignY * _rightSessions.length)
+      .clamp(0.0, _rightSessions.length - 1)
+      .floor();
   Color _rightColor = Colors.transparent;
 
   double maxHeight;
-  double currentAlignY = 0.0;
+  double _currentAlignY = 0.0;
+  double get currentAlignY => _currentAlignY.clamp(0.0, 1.0);
 
   PanSide currentPanSide;
 
@@ -37,15 +42,18 @@ class SelectorLayerState extends State<SelectorLayer> {
   @override
   void initState() {
     super.initState();
-    _leftSessions = widget.sessions.where((session) => session.roomNumber == 1).toList();
+    _leftSessions =
+        widget.sessions.where((session) => session.roomNumber == 1).toList();
     _leftSessions.sort(sorter);
-    _rightSessions = widget.sessions.where((session) => session.roomNumber == 2).toList();
+    _rightSessions =
+        widget.sessions.where((session) => session.roomNumber == 2).toList();
     _rightSessions.sort(sorter);
   }
 
   @override
   Widget build(BuildContext context) {
-    maxHeight = MediaQuery.of(context).size.height;
+    maxHeight =
+        MediaQuery.of(context).removeViewInsets(removeBottom: true).size.height;
     return Row(
       children: <Widget>[
         SizedBox(
@@ -70,7 +78,7 @@ class SelectorLayerState extends State<SelectorLayer> {
               return Visibility(
                 visible: snapshot.data,
                 child: Align(
-                  alignment: Alignment(0.0, -1.0 + 2 * currentAlignY),
+                  alignment: Alignment(0.0, -1.0 + 2 * _currentAlignY),
                   child: currentPanSide == PanSide.left
                       ? LeftDisplayCard(
                           session: _leftSessions[_leftSessionIndex],
@@ -124,6 +132,8 @@ class SelectorLayerState extends State<SelectorLayer> {
   }
 
   panUpdate(DragUpdateDetails dragDetails) {
+    print(
+        "CAY: $_currentAlignY, \nMAX_HEIGHT: $maxHeight, \nLEFT_SESSION_INDEX: $_leftSessionIndex");
     moveSelectorToY(dragDetails.globalPosition.dy);
   }
 
@@ -143,7 +153,7 @@ class SelectorLayerState extends State<SelectorLayer> {
 
   moveSelectorToY(double globalY) {
     setState(() {
-      currentAlignY = globalY / maxHeight;
+      _currentAlignY = globalY / maxHeight;
     });
   }
 }

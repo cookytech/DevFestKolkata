@@ -23,7 +23,8 @@ class SessionWidget extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(0.0),
           child: CachedNetworkImage(
-            fit: BoxFit.cover, imageUrl: session.featureImageURI,
+            fit: BoxFit.cover,
+            imageUrl: session.featureImageURI,
           ),
         ),
       ),
@@ -72,7 +73,10 @@ class SessionWidget extends StatelessWidget {
           ),
           Text(
             '${session.subHead}',
-            style: Theme.of(context).textTheme.subhead.copyWith(fontSize: 14.0, fontWeight: FontWeight.w300),
+            style: Theme.of(context)
+                .textTheme
+                .subhead
+                .copyWith(fontSize: 14.0, fontWeight: FontWeight.w300),
             maxLines: 2,
             overflow: TextOverflow.fade,
           ),
@@ -91,7 +95,13 @@ class SessionWidget extends StatelessWidget {
             titleSection,
             Padding(
               padding: const EdgeInsets.only(bottom: 18.0),
-              child: Text('${session.tagLine}', style: Theme.of(context).textTheme.display4.copyWith(fontSize: 16.0),),
+              child: Text(
+                '${session.tagLine}',
+                style: Theme.of(context)
+                    .textTheme
+                    .display4
+                    .copyWith(fontSize: 16.0),
+              ),
             ),
             chipsRow
           ],
@@ -101,7 +111,7 @@ class SessionWidget extends StatelessWidget {
 
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(vertical: 110.0).copyWith(left: 5.0),
+      padding: EdgeInsets.only(top: 70.0, bottom: 130.0).copyWith(left: 5.0),
       child: Opacity(
         child: Column(
           children: <Widget>[
@@ -121,9 +131,9 @@ class SessionWidget extends StatelessWidget {
                     ))
               ],
             ),
-
           ],
-        ), opacity: 0.9,
+        ),
+        opacity: 0.9,
       ),
     );
   }

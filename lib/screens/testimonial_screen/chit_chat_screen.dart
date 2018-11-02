@@ -8,13 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:devfest_18_kolkata/helper/widgets/user_manager.dart';
 
-class TestimonialScreen extends StatefulWidget {
+class ChitChatScreen extends StatefulWidget {
   @override
-  _TestimonialScreenState createState() =>
-      _TestimonialScreenState();
+  _ChitChatScreenState createState() => _ChitChatScreenState();
 }
 
-class _TestimonialScreenState extends State<TestimonialScreen> {
+class _ChitChatScreenState extends State<ChitChatScreen> {
   UserManager userManager;
   String centerText;
 
@@ -34,7 +33,7 @@ class _TestimonialScreenState extends State<TestimonialScreen> {
     userManager = UserManager.of(context);
     return Scaffold(
       appBar: toolTipAppBar(
-        title: "Testimonials",
+        title: "Chit Chat",
       ),
       body: Stack(
         children: <Widget>[
