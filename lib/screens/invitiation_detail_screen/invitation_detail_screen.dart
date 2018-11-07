@@ -126,7 +126,7 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
                                   .copyWith(fontSize: 25.0),
                               decoration: InputDecoration(
                                   labelText: 'Email',
-                                  hintText: 'If !Gmail',
+                                  hintText: 'If not Gmail',
                                   border: OutlineInputBorder()),
                               autofocus: false,
                             ),
@@ -134,11 +134,13 @@ class _InvitationDetailScreenState extends State<InvitationDetailScreen> {
                         ],
                       ),
                       Builder(
-                        builder: (_) => InkWell(
-                              onTap: () {
+                        builder: (_) => RaisedButton(
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(90.0)),
+                              color: Theme.of(context).scaffoldBackgroundColor,
+                              onPressed: () {
                                 fetchStatus(_);
                               },
-                              borderRadius: BorderRadius.circular(100.0),
+                              elevation: 7.0,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 55.0),
