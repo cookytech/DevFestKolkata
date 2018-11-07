@@ -21,13 +21,13 @@ class SelectorLayerState extends State<SelectorLayer> {
   List<Session> _leftSessions;
   int get _leftSessionIndex => (currentAlignY * _leftSessions.length)
       .clamp(0.0, _leftSessions.length - 1)
-      .floor();
+      .toInt();
   Color _leftColor = Colors.transparent;
 
   List<Session> _rightSessions;
   int get _rightSessionIndex => (currentAlignY * _rightSessions.length)
       .clamp(0.0, _rightSessions.length - 1)
-      .floor();
+      .toInt();
   Color _rightColor = Colors.transparent;
 
   double maxHeight;
