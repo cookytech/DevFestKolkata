@@ -23,14 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_screen/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_layer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_layer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/testimonial_screen/real_time_discussion_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/testimonial_screen/chit_chat_screen.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -48,38 +41,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="speaker_details_screen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart">
+      <file leaf-file-name="list.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/model/list.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368">
-              <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+            <state relative-caret-position="1482">
+              <caret line="78" selection-start-line="78" selection-end-line="79" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invitation_detail_screen.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart">
+      <file leaf-file-name="session.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/model/session.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="665">
+              <caret line="96" column="36" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session_widget.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_widget.dart">
+      <file leaf-file-name="chit_chat_screen.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/screens/testimonial_screen/chit_chat_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="113" column="52" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
+            <state relative-caret-position="779">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session_layer.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="selector_layer.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session_layer.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_layer.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="399">
+              <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -166,19 +168,21 @@
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/right_display_card.dart" />
         <option value="$PROJECT_DIR$/lib/helper/widgets/loading_screen.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart" />
         <option value="$PROJECT_DIR$/lib/screens/speaker_details_screen/speaker_details_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/testimonial_screen/real_time_discussion_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/testimonial_screen/chit_chat_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/invitiation_detail_screen/invitation_detail_screen.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_layer.dart" />
         <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_widget.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="350" />
+    <option name="y" value="70" />
+    <option name="width" value="1264" />
+    <option name="height" value="721" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,17 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DevFestKolkata" type="1abcf292:AndroidViewProjectNode" />
-              <item name="devfest_18_kolkata" type="e9137016:NonAndroidModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -208,44 +202,13 @@
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
               <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
               <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="generated" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-              <item name="apk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="outputs" type="462c0819:PsiDirectoryNode" />
-              <item name="apk" type="462c0819:PsiDirectoryNode" />
-              <item name="release" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +232,7 @@
               <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="invitiation_detail_screen" type="462c0819:PsiDirectoryNode" />
+              <item name="organisers_details_screen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
@@ -285,6 +248,15 @@
               <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="session_detail_screen" type="462c0819:PsiDirectoryNode" />
               <item name="layers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="session_detail_screen" type="462c0819:PsiDirectoryNode" />
+              <item name="layers" type="462c0819:PsiDirectoryNode" />
+              <item name="selector_layer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
@@ -300,13 +272,30 @@
               <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="speaker_details_screen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DevFestKolkata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DevFestKolkata" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="testimonial_screen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DevFestKolkata" type="1abcf292:AndroidViewProjectNode" />
+              <item name="devfest_18_kolkata" type="e9137016:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -783,8 +772,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1" y="-2" width="1922" height="1083" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
@@ -793,38 +781,61 @@
       <window_info id="Build Variants" order="6" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010707" side_tool="true" weight="0.23875803" />
-      <window_info anchor="bottom" id="Dart Analysis" order="8" visible="true" weight="0.36" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892932" weight="0.39757577" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.36120042" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892932" weight="0.39871383" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3279743" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993481" weight="0.32848486" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993481" weight="0.3301179" />
       <window_info anchor="right" id="Flutter Outline" order="6" weight="0.32976446" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.32762313" />
       <window_info id="Captures" order="7" weight="0.32976446" />
       <window_info id="Capture Tool" order="11" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25501433" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17344753" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.19593148" />
       <window_info id="Favorites" order="9" side_tool="true" />
-      <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.3295129" />
-      <window_info anchor="right" id="Assistant" order="9" weight="0.3295129" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4993481" weight="0.22936763" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Preview" order="10" weight="0.32976446" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.32977587" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Designer" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010707" side_tool="true" weight="0.23875803" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25501433" />
+      <window_info anchor="right" id="Preview" order="10" weight="0.32976446" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Dart Analysis" order="8" visible="true" weight="0.36" />
+      <window_info anchor="right" id="Flutter Inspector" order="3" weight="0.3295129" />
+      <window_info id="Build Variants" order="6" side_tool="true" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993481" weight="0.32848486" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="bottom" id="Logcat" order="10" weight="0.32762313" />
+      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.19593148" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="12" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Android Profiler" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Flutter Outline" order="6" weight="0.32976446" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3279743" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
+      <window_info id="Capture Tool" order="11" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892932" weight="0.39757577" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4993481" weight="0.22936763" />
+      <window_info id="Captures" order="7" weight="0.32976446" />
+      <window_info id="Favorites" order="9" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.3295129" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
       <window_info anchor="bottom" id="Dart Analysis" order="8" weight="0.36120042" />
       <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49892932" visible="true" weight="0.39871383" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -847,7 +858,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2678762" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4993481" weight="0.22936763" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1040,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/session.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-978">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="665">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1093,13 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-436">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/right_display_card.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -1111,13 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/testimonial_screen/chit_chat_screen.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1135,17 +1132,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_layer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_widget.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="113" column="52" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/testimonial_screen/chit_chat_screen.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/selector_layer/selector_layer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/session_detail_screen/layers/session_layer/session_layer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
         </state>
       </provider>
     </entry>

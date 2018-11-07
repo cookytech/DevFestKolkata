@@ -20,7 +20,7 @@ class SelectorLayer extends StatefulWidget {
 class SelectorLayerState extends State<SelectorLayer> {
   List<Session> _leftSessions;
   int get _leftSessionIndex => (currentAlignY * _leftSessions.length)
-      .clamp(0.0, _rightSessions.length - 1)
+      .clamp(0.0, _leftSessions.length - 1)
       .floor();
   Color _leftColor = Colors.transparent;
 
