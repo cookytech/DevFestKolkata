@@ -287,5 +287,5 @@ packages:
     source: hosted
     version: "2.1.15"
 sdks:
-  dart: ">=2.0.0 <=2.1.0-dev.5.0.flutter-a2eb050044"
+  dart: ">=2.0.0 <=2.1.0-dev.8.0.flutter-bf26f760b1"
   flutter: ">=0.5.6 <2.0.0"

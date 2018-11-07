@@ -20,14 +20,14 @@ class SelectorLayer extends StatefulWidget {
 class SelectorLayerState extends State<SelectorLayer> {
   List<Session> _leftSessions;
   int get _leftSessionIndex => (currentAlignY * _leftSessions.length)
-      .clamp(0.0, _rightSessions.length - 1)
-      .floor();
+      .clamp(0.0, _leftSessions.length - 1)
+      .toInt();
   Color _leftColor = Colors.transparent;
 
   List<Session> _rightSessions;
   int get _rightSessionIndex => (currentAlignY * _rightSessions.length)
       .clamp(0.0, _rightSessions.length - 1)
-      .floor();
+      .toInt();
   Color _rightColor = Colors.transparent;
 
   double maxHeight;
@@ -132,8 +132,8 @@ class SelectorLayerState extends State<SelectorLayer> {
   }
 
   panUpdate(DragUpdateDetails dragDetails) {
-    print(
-        "CAY: $_currentAlignY, \nMAX_HEIGHT: $maxHeight, \nLEFT_SESSION_INDEX: $_leftSessionIndex");
+    // print(
+        // "CAY: $_currentAlignY, \nMAX_HEIGHT: $maxHeight, \nLEFT_SESSION_INDEX: $_leftSessionIndex");
     moveSelectorToY(dragDetails.globalPosition.dy);
   }
 
